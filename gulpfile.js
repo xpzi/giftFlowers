@@ -69,9 +69,9 @@
     // js 模块化 ，合并，压缩
     var jsFiles = [
    		'./src/scripts/*.js',
-   		'./src/scripts/view/cake/*.js',
-   		'./src/scripts/view/flower/*.js',
-   		'./src/scripts/view/other/*.js'
+   		'./src/scripts/page/cake/*.js',
+   		'./src/scripts/page/flower/*.js',
+   		'./src/scripts/page/other/*.js'
     ];
     gulp.task('packjs', function(){
     	gulp.src(jsFiles)
