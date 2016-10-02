@@ -54,19 +54,9 @@
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	__webpack_require__(2);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./view/index.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	console.log("架构测试");
 
-
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	console.log("首页js");
 
 
 /***/ }
