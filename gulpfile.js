@@ -39,6 +39,26 @@
             				res.end(data);
             			});
             			return;
+					case '/api/apid/content':
+            			fs.readFile('./mock/spid/content.string', function(err, data){
+            				res.end(data);
+            			});
+						return;
+					case '/api/apid/comment':
+            			fs.readFile('./mock/spid/comment.string', function(err, data){
+            				res.end(data);
+            			});
+						return;
+					case '/api/apid/show':
+            			fs.readFile('./mock/spid/show.string', function(err, data){
+            				res.end(data);
+            			});
+						return;
+					case '/api/apid/story':
+            			fs.readFile('./mock/spid/story.string', function(err, data){
+            				res.end(data);
+            			});
+						return;
             		case '/api/users':
             			// ...
             			return;

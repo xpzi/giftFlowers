@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import "../core/reset";
+@import "../core/config.scss";
 @import "../module/m-detail.scss";
+
 
 // 页面所需模块
 
@@ -65,6 +67,7 @@
                         border-radius: .05rem;
                         text-align: center;
                         padding: 0 .2rem;
+						
                 }
             }
             
@@ -95,8 +98,11 @@
                     
                     span{
                         height: 100%;
-                        width: .15rem;
+                        width: .25rem;
                         line-height: .48rem;
+						color:#666;
+						text-align:right;
+						transform: rotate(180deg);
                     }
                 }
             }
@@ -153,6 +159,10 @@
                 text-align: center;
                 line-height: .28rem;
                 border: 1px solid #ccc ;
+				i{
+					transform: rotate(180deg);
+					display:inline-block;
+				}
             }
         }
         .contact{
@@ -162,7 +172,6 @@
             align-items: center;
             padding:0 .08rem;
             a{
-                
                 color: #f60;
                 width:48%;
                 line-height: .4rem;
@@ -171,72 +180,96 @@
                 border: 1px solid #f60;
                 height: .4rem;
                 text-align: center;
+				
+				i{
+					display: inline-block;
+					width: .26rem;
+					height: .26rem;
+					background-size: .26rem .26rem !important;
+					vertical-align: middle;
+					margin-right: 5px;
+					margin-top: -2px;
+				}
+				.qq{
+					background: url(http://img02.hua.com/icon/qq_m.png) no-repeat;
+				}
+				.tel{
+					background: url(http://m.hua.com/images/dhkf.png) no-repeat;
+				}
             }
         }
         #comment{
             display: flex;
             flex-direction: column;
             padding:  .1rem;
-            
+            h3{
+				font-size:16px;
+				color:#666;
+				font-weight:100;
+				line-height:30px;
+				border-bottom: 1px solid #ccc;
+			}
+			
             li{
-               
-                
+				padding:.05rem 0;
+				border-bottom:1px solid #ccc;                   
+				
                 .t{
-                height:.56rem;
-                display: flex;
-                align-items: center;
-                
-                img{
-                   height: .5rem;
-                   width:.5rem;
-                   border: 1px solid #ccc;
-                }
-                .xin{
-                    padding-left: .1rem;
-                    width: .78rem;
-                    height: .26rem;
-                    span{
-                        display: block;
-                        width: .78rem;
-                        height: .26rem;
-                        background: url(../../images/icon2b.png) -1px 3px no-repeat;
-                        background-size: 1.9rem 1.9rem;    
-                    }                   
-                }
-                .ip{
-                    flex:1;
-                    text-align: right;
-                } 
-            }
-             p{
-                    line-height: 20px;
-                    font-size:12px;
-                    padding:.1rem 0;
-                }
-            .b{
-                    display: flex;
-                    align-items: center;
-                    font-size: 12px;
-                    color: #ccc; 
-                    border-bottom:1px solid #ccc;                   
-                    
-                    span:nth-child(1){
-                        height: .2rem;
-                        width: .2rem;
-                        img{
-                            height: 100%;
-                            width: 100%;
-                          }
-                    }
-                    span:nth-child(2){
-                        width: 35%;
-                        padding:0 .05rem;
-                    }
-                    span:nth-child(3){
-                        flex: 1;
-                    }
-                }
-            }
+					height:.56rem;
+					display: flex;
+					align-items: center;
+					color: #ccc; 
+					
+					img{
+					   height: .5rem;
+					   width:.5rem;
+					   border: 1px solid #ccc;
+					}
+					.xin{
+						padding-left: .1rem;
+						width: .78rem;
+						height: .26rem;
+						span{
+							display: block;
+							width: .78rem;
+							height: .26rem;
+							background: url(../../images/icon2b.png) -1px 3px no-repeat;
+							background-size: 1.9rem 1.9rem;    
+						}                   
+					}
+					.ip{
+						flex:1;
+						text-align: right;
+					} 
+				}
+				 p{
+						line-height: 20px;
+						font-size:12px;
+						padding:.05rem 0;
+					}
+				.b{
+					display: flex;
+					align-items: center;
+					font-size: 12px;
+					color: #ccc; 
+					
+					span:nth-child(1){
+						height: .2rem;
+						width: .2rem;
+						img{
+							height: 100%;
+							width: 100%;
+						  }
+					}
+					span:nth-child(2){
+						width: 35%;
+						padding:0 .05rem;
+					}
+					span:nth-child(3){
+						flex: 1;
+					}
+				}
+			}
             
             .more{
                 width:100%;
@@ -266,9 +299,15 @@
                 line-height: .45rem;
                 h3{
                     flex: 1;
-                    font-size: 16px;
-                    font-weight: 100;                    
-                    span{
+					display:flex;
+					align-items:center;
+                    font-size: 16px;  
+					font-weight: 100;  
+					&>b{
+						font-weight: 100;  
+					}
+                    &>span{
+						padding:0 .03rem;
                         font-size: 12px;
                         color:#ccc;
                         span{
@@ -278,6 +317,8 @@
                 }                
                 i{
                     width:.14rem;
+					display:inline-block;
+					transform: rotate(180deg);
                 }
             }
             

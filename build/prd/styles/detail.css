@@ -24,6 +24,45 @@
  * variables中map使用“_”开头，本文件中不使用"_"
  * variables ⇌ config
  */
+@font-face {
+  font-family: "iconfont";
+  src: url("/build/images/iconfont/iconfont.eot?t=1475157978");
+  /* IE9*/
+  src: url("/build/images/iconfont/iconfont.eot?t=1475157978#iefix") format("embedded-opentype"), url("/build/images/iconfont/iconfont.woff?t=1475157978") format("woff"), url("/build/images/iconfont/iconfont.ttf?t=1475157978") format("truetype"), url("/build/images/iconfont/iconfont.svg?t=1475157978#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\e65c"; }
+
+.icon-searchlist:before {
+  content: "\e6fe"; }
+
+.icon-people:before {
+  content: "\e736"; }
+
+.icon-cart:before {
+  content: "\e6af"; }
+
+.icon-back:before {
+  content: "\e679"; }
+
+.icon-sortlight:before {
+  content: "\e7ad"; }
+
+.icon-home:before {
+  content: "\e6b8"; }
+
+.icon-top:before {
+  content: "\e69e"; }
+
 /**
  * Yo框架全局Variables
  * Yo基础变量map，如果不想定义某属性，将其value设置为null
@@ -650,6 +689,52 @@ a {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle; }
 
+/**
+ * Yo框架全局Variables
+ * Yo基础变量map，如果不想定义某属性，将其value设置为null；
+ * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方
+ * variables中map使用“_”开头，本文件中不使用"_"
+ * variables ⇌ config
+ */
+@font-face {
+  font-family: "iconfont";
+  src: url("/build/images/iconfont/iconfont.eot?t=1475157978");
+  /* IE9*/
+  src: url("/build/images/iconfont/iconfont.eot?t=1475157978#iefix") format("embedded-opentype"), url("/build/images/iconfont/iconfont.woff?t=1475157978") format("woff"), url("/build/images/iconfont/iconfont.ttf?t=1475157978") format("truetype"), url("/build/images/iconfont/iconfont.svg?t=1475157978#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\e65c"; }
+
+.icon-searchlist:before {
+  content: "\e6fe"; }
+
+.icon-people:before {
+  content: "\e736"; }
+
+.icon-cart:before {
+  content: "\e6af"; }
+
+.icon-back:before {
+  content: "\e679"; }
+
+.icon-sortlight:before {
+  content: "\e7ad"; }
+
+.icon-home:before {
+  content: "\e6b8"; }
+
+.icon-top:before {
+  content: "\e69e"; }
+
 html, body {
   height: 100%;
   width: 100%; }
@@ -716,8 +801,11 @@ html, body {
               line-height: 24px; }
           .container .deScoll #slider-pic .details a span {
             height: 100%;
-            width: .15rem;
-            line-height: .48rem; }
+            width: .25rem;
+            line-height: .48rem;
+            color: #666;
+            text-align: right;
+            transform: rotate(180deg); }
     .container .deScoll .kongbai {
       height: .16rem;
       border-top: 1px solid #ccc;
@@ -759,6 +847,9 @@ html, body {
         text-align: center;
         line-height: .28rem;
         border: 1px solid #ccc; }
+        .container .deScoll #pictext > span i {
+          transform: rotate(180deg);
+          display: inline-block; }
     .container .deScoll .contact {
       display: flex;
       height: .66rem;
@@ -774,52 +865,73 @@ html, body {
         border: 1px solid #f60;
         height: .4rem;
         text-align: center; }
+        .container .deScoll .contact a i {
+          display: inline-block;
+          width: .26rem;
+          height: .26rem;
+          background-size: .26rem .26rem !important;
+          vertical-align: middle;
+          margin-right: 5px;
+          margin-top: -2px; }
+        .container .deScoll .contact a .qq {
+          background: url(http://img02.hua.com/icon/qq_m.png) no-repeat; }
+        .container .deScoll .contact a .tel {
+          background: url(http://m.hua.com/images/dhkf.png) no-repeat; }
     .container .deScoll #comment {
       display: flex;
       flex-direction: column;
       padding: .1rem; }
-      .container .deScoll #comment li .t {
-        height: .56rem;
-        display: flex;
-        align-items: center; }
-        .container .deScoll #comment li .t img {
-          height: .5rem;
-          width: .5rem;
-          border: 1px solid #ccc; }
-        .container .deScoll #comment li .t .xin {
-          padding-left: .1rem;
-          width: .78rem;
-          height: .26rem; }
-          .container .deScoll #comment li .t .xin span {
-            display: block;
-            width: .78rem;
-            height: .26rem;
-            background: url(../../images/icon2b.png) -1px 3px no-repeat;
-            background-size: 1.9rem 1.9rem; }
-        .container .deScoll #comment li .t .ip {
-          flex: 1;
-          text-align: right; }
-      .container .deScoll #comment li p {
-        line-height: 20px;
-        font-size: 12px;
-        padding: .1rem 0; }
-      .container .deScoll #comment li .b {
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        color: #ccc;
+      .container .deScoll #comment h3 {
+        font-size: 16px;
+        color: #666;
+        font-weight: 100;
+        line-height: 30px;
         border-bottom: 1px solid #ccc; }
-        .container .deScoll #comment li .b span:nth-child(1) {
-          height: .2rem;
-          width: .2rem; }
-          .container .deScoll #comment li .b span:nth-child(1) img {
-            height: 100%;
-            width: 100%; }
-        .container .deScoll #comment li .b span:nth-child(2) {
-          width: 35%;
-          padding: 0 .05rem; }
-        .container .deScoll #comment li .b span:nth-child(3) {
-          flex: 1; }
+      .container .deScoll #comment li {
+        padding: .05rem 0;
+        border-bottom: 1px solid #ccc; }
+        .container .deScoll #comment li .t {
+          height: .56rem;
+          display: flex;
+          align-items: center;
+          color: #ccc; }
+          .container .deScoll #comment li .t img {
+            height: .5rem;
+            width: .5rem;
+            border: 1px solid #ccc; }
+          .container .deScoll #comment li .t .xin {
+            padding-left: .1rem;
+            width: .78rem;
+            height: .26rem; }
+            .container .deScoll #comment li .t .xin span {
+              display: block;
+              width: .78rem;
+              height: .26rem;
+              background: url(../../images/icon2b.png) -1px 3px no-repeat;
+              background-size: 1.9rem 1.9rem; }
+          .container .deScoll #comment li .t .ip {
+            flex: 1;
+            text-align: right; }
+        .container .deScoll #comment li p {
+          line-height: 20px;
+          font-size: 12px;
+          padding: .05rem 0; }
+        .container .deScoll #comment li .b {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          color: #ccc; }
+          .container .deScoll #comment li .b span:nth-child(1) {
+            height: .2rem;
+            width: .2rem; }
+            .container .deScoll #comment li .b span:nth-child(1) img {
+              height: 100%;
+              width: 100%; }
+          .container .deScoll #comment li .b span:nth-child(2) {
+            width: 35%;
+            padding: 0 .05rem; }
+          .container .deScoll #comment li .b span:nth-child(3) {
+            flex: 1; }
       .container .deScoll #comment .more {
         width: 100%;
         display: flex;
@@ -842,15 +954,22 @@ html, body {
         line-height: .45rem; }
         .container .deScoll .Story .title h3 {
           flex: 1;
+          display: flex;
+          align-items: center;
           font-size: 16px;
           font-weight: 100; }
-          .container .deScoll .Story .title h3 span {
+          .container .deScoll .Story .title h3 > b {
+            font-weight: 100; }
+          .container .deScoll .Story .title h3 > span {
+            padding: 0 .03rem;
             font-size: 12px;
             color: #ccc; }
-            .container .deScoll .Story .title h3 span span {
+            .container .deScoll .Story .title h3 > span span {
               color: #f60; }
         .container .deScoll .Story .title i {
-          width: .14rem; }
+          width: .14rem;
+          display: inline-block;
+          transform: rotate(180deg); }
       .container .deScoll .Story .scroll-pai {
         width: 100%;
         overflow: hidden; }
