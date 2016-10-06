@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:100px">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />   
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 结构 </title>
+    
+    <link rel="stylesheet" href="">
+    
+	<style type="text/css">
+	
+	
+	</style>
+	
+</head>
+<body>
+	
+	
+	好了后台数据怎么读出来不管我的事，在说分类哪些也不管我的事
+	
+	我要做的就是：  给我一个商品id 我去请求服务器，
+	然后返回一段数据，我在填充到页面上就搞定了。
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	表:
+		
+	（type）分类表：
+	id(分类id) 		parsen(父级id)	name(分类名称)	way(是不是分类依据 1 是 ， 0 不是)	
+	
+	1				null			鲜花				0
+	2				null 			蛋糕				0
+	
+	11				1 				按用途分			1			
+	12 				1 				按颜色				1
+	
+	
+	101				11				爱情鲜花			0
+	102 			11 				友情鲜花			0
+	
+	111				12				红色				0
+	112				12				白色				0
+	
+	
+	
+	（sp）商品
+	id			type		...
+	
+	1			101, 112    ...
+	
+	查询:
+	
+	查询所有的鲜花：  （这种方式不可行）
+						if(  分类parsen == 鲜花id && 分类way == 1  ){
+							
+							if(  其他分类parsen ==  分类parsen  ){
+								//说明 其他其他分类 id 可以用
+							}
+							
+						}else{
+							//说明 分类 id 可以用
+						}
+						
+						然后根据所有分类找到全部商品
+	
+	（sp）商品
+	id			type		...  
+	
+	1			1-11-101, 1-12-112    ...	
+	
+	查询:
+	查询所有的鲜花：sp中的id有  split(',')[0].split('-')[0] == 1  就符合条件了  这样啊数据库直接查询语句怎么写，拿出来在比较，nono 不可以
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

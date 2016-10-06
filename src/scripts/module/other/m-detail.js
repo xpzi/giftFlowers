@@ -23,10 +23,16 @@ $('.details').on('tap' , function(){
 	window.location.href = './alldetail.html?0';
 });
 $('#pictext>span').on('tap' , function(){
-	window.location.href = './alldetail.html?1';
+	window.location.href = './alldetail.html?0';
 });
 $('#comment .more a').on('tap' , function(){
+	window.location.href = './alldetail.html?1';
+});
+$('#show').on('tap' , function(){
 	window.location.href = './alldetail.html?2';
+});
+$('#story').on('tap' , function(){
+	window.location.href = './alldetail.html?3';
 });
 
 

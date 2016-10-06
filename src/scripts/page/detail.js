@@ -24,6 +24,10 @@ if( curhref.indexOf('index') >= 0 ){
 	require('../module/other/m-cart.js');
 } else if( curhref.indexOf('alldetail') >= 0 ){
 	require('../module/other/m-alldetail.js');
+} else if( curhref.indexOf('login') >= 0 ){
+	require('../module/other/m-login.js');
+} else if( curhref.indexOf('regist') >= 0 ){
+	require('../module/other/m-regist.js');
 } else{
 	
 }
