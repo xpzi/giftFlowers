@@ -31,7 +31,7 @@ function callbackFunc(){
 		var index = $(this).index();
 		activeSelf('.delist li' ,index, 'active');
 	});
-}
+} 
 
 function activeSelf( select , index, className ){
 	$('.swiper-slide').eq(index).css('display' , 'block').siblings().css('display','none');
