@@ -35,15 +35,22 @@
             	switch(urlObj.pathname){
             		case '/api/list.php':
             			res.setHeader('Content-Type', 'application/json');
-            			fs.readFile('./mock/list.json', function(err, data){
+            			fs.readFile('./mock/cake.json', function(err, data){
             				res.end(data);
             			});
             			return;
-            		case '/api/users':
-            			// ...
+            		case '/api/cake/shanghai.php':
+                     res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/shanghai.json', function(err, data){
+                            res.end(data);
+                        });
             			return;
-            		case '/api/cart':
+            		case '/api/gift':
             			// ...
+                          res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/gift.json', function(err, data){
+                            res.end(data);
+                        });
             			return;
             	}
             	next();
@@ -53,10 +60,7 @@
 	
 	//css 预处理
     var cssFiles = [
-        './src/styles/*.scss',
-   		'./src/styles/branch/cake/*.scss',
-   		'./src/styles/branch/flower/*.scss',
-   		'./src/styles/branch/other/*.scss'
+        './src/styles/usage/page/*.scss',
     ];
     gulp.task('scss', function(){
         gulp.src(cssFiles)
@@ -69,9 +73,6 @@
     // js 模块化 ，合并，压缩
     var jsFiles = [
    		'./src/scripts/*.js',
-   		'./src/scripts/view/cake/*.js',
-   		'./src/scripts/view/flower/*.js',
-   		'./src/scripts/view/other/*.js'
     ];
     gulp.task('packjs', function(){
     	gulp.src(jsFiles)
@@ -99,18 +100,6 @@
         gulp.src('./*.html')
             .pipe(gulp.dest('./build/')) // 相对于            
     });
-    gulp.task('copy-flower', function(){
-        gulp.src('./*.html')
-            .pipe(gulp.dest('./build/flower/')) // 相对于            
-    });
-     gulp.task('copy-cake', function(){
-        gulp.src('./*.html')
-            .pipe(gulp.dest('./build/cake/')) // 相对于            
-    });
-     gulp.task('copy-other', function(){
-        gulp.src('./*.html')
-            .pipe(gulp.dest('./build/other/')) // 相对于            
-    });
     
     // 拷贝 images 到 build 文件夹
     gulp.task('copy-images' ,function(){
@@ -120,13 +109,7 @@
     
     
     gulp.task('watch' , function(){
-//  	gulp.watch('./*.html',['copy-index']);
     	gulp.watch('./*.html',['copy-html']);
-    	gulp.watch('./assess/*.html',['copy-html']);
-    	gulp.watch('./assess/cake/*.html',['copy-cake']);
-    	gulp.watch('./assess/flower/*.html',['copy-flower']);
-    	gulp.watch('./assess/other/*.html',['copy-other']);
-    	
     	gulp.watch('./img/**/*',['copy-images']);
     	gulp.watch('./src/styles/**/*', ['scss']);
     	gulp.watch('./src/scripts/**/*', ['packjs']);

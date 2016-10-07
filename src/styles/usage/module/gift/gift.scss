@@ -1,0 +1,349 @@
+$headerbg:#ff6600;
+
+/* @font-face {font-family: 'iconfont';
+    url:('./src/styles/usage/module/cake/iconfont.ttf') format('truetype');
+   
+} */
+
+body {
+    font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('/build/prd/styles/iconfont.eot');
+    /* IE9*/
+    src: url('/build/prd/stylesiconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/build/prd/styles/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('/build/prd/styles/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/build/prd/styles/iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    #wrapper {
+        width: 100%;
+        height: 100%;
+        #iscroll {
+            #header {
+                width: 100%;
+                height: 0.46rem;
+                background: $headerbg;
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-right: 0.1rem;
+                    li {
+                        line-height: 0.45rem;
+
+                        &:first-child {
+                            width: 0.30rem;
+                            height: 0.30rem;
+                            i {
+                                font-size: 0.30rem;
+                                color: white;
+
+                            }
+                        }
+                        &:nth-child(2) {
+                            position: absolute;
+                            left: calc(50% - 0.17*2rem);
+                            font-size: 0.17rem;
+                            color: #fff;
+                        }
+                        &:last-child {
+                            width: 0.32rem;
+                            height: 0.32rem;
+                            position: absolute;
+                            right: 0.1rem;
+                            i {
+                                font-size: 0.32rem;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            nav {
+                width: 100%;
+                height: 0.57rem;
+                background: #fff;
+                display: none;
+                ul {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    padding: 0.05rem;
+                    li {
+                        flex: 1;
+                        span,
+                        i {
+                            display: block;
+                            text-align: center;
+                            color: #666;
+                        }
+                        i {
+                            font-size: 13px;
+                            margin-top: -0.08rem;
+                        }
+                        span {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+            section.nav_bar {
+                height: 0.41rem;
+                width: 100%;
+                background: #fff;
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    li {
+                        line-height: 0.4rem;
+                        text-align: center;
+                        margin-left: 0.1rem;
+                        &:last-child {
+                            position: absolute;
+                            right: 0.1rem;
+                            a {
+                                color: #F00;
+                            }
+                        }
+                        a {
+                            color: #666;
+                        }
+                    }
+                }
+            }
+            .spbox {
+                width: 100%;
+                .dgbox {
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        background: #fff;
+                        padding-bottom: 0.1rem;
+                        .title {
+                            height: 0.39rem;
+                            background: #f4f4f4;
+                            line-height: 0.39rem;
+                            padding-left: 0.1rem;
+                            span {
+                                color: #ff0000;
+                            }
+                        }
+                        ol {
+                            width: 100%;
+                            padding: 0.1rem 0.1rem 0.15rem;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            li {
+                                width: 1.45rem;
+                                margin-bottom: 0.1rem;
+                                @include border($border-width: 2px, $border-color: #e2e2e2, $radius: 5px) a {
+                                    width: 100%;
+                                    color: #666;
+                                    span {
+                                        display: block;
+                                        padding: 0 0.1rem;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        i {
+                                            display: block;
+                                            color: #ff0000;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    img {
+                                        width: 95%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .footerlist {
+                    width: 100%;
+                    .title {
+                        height: 0.47rem;
+                        padding-left: 0.1rem;
+                        line-height: 0.46rem;
+                        color: #666;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                    ol {
+                        width: 100%;
+                        padding-bottom: 0.1rem;
+                        background: #fff;
+                        li {
+                            width: 100%;
+                            padding: 0.1rem;
+                            @include border($border-width: 1px, $border-color: #e4e4e4);
+                            a {
+                                display: block;
+                                width: 100%;
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+            }
+            footer {
+                padding: 0.1rem 0.1rem 0;
+                width: 100%;
+                .btns {
+                    width: 100%;
+                    a {
+                        @include border($border-width: 2px, $border-color: #f60, $radius: 5px);
+                        padding: 0.05rem 0.15rem;
+                        color: #f60;
+                    }
+                }
+                .footer_menu {
+                    width: 100%;
+                    padding: 0.1rem 0.3rem 0;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        li {
+                            border-right: 1px solid #666;
+                            padding: 0 0.1rem 0;
+                            text-align: center;
+                            &:nth-child(n+4) {
+                                border-right: none;
+                            }
+                            a {
+                                color: #666;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                p {
+                    color: #a3a3a3;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .totop {
+        display: none;
+        width: 0.42rem;
+        height: 0.42rem;
+        background: rgba(255, 102, 0, 0.6);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 70px;
+        right: 20px;
+        a {
+            display: block;
+            margin: 0 auto;
+            height: 0.3rem;
+            width: 0.3rem;
+            background: url("http://m.hua.com/images/icon2b.png") -169px 6px no-repeat;
+            background-size: 200px 200px;
+        }
+    }
+}
+
+.citys {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0.2rem 0;
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    .city_menu {
+        width: 100%;
+        padding-bottom: 0.2rem;
+        background: rgba(255, 255, 255, 0.95);
+        position: relative;
+        @include border($border-width: 1px, $border-color: #000, $radius: 5px) .close {
+            font-size: 26px;
+            position: absolute;
+            right: 0.05rem;
+            top: -0.05rem;
+            color: grey;
+            text-shadow: 1px 1px 5px solid #ccc;
+        }
+        .title {
+            text-align: center;
+            height: .42rem;
+            line-height: .42rem;
+            color: #E42B2B;
+        }
+        h4 {
+            width: 100%;
+            background: #dddddd;
+            box-shadow: 0 1px 0 #EEEEEE;
+            color: #7C7C7C;
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 0.2rem;
+            padding-top: 0.02rem;
+            padding-bottom: 0.02rem;
+        }
+        h3 {
+            width: 100%;
+            background: #fff;
+            height: 0.42rem;
+            line-height: 0.42rem;
+            color: #7C7C7C;
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 0.2rem;
+        }
+        .list {
+            width: 100%;
+            ul {
+                width: 100%;
+                padding-left: 0.01rem;
+                padding-right: 0.01rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                li {
+                    width: 0.68rem;
+                    height: 0.44rem;
+                    line-height: 0.44rem;
+                    padding: 0 0.12rem 0;
+                    text-align: center;
+                    font-size: 14px;
+                    @include border($border-width: 0 0 2px 0, $border-color: #e5e5e5)
+                }
+            }
+        }
+    }
+}
+
+.loadmore {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.05rem 0;
+    color: #999;
+    @include border($border-width: 1px, $border-color: gray, $radius: 5px);
+}

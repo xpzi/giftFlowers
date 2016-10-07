@@ -1,0 +1,38 @@
+
+  [ 
+
+ 
+
+    {  "name": "元祖",
+    "city":"上海",
+    "src":["http://img01.hua.com/uploadpic/newpic/5302090.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5301070.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5303069.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5302068.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5302066.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5302064.jpg_220x240.jpg"],
+    
+    "price":["元祖 柳橙慕思(8寸)<i>￥288</i>","元祖 恋爱的心(6寸)<i>￥188</i>","元祖 玫瑰圆舞曲(10寸)<i>￥288</i>","元祖 莫尔卡夫(8寸)<i>￥218</i>","元祖 情有独钟(8寸)<i>￥218</i>","元祖 黄金燕麦香芋(8寸)<i>￥218</i>"]},
+ 
+    {  "name": "窝夫小子",
+    "city":"上海",
+    "src":["http://img01.hua.com/uploadpic/newpic/5501020.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501012.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5502011.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501010.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501002.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501001.jpg_220x240.jpg"],
+    
+    "price":["窝夫小子 巧克力椰子无糖（6寸）<i>￥179</i>","窝夫小子 鲜奶水果(6寸)<i>￥159</i>","窝夫小子 乖乖熊（8寸<i>￥199</i>","窝夫小子 蓝莓甜心(6寸)<i>￥159</i>","窝夫小子 抹茶乳酪蛋糕（6寸）<i>￥179</i>","窝夫小子 原味奶酪（6寸）<i>￥179</i>"]},
+     {  "name": "诺心",
+     "city":"上海",
+    "src":["http://img01.hua.com/uploadpic/newpic/5901052.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501012.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5502011.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501010.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501002.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5501001.jpg_220x240.jpg"],
+    
+    "price":["窝夫小子 巧克力椰子无糖（6寸）<i>￥179</i>","窝夫小子 鲜奶水果(6寸)<i>￥159</i>","窝夫小子 乖乖熊（8寸<i>￥199</i>","窝夫小子 蓝莓甜心(6寸)<i>￥159</i>","窝夫小子 抹茶乳酪蛋糕（6寸）<i>￥179</i>","窝夫小子 原味奶酪（6寸）<i>￥179</i>"]},
+      {  "name": "可颂坊",
+      "city":"上海",
+    "src":["http://img01.hua.com/uploadpic/newpic/5702019.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5702002.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5702036.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5702035.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5702034.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5702033.jpg_220x240.jpg"],
+    
+    "price":["米卡米卡 百利甜之恋  （8寸）<i>￥187</i>","米卡米卡 请叫我奔放的小野马！（8寸）<i>￥237</i>","米卡米卡 多幸运 How Lucky（1.5磅）<i>￥237</i>","米卡米卡 太子 Prince（8寸）<i>￥287</i>","米卡米卡 潘多拉 Pandora（8寸）<i>￥327</i>","米卡米卡 墨缇斯 Metis（8寸）<i>￥287</i>"]},
+          {  "name": "Mcake",
+          "city":"上海",
+    "src":["http://img01.hua.com/uploadpic/newpic/5142029.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5142028.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5142027.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5142026.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5142025.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5142024.jpg_220x240.jpg"],
+    
+    "price":["Mcake 黑森林拿破仑（8寸）<i>￥298</i>","Mcake 小熊动物造型芝士味生日儿童生日宴会蛋糕<i>￥298</i>","Mcake 柠.漾柠檬新鲜慕斯生日宴会蛋糕（2磅）<i>￥298</i>","Mcake 鲜莓印雪.新鲜草莓奶油拿破仑生日聚会蛋糕<i>￥298</i>","Mcake 榛果摩卡布拉吉（2磅）<i>￥318</i>","Mcake 新鲜慕斯蛋糕Pink罗赛特（2磅）<i>￥318</i>"]},
+        {  "name": "all",
+        "city":"上海",
+    "src":["http://img01.hua.com/uploadpic/newpic/5010046.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5010045.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5010044.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5010043.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5010042.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5010041.jpg_220x240.jpg"],
+    
+    "price":[" 水果盛宴<i>￥169</i>","美好回忆<i>￥169</i>","欢声笑语<i>￥169</i>","纯洁挚爱<i>￥169</i>","鲜果缤纷<i>￥169</i>","陪伴左右<i>￥168</i>"]}
+
+   ]

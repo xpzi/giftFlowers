@@ -1,0 +1,270 @@
+<div class="container">
+	<!-- 头部 -->
+	<div id="wrapper">
+		<div id="iscroll">
+				<header id="header">
+		<ul>
+			<li><i class="iconfont">&#xe679;</i> </li>
+			<li>送至:</li>
+			<li>
+			<span>北京 <i></i> </span>
+			</li>
+			<li>蛋糕</li>
+			<li> <i class="iconfont">&#xe7ad;</i> </li>
+		</ul>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#"><span class="iconfont">&#xe6b8;</span><i>首页</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6fe;</span><i>分类搜索</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6af;</span><i>购物车</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe736;</span><i>我的</i></a></li>
+		</ul>
+	</nav>
+	<section class="nav_bar">
+		<ul>
+			<li><a href="http://baidu.com">热门  :</a></li>
+			<li><a href="#">好利来</a></li>
+			<li><a href="#">窝夫小子</a></li>
+			<li><a href="#">北京蛋糕导航></a></li> 
+		</ul>
+		
+	</section>
+	<section class="spbox">
+		<ul class="dgbox">
+			<li>
+				<!-- <div class="title">可送<span>北京</span>的<span>好利来</span>蛋糕：</div>
+				<ol>
+					<li>
+					<a href="#">
+					<img src="http://img01.hua.com/uploadpic/newpic/5201103.jpg_220x240.jpg" alt="">
+					<span>好利来 甄爱礼盒(6寸)<i>￥239</i></span>
+					</a>
+				
+					</li>
+				
+					<li>
+					<a href="#">
+					<img src="http://img01.hua.com/uploadpic/newpic/5201103.jpg_220x240.jpg" alt="">
+					<span>好利来 甄爱礼盒(6寸)<i>￥239</i></span>
+					</a>
+				
+					</li>
+				</ol> -->
+				<script id="test0" type="text/html">
+				<div class="title">可送<span>{{city}}</span>的<span>{{name}}</span>蛋糕：</div>
+				<ol>
+					
+				    {{each src as value i}}
+				   
+				        
+				        <li><a href="#"><img src={{value}}><span>{{#price[i]}}</span></a></li>
+				         
+				    {{/each}}
+				   
+				</ol>
+				</script>
+
+			</li>
+			<li>
+				<!-- <div class="title">可送<span>北京</span>的<span>好利来</span>蛋糕：</div>
+				<ol>
+					<li>
+					<a href="#">
+					<img src="http://img01.hua.com/uploadpic/newpic/5201103.jpg_220x240.jpg" alt="">
+					<span>好利来 甄爱礼盒(6寸)<i>￥239</i></span>
+					</a>
+				
+					</li>
+					<li>
+					<a href="#">
+					<img src="http://img01.hua.com/uploadpic/newpic/5201103.jpg_220x240.jpg" alt="">
+					<span>好利来 甄爱礼盒(6寸)<i>￥239</i></span>
+					</a>
+				
+					</li>
+				</ol> -->
+					<script id="test1" type="text/html">
+				<div class="title">可送<span>{{city}}</span>的<span>{{name}}</span>蛋糕：</div>
+				<ol>
+					
+				    {{each src as value i}}
+				   
+				        
+				        <li><a href="#"><img src={{value}}><span>{{#price[i]}}</span></a></li>
+				         
+				    {{/each}}
+				   
+				</ol>
+					<a class="loadmore">加载更多<span></span></a>
+				</script>
+
+			</li>
+			<li>
+					<script id="test2" type="text/html">
+				<div class="title">可送<span>{{city}}</span>的<span>{{name}}</span>蛋糕：</div>
+				<ol>
+					
+				    {{each src as value i}}
+				   
+				        
+				        <li><a href="#"><img src={{value}}><span>{{#price[i]}}</span></a></li>
+				         
+				    {{/each}}
+				    <a class="loadmore">加载更多<span></span></a>
+				   
+				</ol>
+				</script>
+			</li>
+						<li>
+					<script id="test3" type="text/html">
+				<div class="title">可送<span>{{city}}</span>的<span>{{name}}</span>蛋糕：</div>
+				<ol>
+					
+				    {{each src as value i}}
+				   
+				        
+				        <li><a href="#"><img src={{value}}><span>{{#price[i]}}</span></a></li>
+				         
+				    {{/each}}
+				    <a class="loadmore">加载更多<span></span></a>
+				   
+				</ol>
+				</script>
+			</li>
+						<li>
+								<script id="test4" type="text/html">
+				<div class="title">可送<span>{{city}}</span>的<span>{{name}}</span>蛋糕：</div>
+				<ol>
+					
+				    {{each src as value i}}
+				   
+				        
+				        <li><a href="#"><img src={{value}}><span>{{#price[i]}}</span></a></li>
+				         
+				    {{/each}}
+				    <a class="loadmore">加载更多<span></span></a>
+				   
+				</ol>
+				</script>
+			</li>
+						<li>
+					<script id="test5" type="text/html">
+				<div class="title">全国配送蛋糕（可送<span>{{city}}</span>地区）</div>
+				<ol>
+					
+				    {{each src as value i}}
+				   
+				        
+				        <li><a href="#"><img src={{value}}><span>{{#price[i]}}</span></a></li>
+				         
+				    {{/each}}
+				    <a class="loadmore">加载更多<span></span></a>
+				   
+				</ol>
+				</script>
+			</li>
+						<div class="footerlist">
+				<div class="title">生日蛋糕-蛋糕常识</div>
+				<ol>
+					<li>
+					<a href="#">
+					蛋糕的分类,做法和保存
+					</a>
+
+					</li>
+					<li>
+					<a href="#">
+				九种蛋糕的做法
+					</a>
+
+					</li>
+					<li>
+					<a href="#">
+					美味蛋糕新做法
+					</a>
+
+					</li>
+					<li>
+					<a href="#">
+					选择婚礼蛋糕有学问
+					</a>
+
+					</li>
+					<li>
+					<a href="#">
+					生活常识：巧切蛋糕
+					</a>
+
+					</li>
+					<li>
+					<a href="#">
+					DIY蛋糕方法
+					</a>
+
+					</li>
+					
+				</ol>
+			</div>
+			
+		</ul>
+		
+	</section>
+	<footer>
+		<div class="btns">
+			<a href="#">登录</a>
+			<a href="#">注册</a>
+			
+		</div>
+		<div class="footer_menu">
+		<ul>
+			<li><a href="#">帮助</a></li>
+			<li><a href="#">查单</a></li>
+			<li><a href="#">在线补款</a></li>
+			<li><a href="#">客服</a></li>
+			<li><a href="#">花语大全</a></li>
+			<li><a href="#">电脑版</a></li>
+		</ul>
+		</div>
+		<p>© 花礼网(中国鲜花礼品网) m.hua.com</p>
+	</footer>
+		</div>
+
+</div>
+	<div class="totop"><a></a></div>
+
+
+</div>
+<div class="citys">
+	<div class="city_menu">
+		<a class="close">×</a>
+		<div class="title">请选择蛋糕配送城市</div>
+		<h4>您当前配送的城市:</h4>
+		<h3>北京</h3>
+		<h4>可选城市</h4>
+		<div class="list">
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>广州</li>
+			<li>深圳</li>
+			<li>天津</li>
+			<li>重庆</li>
+			<li>成都</li>
+			<li>西安</li>
+			<li>杭州</li>
+			<li>南京</li>
+			<li>苏州</li>
+			<li>武汉</li>
+			<li>沈阳</li>
+			<li>大连</li>
+			<li>哈尔滨</li>
+			<li>长春</li>
+			<li>济南</li>
+			<li>青岛</li>
+			<li>石家庄</li>
+			<li>长沙</li>
+		</ul>
+		</div>
+	</div>
+	</div>
