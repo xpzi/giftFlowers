@@ -1,6 +1,8 @@
 
   <div class="container">
     <div class="iscroll">
+    	
+    	<!-- header -->
       <header>
       <p class="logo">
 
@@ -11,7 +13,10 @@
         <li><span  class="iconfont">&#xe736;</span></li>
       </ul>
     </header>
+    
       <section>
+      
+      <!-- swiper  -->
       <nav>
         <div class="swiper-container swiper-container-horizontal">
             <div class="swiper-wrapper">
@@ -23,6 +28,8 @@
             </div>
         </div>
       </nav>
+      
+      <!-- 导航 -->
       <div class="mainlist">
           <ul>
               <li class="no1">
@@ -57,7 +64,10 @@
               </li>
           </ul>
       </div>
+      
+      <!-- (复用）空白   -->
       <div class="white"></div>
+      <!--   -->
       <div class="flowernav">
         <ul>
             <li class="item1"><img alt="新品鲜花速递" src="http://img02.hua.com/tuijian/xinpin01_m.png?2"><i class="markup1"><p class="p1 red">新品鲜花速递</p><p class="p2">新款驾到</p></i></li>
@@ -68,16 +78,58 @@
       <div class="white"></div>
       <div class="libox">
         <ul class="flowerlist">
-          <li><img src="./images/01.jpg"></li>
-          <li><img src="./images/02.jpg"></li>
-          <li><img src="./images/03.jpg"></li>
-          <li><img src="./images/04.jpg"></li>
-          <li><img src="./images/05.jpg"></li>
-          <li><img src="./images/06.jpg"></li>
-          <li><img src="./images/07.jpg"></li>
-          <li><img src="./images/08.jpg"></li>
+          <li>
+          	<img src="./images/01.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
+          <li>
+          	<img src="./images/02.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
+          <li>
+          	<img src="./images/03.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
+          <li>
+          	<img src="./images/04.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
+          <li>
+          	<img src="./images/05.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
+          <li>
+          	<img src="./images/06.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
+          <li>
+          	<img src="./images/07.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>1
+          </li>
+          <li>
+          	<img src="./images/08.jpg">
+          	<p>鲜花/清风雅韵</p>
+          	<span>￥159</span>
+          </li>
         </ul>
       </div>
+    	
+    	<!-- 蛋糕 cake -->
+    	<div class="white"></div>
+   		<section class="cake">
+   			<h3><span>生日蛋糕</span> <a href="#">更多&gt;</a></h3>
+   			<div class="logolist">
+   				div.first
+   			</div>
+   			
+   		</section>
     </section>
     </div>
   </div>

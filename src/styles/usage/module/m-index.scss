@@ -1,191 +1,441 @@
-.container{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  .iscroll{
-    @include flexbox();
-    @include flex-direction(column);
-    > * {
-      width: 100%;
-    }
-    header{
-      height: .46rem;
-      @include flexbox();
-      @include flex-direction();
-      @include justify-content(space-between);
-      @include align-items();
-      background: #ff6600;
-      .logo{
-        width: 1.31rem;
-        height: .41rem;
-        margin-left: 0.09rem;
-        background: url('/build/images/icon.png') 0 -0.59rem no-repeat;
-        background-size: 1.9rem 1.9rem;
-      }
-      ul{
-        width: 1.2rem;
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .iscroll {
         @include flexbox();
-        @include flex-direction();
-        @include align-items();
-        @include justify-content(space-between);
-        li{
-          width: 0.4rem;
-          font-size: 0.26rem;
-          color: #fff;
-          text-align: center;
-          @include align-items();
-        }
-      }
-    }
-    section{
-      @include flexbox();
-      @include flex-direction(column);
-      nav{
-        height: 1.24rem;
-        .swiper-container{
-          width: 100%;
-          height: 100%;
-          img{
+        @include flex-direction(column);
+        > * {
             width: 100%;
-            height: 100%;
-          }
-          .swiper-pagination-bullet-active{
-            background:#fff;
-          }
         }
-      }
-      .mainlist{
-        height: .8rem;
-        background: #fff;
-        ul{
-          width: 100%;
-          height: 100%;
-          @include flexbox();
-          @include flex-direction();
-          @include justify-content(space-between);
-          li{
-            width: 20%;
-            padding-top: 0.08rem;
-            dl{
-              font-size: 0.12rem;
-              text-align: center;
-              dt{
+        header {
+            height: 0.46rem;
+            @include flexbox();
+            @include flex-direction();
+            @include justify-content(space-between);
+            @include align-items();
+            background: #ff6600;
+            .logo {
+                width: 1.31rem;
+                height: 0.41rem;
+                margin-left: 0.09rem;
+                background: url('/build/images/icon.png') 0 -0.59rem no-repeat;
+                background-size: 1.9rem 1.9rem;
+            }
+            ul {
+                width: 1.2rem;
+                @include flexbox();
+                @include flex-direction();
+                @include align-items();
+                @include justify-content(space-between);
+                li {
+                    width: 0.4rem;
+                    font-size: 0.26rem;
+                    color: #fff;
+                    text-align: center;
+                    @include align-items();
+                }
+            }
+        }
+        section {
+            @include flexbox();
+            @include flex-direction(column);
+            nav {
+                height: 1.24rem;
+                .swiper-container {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .swiper-pagination-bullet-active {
+                        background: #fff;
+                    }
+                }
+            }
+            .mainlist {
+                height: 0.85rem;
+                background: #fff;
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    @include flexbox();
+                    @include flex-direction();
+                    @include justify-content(space-between);
+                    li {
+                        width: 20%;
+                        padding: 0.08rem;
+                        dl {
+                            font-size: 0.12rem;
+                            text-align: center;
+                            dt {
+                                span {
+                                    background: #fb8989;
+                                    border-radius: 50%;
+                                    display: block;
+                                    height: 0.45rem;
+                                    line-height: 0.45rem;
+                                    margin: auto auto 0.08rem;
+                                    text-align: center;
+                                    width: 0.45rem;
+                                }
+                                .icon_cake {
+                                    background: #de8dc5;
+                                }
+                                .icon_flowersong {
+                                    background: #77bae6;
+                                }
+                                .icon_gifts {
+                                    background: #f6b365;
+                                }
+                                .icon-Plant {
+                                    background: #88d4c0;
+                                }
+                            }
+                            dd {
+                                .icon_list {
+                                    color: #666;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .flowernav {
+                height: 1.25rem;
+                background: #fff;
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    @include flexbox();
+                    @include flex-direction();
+                    @include justify-content(space-between);
+                    li {
+                        width: 33.3%;
+                        border-left: 1px solid #E5E5E5;
+                        margin-left: -1px;
+                        line-height: 0.26rem;
+                        text-align: center;
+                        font-size: 0.12rem;
+                        color: #999;
+                        position: relative;
+                        img {
+                            border: 0;
+                            width: 100%;
+                        }
+                        i {
+                            position: absolute;
+                            z-index: 2;
+                            left: 0;
+                            top: 4%;
+                            text-align: center;
+                            line-height: 0.18rem;
+                            width: 100%;
+                            .p1 {
+                                font-size: 0.14rem;
+                            }
+                            .red {
+                                color: #f00;
+                            }
+                            .pink {
+                                color: #ff8588;
+                            }
+                            .orange {
+                                color: #f2b354;
+                            }
+                            .p2 {
+                                font-size: 0.12rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .libox {
+                height: 8.52rem;
+                background: #fff;
+                .flowerlist {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0.1rem;
+                    @include flexbox();
+                    @include flex-direction();
+                    @include flex-wrap(wrap);
+                    @include align-content(space-between);
+                    li {
+                        width: 1.47rem;
+                        border: 0.01rem solid #e5e5e5;
+                        text-align: center;
+                        font-size: 13px; //          padding-bottom: .1rem;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            padding-top: 0.05rem;
+                            color: #666;
+                        }
+                        span {
+                            color: #ff0000;
+                        }
+                    }
+                    li:nth-child(odd) {
+                        margin-right: 0.025rem;
+                    }
+                    li:nth-child(even) {
+                        margin-left: 0.025rem;
+                    }
+                }
+            }
+            .white {
+                height: 0.12rem;
+                background: #F1F1F5;
+                border-bottom: 1px solid #E5E5E5;
+                border-top: 1px solid #E5E5E5;
+                width: 100%;
+                margin: 0 auto;
+            }
+            .list{
+                h3{
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include align-items(center);
+                    padding:0 .1rem;
+                    width:100%;
+                    height: .4rem;
+                    span{
+                        line-height: 24px;
+                        font-size: .16rem;
+                        color:#666;
+                    }
+                    a{
+                        font-size: 14px;
+                        color:#666;
+                        font-weight: 100;
+                    }
+                }
+            }
+            .cake{
+                background: #fff;
+                
+                .logolist{
+                    div{
+                        height: .8rem;
+                        width:100%;
+                        padding-bottom: .08rem;
+                        img{width:100%;}
+                    }
+                    ul{
+                        @include flexbox();
+                        @include flex-wrap(wrap);
+                        li{
+                            width:33.3333333%;
+                            border-bottom: 1px solid #E5E5E5;
+                            border-right: 1px solid #E5E5E5;
+                            text-align: center;
+                            img{
+                                width:100%;
+                            }
+                            a{
+                                color: #999;
+                                font-size: 12px;
+                                line-height: .24rem;
+                            }
+                        }
+                        li:nth-child(3n){
+                            border-right: 0;
+                        }
+                    }
+                }
+            }
+            .gift{
+                background: #fff;
+                border-top: 1px solid #E5E5E5;
+                ul{
+                    @include flexbox();
+                    @include flex-wrap(wrap);
+                    border-top: 1px solid #E5E5E5;
+                    li{
+                        width:33.33333%;
+                        border-right: 1px solid #e5e5e5;
+                        h4{
+                            font-size: .14rem;
+                            line-height: .16rem;
+                            color:#666;
+                            font-weight: 100;
+                            padding:0 .05rem;
+                            margin-top:-1.2rem;
+                        }
+                        p{
+                            font-size: .12rem;
+                            color:#b9b9b9;
+                            padding:0 .05rem .9rem;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    li:nth-child(3n ){
+                        border-right: 0;
+                    }
+                }
+            }
+            .uation{
+                background: #fff;
+                .alluation{
+                    margin: 0 2% .1rem;
+                    border:1px solid #E6E6E6;
+                    display: block;
+                    height: .3rem;
+                    font-size: .14rem;
+                    line-height:.28rem;
+                    color:#999;
+                    text-align: center;
+                    span{
+                        color:#f60;
+                    }
+                }
+                ul{
+                    padding: 0 .08rem;
+                    li{
+                        @include flexbox();
+                        @include align-items(flex-start);
+                        border-top: 1px solid #E6E6E6;
+                        padding: .1rem 0;
+                        img{
+                            width:15%;
+                        }
+                        &>div{
+                            @include flex();
+                            h4{
+                                font-size:14px ;
+                                color: #666;
+                            }
+                            div{
+                                @include flexbox();
+                                @include justify-content(space-between);
+                                i{
+                                    width: .78rem;
+                                    height: .26rem;
+                                    background: url(../../images/icon2b.png) -0.01rem .03rem no-repeat;
+                                    background-size: 1.9rem 1.9rem;
+                                    vertical-align: top;
+                                }
+                                span{
+                                    line-height: .2rem;
+                                    color:#ccc;
+                                }
+                            }
+                            p{
+                                font-size: 12px;
+                                color:#999;
+                            }
+                        }
+                    }
+                }
+            }
+            .news{
+                background: #fff;
+                .news-list{
+                    border-top:1px solid #E6E6E6;
+                    width:100%;
+                    padding:  0 .1rem;
+                    a{
+                        display: block;
+                        border-top:1px solid #E6E6E6;
+                        line-height: 20px;
+                        font-size: 14px;
+                        color:#666;
+                        padding:.14rem 0;
+                    }
+                    a:nth-child(1){
+                        border-top:0;
+                    }
+                }
+            }
+            .busin{
+                background: #fff;
+                ul{
+                    @include flexbox();
+                    li{
+                        padding:.1rem 0 ; 
+                        @include flex();
+                        @include flexbox();
+                        @include flex-direction(column); 
+                        @include justify-content(center);
+                        @include align-items(center); 
+                        text-align: center;
+                        img{
+                            height: .45rem;
+                            width: .45rem;
+                        }
+                        span{
+                            margin-top:.05rem;
+                            font-size:12px;
+                            color:#999;
+                        }
+                    }
+                }
+                .tel{
+                    border-top: 1px solid #E6E6E6;
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: #666;
+                    text-align:  center;
+                    padding: .15rem 0;
+                    i{
+                        background: url('http://m.hua.com/images/Phone.png') no-repeat scroll 0 0 rgba(0,0,0,0);
+                        display: inline-block;
+                        height: 20px;
+                        vertical-align: middle;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+        footer{
+            .button{
+                @include flexbox();
+                @include justify-content(space-around);
+                padding:.2rem 0 .1rem;
                 span{
-                  background: #fb8989;
-                  border-radius: 50%;
-                  display: block;
-                  height: .45rem;
-                  line-height: .45rem;
-                  margin: auto auto 0.08rem;
-                  text-align: center;
-                  width: .45rem;
+                    width: 40%;
+                    @include flexbox();
+                    @include justify-content(space-around);
+                    
+                    a{
+                        border:1px solid #f60;
+                        padding:0 .1rem;
+                        border-radius: .05rem;
+                        text-align: center;
+                        height: 30px;
+                        line-height: 28px;
+                        color:#f60;
+                        width: 40%;
+                    }
                 }
-                .icon_cake{
-                  background: #de8dc5;
+                span:nth-child(2){
+                    a{width: 80%;}
                 }
-                .icon_flowersong{
-                  background: #77bae6;
-                }
-                .icon_gifts{
-                  background: #f6b365;
-                }
-                .icon-Plant{
-                  background: #88d4c0;
-                }
-              }
-              dd{
-                .icon_list{
-                  color: #666;
-                }
-              }
             }
-          }
+            .link{
+                text-align: center;
+                height: 24px;
+                line-height: 24px;
+                color:#666;
+                font-size: 12px;
+                a{
+                    color:#666;
+                }
+                span{
+                    padding: 0 .1rem;
+                }
+            }
+            p{
+                font-size: 12px;
+                color:#999;
+                text-align: center;
+                line-height: 24px;
+            }
         }
-      }
-      .flowernav{
-        height: 1.25rem;
-        background: #fff;
-        ul{
-          width: 100%;
-          height: 100%;
-          @include flexbox();
-          @include flex-direction();
-          @include justify-content(space-between);
-          li{
-            width: 33.3%;
-            border-left: 1px solid #E5E5E5;
-            margin-left: -1px;
-            line-height: .26rem;
-            text-align: center;
-            font-size: .12rem;
-            color: #999;
-            position: relative;
-            img{
-              border:0;
-              width:100%;
-            }
-            i{
-              position: absolute;
-              z-index: 2;
-              left: 0;
-              top: 4%;
-              text-align: center;
-              line-height: .18rem;
-              width: 100%;
-              .p1{
-                font-size: 0.14rem;
-              }
-              .red{
-                color: #f00;
-              }
-              .pink{
-                color: #ff8588;
-              }
-              .orange{
-                color: #f2b354;
-              }
-              .p2{
-                font-size: 0.12rem;
-              }
-            }
-          }
-        }
-      }
-      .libox{
-        height: 8.52rem;
-        background: #fff;
-        .flowerlist{
-          height: 100%;
-          width: 100%;
-          padding: 0.1rem;
-          @include flexbox();
-          @include flex-direction();
-          @include flex-wrap(wrap);
-          @include align-content(space-between);
-          li{
-            width: 1.47rem;
-            border:0.01rem solid #e5e5e5;
-            img{
-              width: 100%;
-            }
-          }
-          li:nth-child(odd){
-            margin-right: 0.025rem;
-          }
-          li:nth-child(even){
-            margin-left: 0.025rem;
-          }
-        }
-      }
-
-      .white{
-        height: .12rem;
-        background: #F1F1F5;
-        border-bottom: 1px solid #E5E5E5;
-        border-top: 1px solid #E5E5E5;
-        width: 100%;
-        margin: 0 auto;
-      }
     }
-  }
 }

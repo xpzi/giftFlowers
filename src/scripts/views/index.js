@@ -1,15 +1,13 @@
-var str=require('../tpls/index.string');
+var str=require('../tpls/index.html');
 var common=require('../utils/common.util.js');
 
 common.renderBody($('body'),str);
-new IScroll('.container',{});
 
 var mySwiper = new Swiper('.swiper-container', {
 	autoplay: 3000,
   pagination : '.swiper-pagination',
   paginationClickable :true
 });
-
 
 $('.logo').on('tap',function(){
   location.href = 'index.html';
@@ -38,3 +36,12 @@ $('.no4').on('tap',function(){
 $('.no5').on('tap',function(){
   location.href = '';
 });
+
+      
+$(function(){
+	var huaScroll = new IScroll('.container',{});
+    
+	setTimeout(function(){
+		huaScroll.refresh();		
+	},500);
+})  
