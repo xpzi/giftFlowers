@@ -445,6 +445,7 @@
 		var $back = $('#loginBack input');
 		$back.eq(0).on('blur', function(){
 			var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/; 
+	//		console.log( phone.test($(this).val())  );
 			if( !phone.test($(this).val()) ){
 				$('.err').remove();
 				$(this).after( '<span class="err">请输入正确的手机号码</span>' );
@@ -453,11 +454,10 @@
 			}
 		});
 		$('.mess span').on('tap', function(){
-			
-			var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/; 
-			if( !phone.test($(this).val()) ){
+			var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+			if( !phone.test($back.eq(0).val()) ){
 				$('.err').remove();
-				$(this).after( '<span class="err">请输入正确的手机号码</span>' );
+				$back.eq(0).after( '<span class="err">请输入正确的手机号码</span>' );
 			} else{
 				$('.err').remove();
 				var timer ;
@@ -476,10 +476,24 @@
 					},1000);
 				}
 			}
-			
-			
-
 		});
+		$('#loginBack input[type=button]').eq(0).on('tap', function(){
+			var reg = /\d{6}/;
+			if (  reg.test( $( '.mess input' ).val() ) ){
+				$('.mess').after('<span class="err">请填写短信验证码</span>');
+			}else{
+				$.ajax({
+					url:'/api/userMessage',
+					success: function( res ){
+						console.log( res );
+						alert( "登录成功！");
+					}
+				});
+			}
+			
+			
+		});
+		
 		
 	});
 
@@ -519,6 +533,94 @@
 		});
 
 
+		/* 验证 */
+		$('#phone .haoma input').on('blur', function(){
+			var reg = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+			$('#phone .haoma + .err' ).remove();
+			if( !reg.test( $(this).val() )){
+				$('#phone .haoma').after('<span class="err">请输入你要注册的手机号</span>');
+			}
+		});
+		$('#phone .shoujihao input').on('blur' , function(){
+			var phone = /\S{6,16}/;
+			$('#phone .shoujihao + .err').remove();
+			if( !phone.test( $(this).val() ) ){
+				$(this).parent( ).after('<span class="err">请设置6-20位字母和数字登录密码</span>');
+			}
+		});
+		$('#phone  input[type=button]').eq(0).on('tap', function(){
+			
+			var reg = /\d{6}/;//短信验证码
+			$('.err').remove();
+			if( !reg.test( $('.duanxin input').eq(0).val() ) ){
+				$('.duanxin' ).after( '<span class="err">请输入短信验证码</span>' );
+			}
+			$('#phone .haoma  input').trigger('blur');
+			$('#phone .shoujihao input').trigger('blur');
+			
+			if( $('.err').length == 0 ){
+				var user = {
+					user: $('.haoma input').eq(0).val(),
+					password: $('.shoujihao input').eq(0).val()
+				}
+				users = store('user');
+				if( !users ){
+					users = [];
+					users.push(user);
+				}else{
+					users = JSON.parse( users);
+					for(var i=0; i< users.length; i++){
+						if( users[i].id == user.id  ){
+							break;
+						}
+					}
+					if( i ==  users.length ){
+						users.push(user );
+						store('user' , JSON.stringify(users));
+						//注册成功
+					}else{
+						//用户已注册
+					}
+				}
+			}
+		});
+		
+		
+		$('.shoujihao span').on('tap' , function(){
+			if( $(this).css('text-align') == 'left' ){
+				$(this).css('text-align', 'right');
+				$(this).find('i').css('background' , "#ffad0d");
+			} else{
+				$(this).css('text-align', 'left');
+				$(this).find('i').css('background' , "#ccc");
+			}		
+		});
+		
+		$('.duanxin span').on('tap', function(){
+			var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+			if( phone.test( $('.haoma input').eq(0).val()) ){
+				$('.err').remove();
+				var timer ;
+				var i = 29;
+				var self = this;
+				$(self).html( 30+"秒后可再次发送" );
+				if(!timer){
+					timer = setInterval( function(){
+						$(self).html( i+"秒后可再次发送" );
+						if(!(--i)){ 
+							clearInterval( timer ); 
+							$(self).html( '获取验证码' );
+							//假装有验证码
+							$(self).siblings('input').val("123849");
+						}
+					},1000);
+				}
+			} else{
+				$('.err').remove();
+				$('.haoma').eq(0).after('<span class="err">请输入你要注册的手机号</span>');
+			}
+		});
+
 	});
 
 
@@ -526,7 +628,7 @@
 /* 12 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container  regist \">	<header>等待</header>	<div class=\"deScoll\">		<div class=\"deScoll-box\">						<ul class=\"reg\">				<li class=\"active\">手机注册</li>				<li>邮箱注册</li>			</ul>			      			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<form class=\"phone\" action=\"\">							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span>  </label>							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入手机号\" /><span class=\"err\">此项为必填项，请输入你要注册的手机号</span></label>							<label class=\"shoujihao\"><input type=\"number\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"duanxin\"><input type=\"text\" placeholder=\"输入短信验证码\" /><span>获取短信验证码</span></label>														<input type=\"button\" value=\"提交注册\" />						</form>  					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<form class=\"phone emil\" action=\"\">							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入手机号\" /><span class=\"err\">此项为必填项，请输入你要注册的手机号</span></label>							<label class=\"shoujihao\"><input type=\"number\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span></label>														<input type=\"button\" value=\"提交注册\" />						</form>					</div>				</div>			</div>												<footer>等待</footer>		</div>	</div></div>"
+	module.exports = "<div class=\"container  regist \">	<header>等待</header>	<div class=\"deScoll\">		<div class=\"deScoll-box\">						<ul class=\"reg\">				<li class=\"active\">手机注册</li>				<li>邮箱注册</li>			</ul>			      			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<form class=\"phone\" id=\"phone\" action=\"\">							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span>  </label>							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入手机号\" /></label>							<!--<span class=\"err\">此项为必填项，请输入你要注册的手机号</span>-->							<label class=\"shoujihao\"><input type=\"text\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"duanxin\"><input type=\"text\" placeholder=\"输入短信验证码\" /><span>获取短信验证码</span></label>														<input type=\"button\" value=\"提交注册\" />						</form>  					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<form id=\"emil\" class=\"phone emil\" action=\"\">							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入邮箱\" /></label>							<label class=\"shoujihao\"><input type=\"text\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span></label>							<input type=\"button\" value=\"提交注册\" />						</form>					</div>				</div>			</div>												<footer>等待</footer>		</div>	</div></div>"
 
 /***/ }
 /******/ ]);
