@@ -782,11 +782,12 @@ html, body {
           text-align: center;
           padding: 0 .2rem; }
       .container .deScoll #slider-pic .details {
-        height: .72rem;
+        /* height: .72rem; */
+        padding: .1rem 0;
         display: flex;
         align-items: center; }
         .container .deScoll #slider-pic .details a {
-          height: .48rem;
+          /* height: .48rem; */
           flex: 1;
           display: flex; }
           .container .deScoll #slider-pic .details a p {
@@ -799,10 +800,13 @@ html, body {
             .container .deScoll #slider-pic .details a p span {
               color: #f60;
               line-height: 24px; }
-          .container .deScoll #slider-pic .details a span {
-            height: 100%;
+          .container .deScoll #slider-pic .details a > span {
+            /* height: 100%; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: .25rem;
-            line-height: .48rem;
+            /* line-height: .48rem; */
             color: #666;
             text-align: right;
             transform: rotate(180deg); }

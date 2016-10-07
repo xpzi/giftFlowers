@@ -7,20 +7,20 @@
 				<section id="slider-pic">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-						    <div class="swiper-slide"><img src="http://img01.hua.com/uploadpic/newpic/9012147.jpg" alt="" /></div>
-						    <div class="swiper-slide"><img src="http://img01.hua.com/uploadpic/newpic/9012147.jpg" alt="" /></div>
-						    <div class="swiper-slide"><img src="http://img01.hua.com/uploadpic/newpic/9012147.jpg" alt="" /></div>
+							{{each imgs as value i}}
+								<div class="swiper-slide"><img src="{{value}}" alt="" /></div>
+							{{/each}}
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
 					<div class="addcart">
-						<span>￥129</span>
+						<span>￥{{price}}</span>
 						<span>加入购物车</span>
 					</div>
-					<div class="details">
+					<div class="details" data-url="./alldetail.html?{{id}}-0">
 						<a href="#">
-							<p>纯美时光-戴安娜粉玫瑰11枝，搭配白色满天星栀子叶 <span>新品</span></p>
-							<span class="iconfont">&#xe679;</span>
+							<p>{{title}}<span>{{state}}</span></p>
+							<span><i  class="iconfont" >&#xe679;</i> </span>
 						</a>
 					</div>
 				</section>
@@ -33,13 +33,13 @@
 				<div class="kongbai"></div>
 				<section id="pictext">
 					<ul>
-						<li><span>材料：</span>戴安娜粉玫瑰11枝，搭配白色满天星和栀子叶</li>
-						<li><span>花语：</span>一段最纯最真的时光，在岁月里静静绽放！很爱你，想把你捧在手心，放在心里......11枝红玫瑰，寓意一心一意。纵然途中万般风景，我的眼里只有你！</li>
-						<li><span>配送：</span>全国（可配送至全国1000多城市）	</li>
-						<li><span>说明：</span>特惠价！</li>
+						<li><span>材料：</span>{{material}}</li>
+						<li><span>花语：</span>{{says}}</li>
+						<li><span>配送：</span>{{delivery}}</li>
+						<li><span>说明：</span>{{explain}}</li>
 					</ul>
 					
-					<span>更多图文详情 <i class="iconfont">&#xe679;</i>	</span>
+					<span data-url="./alldetail.html?{{id}}-0">更多图文详情 <i class="iconfont">&#xe679;</i>	</span>
 				</section>
 				<div class="kongbai"></div>
 				<section class="contact"> 
@@ -50,93 +50,64 @@
 				<section id="comment">
 					<h3>商品评价</h3>
 					<ul>
-						<li>
-							<div class="t">
-								<img src="http://img01.hua.com/uploadpic/newpic/5201103.jpg_80x87.jpg" alt="" />
-								<span class="xin"><span></span></span>
-								<span class="ip">111.161.105.*</span>
-							</div>
-							<p>花很美，也很新鲜，蛋糕也不错，服务好</p>
-							<div class="b">
-								<span><img src="http://img02.hua.com/icon/touxiang_m.png?3"/></span>
-								<span>yoyobob*</span>
-								<span>配送地址：天津市南开区广开街*</span>
-							</div>
-						</li>
-						<li>
-							<div class="t">
-								<img src="http://img01.hua.com/uploadpic/newpic/5201103.jpg_80x87.jpg" alt="" />
-								<span class="xin"><span></span></span>
-								<span class="ip">111.161.105.*</span>
-							</div>
-							<p>花很美，也很新鲜，蛋糕也不错，服务好</p>
-							<div class="b">
-								<span><img src="http://img02.hua.com/icon/touxiang_m.png?3"/></span>
-								<span>yoyobob*</span>
-								<span>配送地址：天津市南开区广开街*</span>
-							</div>
-						</li>
+						{{each evaluation as value i}}
+							<li>
+								<div class="t">
+									<img src="{{value.imgsrc}}" alt="" />
+									<span class="xin"><span></span></span>
+									<span class="ip">{{value.ip}}</span>
+								</div>
+								<p>{{value.content}}</p>
+								<div class="b">
+									<span><img src="http://img02.hua.com/icon/touxiang_m.png?3"/></span>
+									<span>{{value.name}}</span>
+									<span>配送地址：{{value.path}}</span>
+								</div>
+							</li>
+						{{/each}}
 					</ul>
 					<div class="more">
-						<a href="#">【查看本商品全部评价】</a>
-						<a href="#">【查看最近所有商品评价181550条】</a>
+						<a href="./alldetail.html?{{id}}-1">【查看本商品全部评价】</a>
+						<a href="./alldetail.html?{{id}}-1">【查看最近所有商品评价181550条】</a>
 					</div>
 					
 				</section>
 				
 				<div class="kongbai"></div>
 				<section class="Story">
-					<div id="show" class=" title">
+					<div id="show"  class=" title" data-url="./alldetail.html?{{id}}-2">
 						<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>
 						<i class="iconfont">&#xe679;</i>	
 					</div>
 					<div class="scroll-pai">
 						<ul>
+							{{each show as value i}}
 							<li>
-								<img src="http://www.hua.com/uploadshipai/201672516322113799.jpg" alt="" />
-								<p>订单：156661***</p>
-								<p>辽宁省大连市旅顺经*</p>
+								<img src="{{value.imgsrc}}" alt="" />
+								<p>订单：{{value.danhao}}</p>
+								<p>{{value.path}}</p>
 							</li>
-							<li>
-								<img src="http://www.hua.com/uploadshipai/201672516322113799.jpg" alt="" />
-								<p>订单：156661***</p>
-								<p>辽宁省大连市旅顺经*</p>
-							</li>
-							<li>
-								<img src="http://www.hua.com/uploadshipai/201672516322113799.jpg" alt="" />
-								<p>订单：156661***</p>
-								<p>辽宁省大连市旅顺经*</p>
-							</li>
-							<li>
-								<img src="http://www.hua.com/uploadshipai/201672516322113799.jpg" alt="" />
-								<p>订单：156661***</p>
-								<p>辽宁省大连市旅顺经*</p>
-							</li>
+							{{/each}}
 						</ul>
 					</div>
 				</section>
 				
 				<div class="kongbai"></div>
 				<section class="Story">
-					<div id="story" class="title">
+					<div id="story" class="title" data-url="./alldetail.html?{{id}}-3">
 						<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>
 						<i class="iconfont">&#xe679;</i>
 					</div>
 					<div class="list">
-						<div class="item">
-							<img src="http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg" alt="" />
-							<div class="text">
-								<h3>在最好的年华遇见你</h3>
-								<p>香槟玫瑰与爱情相关，带有一种朦胧优雅的情愫。这款阳光海岸，如同海岸线上冉冉升起的太阳，将爱情的温暖带给每个吹着海风的人。临近七夕，一束阳光海岸给爱人，也给这美好的爱情时光。…</p>
+						{{each story as value i}}
+							<div class="item">
+								<img src="{{value.imgsrc}}" alt="" />
+								<div class="text">
+									<h3>{{value.title}}</h3>
+									<p>{{value.content}}<p>
+								</div>
 							</div>
-						</div>
-						<div class="item">
-							<img src="http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg" alt="" />
-							<div class="text">
-								<h3>在最好的年华遇见你</h3>
-								<p>香槟玫瑰与爱情相关，带有一种朦胧优雅的情愫。这款阳光海岸，如同海岸线上冉冉升起的太阳，将爱情的温暖带给每个吹着海风的人。临近七夕，一束阳光海岸给爱人，也给这美好的爱情时光。…</p>
-							</div>
-						</div>
+						{{/each}}
 					</div>
 				</section>
 				

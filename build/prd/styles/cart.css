@@ -765,7 +765,7 @@ html, body {
       border-top: 1px solid #e4e4e4; }
       .container .deScoll .clearing div:nth-child(1) {
         color: #f60; }
-      .container .deScoll .clearing div:nth-child(2) span:nth-child(1) {
+      .container .deScoll .clearing div:nth-child(2) span:nth-child(1) a {
         color: #888; }
       .container .deScoll .clearing div:nth-child(2) span:nth-child(2) {
         display: inline-block;

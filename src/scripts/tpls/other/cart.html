@@ -10,21 +10,26 @@
 			<!-- 结算 -->
 			<div class="clearing">
 				<div>共1件商品</div>
-				<div><span>继续挑选 | </span><span>去结算</span></div>
+				<div><span> <a href="./index.html">继续挑选</a> | </span><span>去结算</span></div>
 			</div>
 			
 			
 			<!-- 购物车列表 -->
-			<ul class="splist">
+			<script id="splistTpl" type="text/html">
+				{{each list as value i }}
 				<li>
-					<div><img src="http://img01.hua.com/uploadpic/newpic/9012147.jpg_80x87.jpg" alt=""/></div>
+					<div><img src="{{value.img}}" alt=""/></div>
 					<div>
-						<h3><span>[鲜花]</span><a href="#">纯美时光</a></h3>
-						<p>现价: <span > ￥129</span></p>
-						<p>数量：<span>-</span><span><input type="text" value="1"/></span><span>+</span></p>
+						<h3><span>[{{value.type}}]</span><a href="#">{{value.name}}</a></h3>
+						<p>现价: <span > ￥{{value.price}}</span></p>
+						<p>数量：<span class="sub">-</span><span><input class="sum" type="text" data-id="{{value.id}}" value="{{value.sum}}"/></span><span class="add">+</span></p>
 					</div>
 					<div class="del"><i></i></div>
 				</li>
+				{{/each}}
+			</script>
+			<ul id="splist"  class="splist">
+				
 			</ul>
 			
 			<!-- total 总共 -->

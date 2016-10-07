@@ -1,86 +1,97 @@
 {
-	"title": "ÇéÓÐ¶ÀÖÓ-´÷°²ÄÈ·ÛÃµ¹å50Ö¦",
-	"state": "ÐÂÆ·ÌØ¼Û",
+	"id":"9012126",
+	"type":"é²œèŠ±",
+	"name":"æƒ…æœ‰ç‹¬é’Ÿ",
+	"title": "æƒ…æœ‰ç‹¬é’Ÿ-æˆ´å®‰å¨œç²‰çŽ«ç‘°50æž",
+	"state": "æ–°å“ç‰¹ä»·",
 	"imgs":["http://img01.hua.com/uploadpic/newpic/9012126.jpg"],
 	"price":339,
-	"material":"´÷°²ÄÈ·ÛÃµ¹å50Ö¦£¬Ê¯ÖñÃ·",
-	"says":"·çÀïÓÐÖÖÀËÂþÆøÏ¢»º»ºÁ÷¶¯£¬ÌôÆðÁË°®µÄÇéÐ÷£¬Ò»µãÒ»µÎÁ÷ÈëÐÄÖÐ£¬¶ÔÄãÇéÓÐ¶ÀÖÓ£¬Ïë°ÑÕû¸öÊÀ½ç¶¼¸øÄã£¬¶¼²»¾õµÃ»ÄÃý¡£",
-	"delivery":"È«¹ú£¨¿ÉÅäËÍÖÁÈ«¹ú1000¶à³ÇÊÐ£©",
+	"material":"æˆ´å®‰å¨œç²‰çŽ«ç‘°50æžï¼ŒçŸ³ç«¹æ¢…",
+	"says":"é£Žé‡Œæœ‰ç§æµªæ¼«æ°”æ¯ç¼“ç¼“æµåŠ¨ï¼ŒæŒ‘èµ·äº†çˆ±çš„æƒ…ç»ªï¼Œä¸€ç‚¹ä¸€æ»´æµå…¥å¿ƒä¸­ï¼Œå¯¹ä½ æƒ…æœ‰ç‹¬é’Ÿï¼Œæƒ³æŠŠæ•´ä¸ªä¸–ç•Œéƒ½ç»™ä½ ï¼Œéƒ½ä¸è§‰å¾—è’è°¬ã€‚",
+	"delivery":"å…¨å›½ï¼ˆå¯é…é€è‡³å…¨å›½1000å¤šåŸŽå¸‚ï¼‰",
+	"explain":"ç‰¹æƒ ä»·ï¼",
+	"contentImg":[
+		"http://img01.hua.com/uploadpic/images/2016629164236865939.jpg",
+		"http://img01.hua.com/uploadpic/images/20166291642418331286.jpg",
+		"http://img01.hua.com/uploadpic/images/20166291642458726794.jpg",
+		"http://img01.hua.com/uploadpic/images/20166291642491265429.jpg",
+		"http://img01.hua.com/uploadpic/images/20166291642545131518.jpg"
+	],
 	"evaluation":[{
 		"imgsrc" : "http://img01.hua.com/uploadpic/newpic/9012126.jpg_80x87.jpg",
 		"ip":"210.12.222.*",
-		"content":"¿Í·þ·Ç³£ÂúÒâ£¬ÅÉËÍ³¬¼¶¿ì£¬·Ç³£ÂúÒâµÄÒ»´Î¹ºÂò",
+		"content":"å®¢æœéžå¸¸æ»¡æ„ï¼Œæ´¾é€è¶…çº§å¿«ï¼Œéžå¸¸æ»¡æ„çš„ä¸€æ¬¡è´­ä¹°",
 		"name":"1357797*",
-		"path":"ÉÏº£ÊÐÃöÐÐÇøäî±¦Â·*"
+		"path":"ä¸Šæµ·å¸‚é—½è¡ŒåŒºæ¼•å®è·¯*"
 	},{
 		"imgsrc" : "http://img01.hua.com/uploadpic/newpic/9012126.jpg_80x87.jpg",
 		"ip":"210.12.222.*",
-		"content":"¿Í·þ·Ç³£ÂúÒâ£¬ÅÉËÍ³¬¼¶¿ì£¬·Ç³£ÂúÒâµÄÒ»´Î¹ºÂò",
+		"content":"å®¢æœéžå¸¸æ»¡æ„ï¼Œæ´¾é€è¶…çº§å¿«ï¼Œéžå¸¸æ»¡æ„çš„ä¸€æ¬¡è´­ä¹°",
 		"name":"1357797*",
-		"path":"ÉÏº£ÊÐÃöÐÐÇøäî±¦Â·*"
+		"path":"ä¸Šæµ·å¸‚é—½è¡ŒåŒºæ¼•å®è·¯*"
 	},{
 		"imgsrc" : "http://img01.hua.com/uploadpic/newpic/9012126.jpg_80x87.jpg",
 		"ip":"210.12.222.*",
-		"content":"¿Í·þ·Ç³£ÂúÒâ£¬ÅÉËÍ³¬¼¶¿ì£¬·Ç³£ÂúÒâµÄÒ»´Î¹ºÂò",
+		"content":"å®¢æœéžå¸¸æ»¡æ„ï¼Œæ´¾é€è¶…çº§å¿«ï¼Œéžå¸¸æ»¡æ„çš„ä¸€æ¬¡è´­ä¹°",
 		"name":"1357797*",
-		"path":"ÉÏº£ÊÐÃöÐÐÇøäî±¦Â·*"
+		"path":"ä¸Šæµ·å¸‚é—½è¡ŒåŒºæ¼•å®è·¯*"
 	},{
 		"imgsrc" : "http://img01.hua.com/uploadpic/newpic/9012126.jpg_80x87.jpg",
 		"ip":"210.12.222.*",
-		"content":"¿Í·þ·Ç³£ÂúÒâ£¬ÅÉËÍ³¬¼¶¿ì£¬·Ç³£ÂúÒâµÄÒ»´Î¹ºÂò",
+		"content":"å®¢æœéžå¸¸æ»¡æ„ï¼Œæ´¾é€è¶…çº§å¿«ï¼Œéžå¸¸æ»¡æ„çš„ä¸€æ¬¡è´­ä¹°",
 		"name":"1357797*",
-		"path":"ÉÏº£ÊÐÃöÐÐÇøäî±¦Â·*"
+		"path":"ä¸Šæµ·å¸‚é—½è¡ŒåŒºæ¼•å®è·¯*"
 	},{
 		"imgsrc" : "http://img01.hua.com/uploadpic/newpic/9012126.jpg_80x87.jpg",
 		"ip":"210.12.222.*",
-		"content":"¿Í·þ·Ç³£ÂúÒâ£¬ÅÉËÍ³¬¼¶¿ì£¬·Ç³£ÂúÒâµÄÒ»´Î¹ºÂò",
+		"content":"å®¢æœéžå¸¸æ»¡æ„ï¼Œæ´¾é€è¶…çº§å¿«ï¼Œéžå¸¸æ»¡æ„çš„ä¸€æ¬¡è´­ä¹°",
 		"name":"1357797*",
-		"path":"ÉÏº£ÊÐÃöÐÐÇøäî±¦Â·*"
+		"path":"ä¸Šæµ·å¸‚é—½è¡ŒåŒºæ¼•å®è·¯*"
 	},{
 		"imgsrc" : "http://img01.hua.com/uploadpic/newpic/9012126.jpg_80x87.jpg",
 		"ip":"210.12.222.*",
-		"content":"¿Í·þ·Ç³£ÂúÒâ£¬ÅÉËÍ³¬¼¶¿ì£¬·Ç³£ÂúÒâµÄÒ»´Î¹ºÂò",
+		"content":"å®¢æœéžå¸¸æ»¡æ„ï¼Œæ´¾é€è¶…çº§å¿«ï¼Œéžå¸¸æ»¡æ„çš„ä¸€æ¬¡è´­ä¹°",
 		"name":"1357797*",
-		"path":"ÉÏº£ÊÐÃöÐÐÇøäî±¦Â·*"
+		"path":"ä¸Šæµ·å¸‚é—½è¡ŒåŒºæ¼•å®è·¯*"
 	}],
 	"show":[{
 		"imgsrc":"http://www.hua.com/uploadshipai/20168214563997974.jpg",
 		"danhao":"157519***",
-		"path":"½õ½­Çø£¬¾²°²Â·1ºÅ*"
+		"path":"é”¦æ±ŸåŒºï¼Œé™å®‰è·¯1å·*"
 	},{
 		"imgsrc":"http://www.hua.com/uploadshipai/20168214563997974.jpg",
 		"danhao":"157519***",
-		"path":"½õ½­Çø£¬¾²°²Â·1ºÅ*"
+		"path":"é”¦æ±ŸåŒºï¼Œé™å®‰è·¯1å·*"
 	},{
 		"imgsrc":"http://www.hua.com/uploadshipai/20168214563997974.jpg",
 		"danhao":"157519***",
-		"path":"½õ½­Çø£¬¾²°²Â·1ºÅ*"
+		"path":"é”¦æ±ŸåŒºï¼Œé™å®‰è·¯1å·*"
 	}],
 	"story":[{
-		"title":"ÔÚ×îºÃµÄÄê»ªÓö¼ûÄã",
+		"title":"åœ¨æœ€å¥½çš„å¹´åŽé‡è§ä½ ",
 		"imgsrc":"http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg",
 		"time":"2016-08-08",
-		"content":"ÏãéÄÃµ¹åÓë°®ÇéÏà¹Ø£¬´øÓÐÒ»ÖÖëüëÊÓÅÑÅµÄÇéãº¡£Õâ¿îÑô¹âº£°¶£¬ÈçÍ¬º£°¶ÏßÉÏÈ½È½ÉýÆðµÄÌ«Ñô£¬½«°®ÇéµÄÎÂÅ¯´ø¸øÃ¿¸ö´µ×Åº£·çµÄÈË¡£ÁÙ½üÆßÏ¦£¬Ò»ÊøÑô¹âº£°¶¸ø°®ÈË£¬Ò²¸øÕâÃÀºÃµÄ°®ÇéÊ±¹â¡£¡­"
+		"content":"é¦™æ§ŸçŽ«ç‘°ä¸Žçˆ±æƒ…ç›¸å…³ï¼Œå¸¦æœ‰ä¸€ç§æœ¦èƒ§ä¼˜é›…çš„æƒ…æ„«ã€‚è¿™æ¬¾é˜³å…‰æµ·å²¸ï¼Œå¦‚åŒæµ·å²¸çº¿ä¸Šå†‰å†‰å‡èµ·çš„å¤ªé˜³ï¼Œå°†çˆ±æƒ…çš„æ¸©æš–å¸¦ç»™æ¯ä¸ªå¹ç€æµ·é£Žçš„äººã€‚ä¸´è¿‘ä¸ƒå¤•ï¼Œä¸€æŸé˜³å…‰æµ·å²¸ç»™çˆ±äººï¼Œä¹Ÿç»™è¿™ç¾Žå¥½çš„çˆ±æƒ…æ—¶å…‰ã€‚â€¦"
 	},{
-		"title":"ÔÚ×îºÃµÄÄê»ªÓö¼ûÄã",
+		"title":"åœ¨æœ€å¥½çš„å¹´åŽé‡è§ä½ ",
 		"imgsrc":"http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg",
 		"time":"2016-08-08",
-		"content":"ÏãéÄÃµ¹åÓë°®ÇéÏà¹Ø£¬´øÓÐÒ»ÖÖëüëÊÓÅÑÅµÄÇéãº¡£Õâ¿îÑô¹âº£°¶£¬ÈçÍ¬º£°¶ÏßÉÏÈ½È½ÉýÆðµÄÌ«Ñô£¬½«°®ÇéµÄÎÂÅ¯´ø¸øÃ¿¸ö´µ×Åº£·çµÄÈË¡£ÁÙ½üÆßÏ¦£¬Ò»ÊøÑô¹âº£°¶¸ø°®ÈË£¬Ò²¸øÕâÃÀºÃµÄ°®ÇéÊ±¹â¡£¡­"
+		"content":"é¦™æ§ŸçŽ«ç‘°ä¸Žçˆ±æƒ…ç›¸å…³ï¼Œå¸¦æœ‰ä¸€ç§æœ¦èƒ§ä¼˜é›…çš„æƒ…æ„«ã€‚è¿™æ¬¾é˜³å…‰æµ·å²¸ï¼Œå¦‚åŒæµ·å²¸çº¿ä¸Šå†‰å†‰å‡èµ·çš„å¤ªé˜³ï¼Œå°†çˆ±æƒ…çš„æ¸©æš–å¸¦ç»™æ¯ä¸ªå¹ç€æµ·é£Žçš„äººã€‚ä¸´è¿‘ä¸ƒå¤•ï¼Œä¸€æŸé˜³å…‰æµ·å²¸ç»™çˆ±äººï¼Œä¹Ÿç»™è¿™ç¾Žå¥½çš„çˆ±æƒ…æ—¶å…‰ã€‚â€¦"
 	},{
-		"title":"ÔÚ×îºÃµÄÄê»ªÓö¼ûÄã",
+		"title":"åœ¨æœ€å¥½çš„å¹´åŽé‡è§ä½ ",
 		"imgsrc":"http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg",
 		"time":"2016-08-08",
-		"content":"ÏãéÄÃµ¹åÓë°®ÇéÏà¹Ø£¬´øÓÐÒ»ÖÖëüëÊÓÅÑÅµÄÇéãº¡£Õâ¿îÑô¹âº£°¶£¬ÈçÍ¬º£°¶ÏßÉÏÈ½È½ÉýÆðµÄÌ«Ñô£¬½«°®ÇéµÄÎÂÅ¯´ø¸øÃ¿¸ö´µ×Åº£·çµÄÈË¡£ÁÙ½üÆßÏ¦£¬Ò»ÊøÑô¹âº£°¶¸ø°®ÈË£¬Ò²¸øÕâÃÀºÃµÄ°®ÇéÊ±¹â¡£¡­"
+		"content":"é¦™æ§ŸçŽ«ç‘°ä¸Žçˆ±æƒ…ç›¸å…³ï¼Œå¸¦æœ‰ä¸€ç§æœ¦èƒ§ä¼˜é›…çš„æƒ…æ„«ã€‚è¿™æ¬¾é˜³å…‰æµ·å²¸ï¼Œå¦‚åŒæµ·å²¸çº¿ä¸Šå†‰å†‰å‡èµ·çš„å¤ªé˜³ï¼Œå°†çˆ±æƒ…çš„æ¸©æš–å¸¦ç»™æ¯ä¸ªå¹ç€æµ·é£Žçš„äººã€‚ä¸´è¿‘ä¸ƒå¤•ï¼Œä¸€æŸé˜³å…‰æµ·å²¸ç»™çˆ±äººï¼Œä¹Ÿç»™è¿™ç¾Žå¥½çš„çˆ±æƒ…æ—¶å…‰ã€‚â€¦"
 	},{
-		"title":"ÔÚ×îºÃµÄÄê»ªÓö¼ûÄã",
+		"title":"åœ¨æœ€å¥½çš„å¹´åŽé‡è§ä½ ",
 		"imgsrc":"http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg",
 		"time":"2016-08-08",
-		"content":"ÏãéÄÃµ¹åÓë°®ÇéÏà¹Ø£¬´øÓÐÒ»ÖÖëüëÊÓÅÑÅµÄÇéãº¡£Õâ¿îÑô¹âº£°¶£¬ÈçÍ¬º£°¶ÏßÉÏÈ½È½ÉýÆðµÄÌ«Ñô£¬½«°®ÇéµÄÎÂÅ¯´ø¸øÃ¿¸ö´µ×Åº£·çµÄÈË¡£ÁÙ½üÆßÏ¦£¬Ò»ÊøÑô¹âº£°¶¸ø°®ÈË£¬Ò²¸øÕâÃÀºÃµÄ°®ÇéÊ±¹â¡£¡­"
+		"content":"é¦™æ§ŸçŽ«ç‘°ä¸Žçˆ±æƒ…ç›¸å…³ï¼Œå¸¦æœ‰ä¸€ç§æœ¦èƒ§ä¼˜é›…çš„æƒ…æ„«ã€‚è¿™æ¬¾é˜³å…‰æµ·å²¸ï¼Œå¦‚åŒæµ·å²¸çº¿ä¸Šå†‰å†‰å‡èµ·çš„å¤ªé˜³ï¼Œå°†çˆ±æƒ…çš„æ¸©æš–å¸¦ç»™æ¯ä¸ªå¹ç€æµ·é£Žçš„äººã€‚ä¸´è¿‘ä¸ƒå¤•ï¼Œä¸€æŸé˜³å…‰æµ·å²¸ç»™çˆ±äººï¼Œä¹Ÿç»™è¿™ç¾Žå¥½çš„çˆ±æƒ…æ—¶å…‰ã€‚â€¦"
 	},{
-		"title":"ÔÚ×îºÃµÄÄê»ªÓö¼ûÄã",
+		"title":"åœ¨æœ€å¥½çš„å¹´åŽé‡è§ä½ ",
 		"imgsrc":"http://img01.hua.com/uploadpic/newpic/9012011.jpg_80x87.jpg",
 		"time":"2016-08-08",
-		"content":"ÏãéÄÃµ¹åÓë°®ÇéÏà¹Ø£¬´øÓÐÒ»ÖÖëüëÊÓÅÑÅµÄÇéãº¡£Õâ¿îÑô¹âº£°¶£¬ÈçÍ¬º£°¶ÏßÉÏÈ½È½ÉýÆðµÄÌ«Ñô£¬½«°®ÇéµÄÎÂÅ¯´ø¸øÃ¿¸ö´µ×Åº£·çµÄÈË¡£ÁÙ½üÆßÏ¦£¬Ò»ÊøÑô¹âº£°¶¸ø°®ÈË£¬Ò²¸øÕâÃÀºÃµÄ°®ÇéÊ±¹â¡£¡­"
+		"content":"é¦™æ§ŸçŽ«ç‘°ä¸Žçˆ±æƒ…ç›¸å…³ï¼Œå¸¦æœ‰ä¸€ç§æœ¦èƒ§ä¼˜é›…çš„æƒ…æ„«ã€‚è¿™æ¬¾é˜³å…‰æµ·å²¸ï¼Œå¦‚åŒæµ·å²¸çº¿ä¸Šå†‰å†‰å‡èµ·çš„å¤ªé˜³ï¼Œå°†çˆ±æƒ…çš„æ¸©æš–å¸¦ç»™æ¯ä¸ªå¹ç€æµ·é£Žçš„äººã€‚ä¸´è¿‘ä¸ƒå¤•ï¼Œä¸€æŸé˜³å…‰æµ·å²¸ç»™çˆ±äººï¼Œä¹Ÿç»™è¿™ç¾Žå¥½çš„çˆ±æƒ…æ—¶å…‰ã€‚â€¦"
 	}]
 	
 }

@@ -1,41 +1,50 @@
 var common = require('../../utils/common-util.js');
 var T = template;
 var html = require( '../../tpls/other/detail.html' );
-
-common.randerBody(html);  
-
-
-var picSwiper = new Swiper('.swiper-container', {
-	pagination : '.swiper-pagination',
-	paginationType : 'custom',
-	paginationCustomRender: function (swiper, current, total) {
-		return current + '/' + total;
+$.ajax({
+	url: '/api/spid/9012126',
+	success: function (res) {
+	
+		var rander = template.compile(html);
+		var newhtml = rander(res);
+		
+		common.randerBody(newhtml);
+		callbackFunc(res);
 	}
-});
+});  
 
-//¼ÓÈë¹ºÎï³µÖ±½Ó Ìø×ªµ½¹ºÎï³µ Ò³Ãæ
-$('.addcart span').eq(1).on('tap' , function(){
-	window.location.href = './cart.html';
-});
+function callbackFunc(sp){
+	var sp = sp;
+	var picSwiper = new Swiper('.swiper-container', {
+		pagination : '.swiper-pagination',
+		paginationType : 'custom',
+		paginationCustomRender: function (swiper, current, total) {
+			return current + '/' + total;
+		}
+	});
 
-//Ìø×ªµ½ÉÌÆ·È«²¿ÐÅÏ¢Ò³Ãæ
-$('.details').on('tap' , function(){
-	window.location.href = './alldetail.html?0';
-});
-$('#pictext>span').on('tap' , function(){
-	window.location.href = './alldetail.html?0';
-});
-$('#comment .more a').on('tap' , function(){
-	window.location.href = './alldetail.html?1';
-});
-$('#show').on('tap' , function(){
-	window.location.href = './alldetail.html?2';
-});
-$('#story').on('tap' , function(){
-	window.location.href = './alldetail.html?3';
-});
+	setTimeout( function(){
+		var deScroll = new IScroll('.deScoll');
+	},1000);
 
+	//åŠ å…¥è´­ç‰©è½¦ç›´æŽ¥ è·³è½¬åˆ°è´­ç‰©è½¦ é¡µé¢
+	$('.addcart span').eq(1).on('tap' , function(){
+		common.addCart( sp );
+		window.location.href = './cart.html';
+	});
 
-window.onload = function(){
-	var deScroll = new IScroll('.deScoll');
-} 
+	//è·³è½¬åˆ°å•†å“å…¨éƒ¨ä¿¡æ¯é¡µé¢
+	$('.details').on('tap' , function(){
+		window.location.href =  $(this).attr('data-url');
+	});
+	$('#pictext>span').on('tap' , function(){
+		window.location.href =  $(this).attr('data-url');
+	});
+	$('#show').on('tap' , function(){
+		window.location.href =  $(this).attr('data-url');
+	});
+	$('#story').on('tap' , function(){
+		window.location.href =  $(this).attr('data-url');
+	});
+	
+}

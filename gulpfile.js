@@ -39,27 +39,19 @@
             				res.end(data);
             			});
             			return;
-					case '/api/apid/content':
-            			fs.readFile('./mock/spid/content.string', function(err, data){
+					case '/api/spid/9012126':
+            			res.setHeader('Content-Type', 'application/json');
+            			fs.readFile('./mock/spid/9012126.json', function(err, data){
             				res.end(data);
             			});
-						return;
-					case '/api/apid/comment':
-            			fs.readFile('./mock/spid/comment.string', function(err, data){
+            			return;
+					case '/api/userlogin':
+            			res.setHeader('Content-Type', 'application/json');
+            			fs.readFile('./mock/userlogin.json', function(err, data){
             				res.end(data);
             			});
-						return;
-					case '/api/apid/show':
-            			fs.readFile('./mock/spid/show.string', function(err, data){
-            				res.end(data);
-            			});
-						return;
-					case '/api/apid/story':
-            			fs.readFile('./mock/spid/story.string', function(err, data){
-            				res.end(data);
-            			});
-						return;
-            		case '/api/users':
+            			return;
+            		case '/api/userlogin':
             			// ...
             			return;
             		case '/api/cart':
