@@ -71,6 +71,7 @@ $(function(){
 	var $back = $('#loginBack input');
 	$back.eq(0).on('blur', function(){
 		var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/; 
+//		console.log( phone.test($(this).val())  );
 		if( !phone.test($(this).val()) ){
 			$('.err').remove();
 			$(this).after( '<span class="err">请输入正确的手机号码</span>' );
@@ -79,11 +80,10 @@ $(function(){
 		}
 	});
 	$('.mess span').on('tap', function(){
-		
-		var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/; 
-		if( !phone.test($(this).val()) ){
+		var phone = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+		if( !phone.test($back.eq(0).val()) ){
 			$('.err').remove();
-			$(this).after( '<span class="err">请输入正确的手机号码</span>' );
+			$back.eq(0).after( '<span class="err">请输入正确的手机号码</span>' );
 		} else{
 			$('.err').remove();
 			var timer ;
@@ -102,10 +102,24 @@ $(function(){
 				},1000);
 			}
 		}
-		
-		
-
 	});
+	$('#loginBack input[type=button]').eq(0).on('tap', function(){
+		var reg = /\d{6}/;
+		if (  reg.test( $( '.mess input' ).val() ) ){
+			$('.mess').after('<span class="err">请填写短信验证码</span>');
+		}else{
+			$.ajax({
+				url:'/api/userMessage',
+				success: function( res ){
+					console.log( res );
+					alert( "登录成功！");
+				}
+			});
+		}
+		
+		
+	});
+	
 	
 });
 
