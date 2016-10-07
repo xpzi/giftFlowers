@@ -1,0 +1,102 @@
+<div class="container">
+		
+		<header id="header">
+		<ul>
+			<li><i class="iconfont">&#xe679;</i> </li>
+			<li>购物车</li> 
+			<li> <i class="iconfont">&#xe7ad;</i> </li>
+		</ul>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#"><span class="iconfont">&#xe6b8;</span><i>首页</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6fe;</span><i>分类搜索</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6af;</span><i>购物车</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe736;</span><i>我的</i></a></li>
+		</ul>
+	</nav>
+	<div class="deScoll">
+		<div class="deScoll-box">
+			<ul class="delist">
+				<li class="active">详情</li>
+				<li>评价</li>
+				<li>实拍秀</li>
+				<li>送花故事</li>
+			</ul>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide swiper-no-swiping">
+						<div id="Img_Deail" style="width:100%">
+							{{each contentImg as value i}}
+								<p align="center"><img alt="" src="{{value}}" border="0"></p>
+								<p>&nbsp;</p>
+							{{/each}}
+						</div>
+					</div>
+					<div class="swiper-slide swiper-no-swiping">
+						<section id="comment">
+							<h3>商品评价</h3>
+							<ul>
+								{{each evaluation as value i}}
+									<li>
+										<div class="t">
+											<img src="{{value.imgsrc}}" alt="" />
+											<span class="xin"><span></span></span>
+											<span class="ip">{{value.ip}}</span>
+										</div>
+										<p>{{value.content}}</p>
+										<div class="b">
+											<span><img src="http://img02.hua.com/icon/touxiang_m.png?3"/></span>
+											<span>{{value.name}}</span>
+											<span>配送地址：{{value.path}}</span>
+										</div>
+									</li>
+								{{/each}}
+							</ul>
+						</section>
+					</div>
+					<div class="swiper-slide swiper-no-swiping">
+						<section class="Story">
+							<div id="show" class=" title">
+								<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>
+								<i class="iconfont">&#xe679;</i>	
+							</div>
+							<div class="scroll-pai">
+								<ul>
+									{{each show as value i}}
+									<li>
+										<img src="{{value.imgsrc}}" alt="" />
+										<p>订单：{{value.danhao}}</p>
+										<p>{{value.path}}</p>
+									</li>
+									{{/each}}
+								</ul>
+							</div>
+						</section>
+					</div>
+					<div class="swiper-slide swiper-no-swiping">
+						<section class="Story">
+							<div id="story" class="title">
+								<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>
+								<i class="iconfont">&#xe679;</i>
+							</div>
+							<div class="list">
+								{{each story as value i}}
+									<div class="item">
+										<img src="{{value.imgsrc}}" alt="" />
+										<div class="text">
+											<h3>{{value.title}}</h3>
+											<p>{{value.content}}<p>
+										</div>
+									</div>
+								{{/each}}
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
