@@ -24,6 +24,45 @@
  * variables中map使用“_”开头，本文件中不使用"_"
  * variables ⇌ config
  */
+@font-face {
+  font-family: "iconfont";
+  src: url("/build/images/iconfont/iconfont.eot?t=1475157978");
+  /* IE9*/
+  src: url("/build/images/iconfont/iconfont.eot?t=1475157978#iefix") format("embedded-opentype"), url("/build/images/iconfont/iconfont.woff?t=1475157978") format("woff"), url("/build/images/iconfont/iconfont.ttf?t=1475157978") format("truetype"), url("/build/images/iconfont/iconfont.svg?t=1475157978#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\e65c"; }
+
+.icon-searchlist:before {
+  content: "\e6fe"; }
+
+.icon-people:before {
+  content: "\e736"; }
+
+.icon-cart:before {
+  content: "\e6af"; }
+
+.icon-back:before {
+  content: "\e679"; }
+
+.icon-sortlight:before {
+  content: "\e7ad"; }
+
+.icon-home:before {
+  content: "\e6b8"; }
+
+.icon-top:before {
+  content: "\e69e"; }
+
 /**
  * Yo框架全局Variables
  * Yo基础变量map，如果不想定义某属性，将其value设置为null
@@ -461,7 +500,7 @@ body {
 html {
   background-color: #ebebeb;
   color: #212121;
-  font-size: 100px;
+  font-size: 31.25vw;
   -webkit-user-select: none;
   user-select: none; }
 
@@ -650,6 +689,209 @@ a {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle; }
 
-body {
-  background: red;
-  height: 100%; }
+@font-face {
+  font-family: 'iconfont';
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url("/build/images/iconfont/iconfont.woff") format("woff"), url("/build/images/iconfont/iconfont.ttf") format("truetype"); }
+
+.iconfont {
+  font-family: iconfont; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .container .iscroll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+    .container .iscroll > * {
+      width: 100%; }
+    .container .iscroll header {
+      height: .46rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background: #ff6600; }
+      .container .iscroll header .logo {
+        width: 1.31rem;
+        height: .41rem;
+        margin-left: 0.09rem;
+        background: url("/build/images/icon.png") 0 -0.59rem no-repeat;
+        background-size: 1.9rem 1.9rem; }
+      .container .iscroll header ul {
+        width: 1.2rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between; }
+        .container .iscroll header ul li {
+          width: 0.4rem;
+          font-size: 0.26rem;
+          color: #fff;
+          text-align: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          align-items: center; }
+    .container .iscroll section {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      flex-direction: column; }
+      .container .iscroll section nav {
+        height: 1.24rem; }
+        .container .iscroll section nav .swiper-container {
+          width: 100%;
+          height: 100%; }
+          .container .iscroll section nav .swiper-container img {
+            width: 100%;
+            height: 100%; }
+          .container .iscroll section nav .swiper-container .swiper-pagination-bullet-active {
+            background: #fff; }
+      .container .iscroll section .mainlist {
+        height: .8rem;
+        background: #fff; }
+        .container .iscroll section .mainlist ul {
+          width: 100%;
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          justify-content: space-between; }
+          .container .iscroll section .mainlist ul li {
+            width: 20%;
+            padding-top: 0.08rem; }
+            .container .iscroll section .mainlist ul li dl {
+              font-size: 0.12rem;
+              text-align: center; }
+              .container .iscroll section .mainlist ul li dl dt span {
+                background: #fb8989;
+                border-radius: 50%;
+                display: block;
+                height: .45rem;
+                line-height: .45rem;
+                margin: auto auto 0.08rem;
+                text-align: center;
+                width: .45rem; }
+              .container .iscroll section .mainlist ul li dl dt .icon_cake {
+                background: #de8dc5; }
+              .container .iscroll section .mainlist ul li dl dt .icon_flowersong {
+                background: #77bae6; }
+              .container .iscroll section .mainlist ul li dl dt .icon_gifts {
+                background: #f6b365; }
+              .container .iscroll section .mainlist ul li dl dt .icon-Plant {
+                background: #88d4c0; }
+              .container .iscroll section .mainlist ul li dl dd .icon_list {
+                color: #666; }
+      .container .iscroll section .flowernav {
+        height: 1.25rem;
+        background: #fff; }
+        .container .iscroll section .flowernav ul {
+          width: 100%;
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          justify-content: space-between; }
+          .container .iscroll section .flowernav ul li {
+            width: 33.3%;
+            border-left: 1px solid #E5E5E5;
+            margin-left: -1px;
+            line-height: .26rem;
+            text-align: center;
+            font-size: .12rem;
+            color: #999;
+            position: relative; }
+            .container .iscroll section .flowernav ul li img {
+              border: 0;
+              width: 100%; }
+            .container .iscroll section .flowernav ul li i {
+              position: absolute;
+              z-index: 2;
+              left: 0;
+              top: 4%;
+              text-align: center;
+              line-height: .18rem;
+              width: 100%; }
+              .container .iscroll section .flowernav ul li i .p1 {
+                font-size: 0.14rem; }
+              .container .iscroll section .flowernav ul li i .red {
+                color: #f00; }
+              .container .iscroll section .flowernav ul li i .pink {
+                color: #ff8588; }
+              .container .iscroll section .flowernav ul li i .orange {
+                color: #f2b354; }
+              .container .iscroll section .flowernav ul li i .p2 {
+                font-size: 0.12rem; }
+      .container .iscroll section .libox {
+        height: 8.52rem;
+        background: #fff; }
+        .container .iscroll section .libox .flowerlist {
+          height: 100%;
+          width: 100%;
+          padding: 0.1rem;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-align-content: space-between;
+          align-content: space-between; }
+          .container .iscroll section .libox .flowerlist li {
+            width: 1.47rem;
+            border: 0.01rem solid #e5e5e5; }
+            .container .iscroll section .libox .flowerlist li img {
+              width: 100%; }
+          .container .iscroll section .libox .flowerlist li:nth-child(odd) {
+            margin-right: 0.025rem; }
+          .container .iscroll section .libox .flowerlist li:nth-child(even) {
+            margin-left: 0.025rem; }
+      .container .iscroll section .white {
+        height: .12rem;
+        background: #F1F1F5;
+        border-bottom: 1px solid #E5E5E5;
+        border-top: 1px solid #E5E5E5;
+        width: 100%;
+        margin: 0 auto; }

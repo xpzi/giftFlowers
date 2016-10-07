@@ -1,0 +1,83 @@
+
+  <div class="container">
+    <div class="iscroll">
+      <header>
+      <p class="logo">
+
+      </p>
+      <ul class="icon">
+        <li><span  class="iconfont">&#xe6fe;</span></li>
+        <li><span  class="iconfont">&#xe6af;</span></li>
+        <li><span  class="iconfont">&#xe736;</span></li>
+      </ul>
+    </header>
+      <section>
+      <nav>
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-active gundimg"><img alt="重阳节" src="http://img02.hua.com/banner/16_chongyangjie_banner_m.png"></div>
+                <div class="swiper-slide swiper-slide-active gundimg"><img alt="天秤座" src="http://img02.hua.com/banner/16_xingzuo_tcz_m.jpg"></div>
+                <div class="swiper-slide swiper-slide-active gundimg"><img alt="音乐旅行之藏路寻爱" src="http://img02.hua.com/banner/16_music_banner_m.jpg"></div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable">
+            </div>
+        </div>
+      </nav>
+      <div class="mainlist">
+          <ul>
+              <li class="no1">
+                  <dl>
+                      <dt><span class="icon_red"><img src="/build/images/flower_1.png" alt="鲜花" width="25" height="26" /></span></dt>
+                      <dd><span class="icon_list">鲜花</span></dd>
+                  </dl>
+              </li>
+              <li class="no2">
+                  <dl>
+                      <dt><span class="icon_cake"><img src="/build/images/cake_2.png" alt="蛋糕" width="25" height="26" /></span></dt>
+                      <dd><span class="icon_list">蛋糕</span></dd>
+                  </dl>
+              </li>
+              <li class="no3">
+                  <dl>
+                      <dt><span class="icon_flowersong"><img src="/build/images/flowersong_1.png" alt="永生花" width="25" height="26" /></span></dt>
+                      <dd><span class="icon_list">永生花</span></dd>
+                  </dl>
+              </li>
+              <li class="no4">
+                  <dl>
+                      <dt><span class="icon_gifts"><img src="/build/images/gifts_2.png" alt="特色礼品" width="25" height="26" /></span></dt>
+                      <dd><span class="icon_list">特色礼品</span></dd>
+                  </dl>
+              </li>
+              <li class="no5">
+                  <dl>
+                      <dt><span class="icon_Plant"><img src="/build/images/Plant_2.png" alt="更多分类" width="25" height="26" /></span></dt>
+                      <dd><span class="icon_list">更多分类</span></dd>
+                  </dl>
+              </li>
+          </ul>
+      </div>
+      <div class="white"></div>
+      <div class="flowernav">
+        <ul>
+            <li class="item1"><img alt="新品鲜花速递" src="http://img02.hua.com/tuijian/xinpin01_m.png?2"><i class="markup1"><p class="p1 red">新品鲜花速递</p><p class="p2">新款驾到</p></i></li>
+            <li class="item2"><img alt="蛋糕食代" src="http://m.hua.com/images/xpsd_005.png"><i class="markup1"><p class="p1 pink">蛋糕食代</p><p class="p2">爱与美味共享</p></i></li>
+            <li class="item3"><img alt="漫画选花" src="http://m.hua.com/images/mhxh_001.png"><i class="markup1"><p class="p1 orange">漫画选花</p><p class="p2">浪漫以画代话</p></i></li>
+        </ul>
+      </div>
+      <div class="white"></div>
+      <div class="libox">
+        <ul class="flowerlist">
+          <li><img src="./images/01.jpg"></li>
+          <li><img src="./images/02.jpg"></li>
+          <li><img src="./images/03.jpg"></li>
+          <li><img src="./images/04.jpg"></li>
+          <li><img src="./images/05.jpg"></li>
+          <li><img src="./images/06.jpg"></li>
+          <li><img src="./images/07.jpg"></li>
+          <li><img src="./images/08.jpg"></li>
+        </ul>
+      </div>
+    </section>
+    </div>
+  </div>

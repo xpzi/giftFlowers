@@ -44,11 +44,15 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(5);
 
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -75,15 +79,15 @@
 	} */
 	var curhref = window.location.href;
 	if( curhref.indexOf('index') >= 0 ){
-		__webpack_require__(2);
+		__webpack_require__(6);
 	} else if( curhref.indexOf('cart') >= 0 ){
-		__webpack_require__(5);
-	} else if( curhref.indexOf('alldetail') >= 0 ){
-		__webpack_require__(7);
-	} else if( curhref.indexOf('login') >= 0 ){
 		__webpack_require__(9);
-	} else if( curhref.indexOf('regist') >= 0 ){
+	} else if( curhref.indexOf('alldetail') >= 0 ){
 		__webpack_require__(11);
+	} else if( curhref.indexOf('login') >= 0 ){
+		__webpack_require__(13);
+	} else if( curhref.indexOf('regist') >= 0 ){
+		__webpack_require__(15);
 	} else{
 		
 	}
@@ -94,15 +98,15 @@
 
 
 /***/ },
-/* 2 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(3);
+	var common = __webpack_require__(7);
 	var T = template;
-	var html = __webpack_require__( 4 );
+	var html = __webpack_require__( 8 );
 	$.ajax({
 		url: '/api/spid/9012126',
 		success: function (res) {
@@ -154,7 +158,7 @@
 
 
 /***/ },
-/* 3 */
+/* 7 */
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -197,21 +201,21 @@
 
 
 /***/ },
-/* 4 */
+/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">	<header>  等待  </header>		<div class=\"deScoll\">		<div class=\"deScoll-box\">			<section>				<section id=\"slider-pic\">					<div class=\"swiper-container\">						<div class=\"swiper-wrapper\">							{{each imgs as value i}}								<div class=\"swiper-slide\"><img src=\"{{value}}\" alt=\"\" /></div>							{{/each}}						</div>						<div class=\"swiper-pagination\"></div>					</div>					<div class=\"addcart\">						<span>￥{{price}}</span>						<span>加入购物车</span>					</div>					<div class=\"details\" data-url=\"./alldetail.html?{{id}}-0\">						<a href=\"#\">							<p>{{title}}<span>{{state}}</span></p>							<span><i  class=\"iconfont\" >&#xe679;</i> </span>						</a>					</div>				</section>				<div class=\"kongbai\"></div>				<section id=\"app-exclusive\">					<span>APP专享价</span>					<span>可省3元</span>					<span></span>				</section>				<div class=\"kongbai\"></div>				<section id=\"pictext\">					<ul>						<li><span>材料：</span>{{material}}</li>						<li><span>花语：</span>{{says}}</li>						<li><span>配送：</span>{{delivery}}</li>						<li><span>说明：</span>{{explain}}</li>					</ul>										<span data-url=\"./alldetail.html?{{id}}-0\">更多图文详情 <i class=\"iconfont\">&#xe679;</i>	</span>				</section>				<div class=\"kongbai\"></div>				<section class=\"contact\"> 					<a href=\"#\"><i class=\"qq\"></i><span>在线客服</span></a>					<a href=\"#\"><i class=\"tel\"></i><span>400-899-8188</span></a>				</section>				<div class=\"kongbai\"></div>				<section id=\"comment\">					<h3>商品评价</h3>					<ul>						{{each evaluation as value i}}							<li>								<div class=\"t\">									<img src=\"{{value.imgsrc}}\" alt=\"\" />									<span class=\"xin\"><span></span></span>									<span class=\"ip\">{{value.ip}}</span>								</div>								<p>{{value.content}}</p>								<div class=\"b\">									<span><img src=\"http://img02.hua.com/icon/touxiang_m.png?3\"/></span>									<span>{{value.name}}</span>									<span>配送地址：{{value.path}}</span>								</div>							</li>						{{/each}}					</ul>					<div class=\"more\">						<a href=\"./alldetail.html?{{id}}-1\">【查看本商品全部评价】</a>						<a href=\"./alldetail.html?{{id}}-1\">【查看最近所有商品评价181550条】</a>					</div>									</section>								<div class=\"kongbai\"></div>				<section class=\"Story\">					<div id=\"show\"  class=\" title\" data-url=\"./alldetail.html?{{id}}-2\">						<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>						<i class=\"iconfont\">&#xe679;</i>						</div>					<div class=\"scroll-pai\">						<ul>							{{each show as value i}}							<li>								<img src=\"{{value.imgsrc}}\" alt=\"\" />								<p>订单：{{value.danhao}}</p>								<p>{{value.path}}</p>							</li>							{{/each}}						</ul>					</div>				</section>								<div class=\"kongbai\"></div>				<section class=\"Story\">					<div id=\"story\" class=\"title\" data-url=\"./alldetail.html?{{id}}-3\">						<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>						<i class=\"iconfont\">&#xe679;</i>					</div>					<div class=\"list\">						{{each story as value i}}							<div class=\"item\">								<img src=\"{{value.imgsrc}}\" alt=\"\" />								<div class=\"text\">									<h3>{{value.title}}</h3>									<p>{{value.content}}<p>								</div>							</div>						{{/each}}					</div>				</section>								<div class=\"add-cart\">					<a href=\"#\">￥239  加入购物车</a>				</div>				<section class=\"you-like\">					<h3>也许您还喜欢</h3>					<div class=\"scroll-youlike\">						<ul>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>						</ul>					</div>				</section>			</section>						<footer>等待</footer>		</div>	</div></div>"
 
 /***/ },
-/* 5 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(3);
+	var common = __webpack_require__(7);
 	var T = template;
-	var html = __webpack_require__( 6 );
+	var html = __webpack_require__( 10 );
 
 	common.randerBody(html);
 
@@ -297,20 +301,20 @@
 
 
 /***/ },
-/* 6 */
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">		<div class=\"deScoll\">		<div class=\"deScoll-box\">					<header>等待</header>						<div class=\"liubai\"></div>						<!-- 结算 -->			<div class=\"clearing\">				<div>共1件商品</div>				<div><span> <a href=\"./index.html\">继续挑选</a> | </span><span>去结算</span></div>			</div>									<!-- 购物车列表 -->			<script id=\"splistTpl\" type=\"text/html\">				{{each list as value i }}				<li>					<div><img src=\"{{value.img}}\" alt=\"\"/></div>					<div>						<h3><span>[{{value.type}}]</span><a href=\"#\">{{value.name}}</a></h3>						<p>现价: <span > ￥{{value.price}}</span></p>						<p>数量：<span class=\"sub\">-</span><span><input class=\"sum\" type=\"text\" data-id=\"{{value.id}}\" value=\"{{value.sum}}\"/></span><span class=\"add\">+</span></p>					</div>					<div class=\"del\"><i></i></div>				</li>				{{/each}}			</script>			<ul id=\"splist\"  class=\"splist\">							</ul>						<!-- total 总共 -->			<div class=\"goumai\">				<div class=\"total\"><span>合计:</span><i>￥129</i></div>				<div class=\"goclearing\">去结算</div>			</div>												<!-- 搭配 -->			<div class=\"match\">				<h3>搭配以下商品，可与鲜花同时送达：</h3>				<ul>					<li>						<img src=\"http://img01.hua.com/uploadpic/images/20147211744696762.jpg\" alt=\"\"/>						<p>德芙心语:98g铁盒或109克礼盒</p>						<span>￥68</span>					</li>					<li>						<img src=\"http://img01.hua.com/uploadpic/images/20147211744696762.jpg\" alt=\"\"/>						<p>德芙心语:98g铁盒或109克礼盒</p>						<span>￥68</span>					</li>					<li>						<img src=\"http://img01.hua.com/uploadpic/images/20147211744696762.jpg\" alt=\"\"/>						<p>德芙心语:98g铁盒或109克礼盒</p>						<span>￥68</span>					</li>				</ul>			</div>						<footer>等待</footer>		</div>	</div></div>"
 
 /***/ },
-/* 7 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(3);
-	var html = __webpack_require__( 8 );
+	var common = __webpack_require__(7);
+	var html = __webpack_require__( 12 );
 	// iscroll 滑动
 	var deScroll;
 	// var picSwiper;
@@ -360,21 +364,21 @@
 
 
 /***/ },
-/* 8 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">	<header>  等待  </header>	<div class=\"deScoll\">		<div class=\"deScoll-box\">			<ul class=\"delist\">				<li class=\"active\">详情</li>				<li>评价</li>				<li>实拍秀</li>				<li>送花故事</li>			</ul>			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<div id=\"Img_Deail\" style=\"width:100%\">							{{each contentImg as value i}}								<p align=\"center\"><img alt=\"\" src=\"{{value}}\" border=\"0\"></p>								<p>&nbsp;</p>							{{/each}}						</div>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section id=\"comment\">							<h3>商品评价</h3>							<ul>								{{each evaluation as value i}}									<li>										<div class=\"t\">											<img src=\"{{value.imgsrc}}\" alt=\"\" />											<span class=\"xin\"><span></span></span>											<span class=\"ip\">{{value.ip}}</span>										</div>										<p>{{value.content}}</p>										<div class=\"b\">											<span><img src=\"http://img02.hua.com/icon/touxiang_m.png?3\"/></span>											<span>{{value.name}}</span>											<span>配送地址：{{value.path}}</span>										</div>									</li>								{{/each}}							</ul>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section class=\"Story\">							<div id=\"show\" class=\" title\">								<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>								<i class=\"iconfont\">&#xe679;</i>								</div>							<div class=\"scroll-pai\">								<ul>									{{each show as value i}}									<li>										<img src=\"{{value.imgsrc}}\" alt=\"\" />										<p>订单：{{value.danhao}}</p>										<p>{{value.path}}</p>									</li>									{{/each}}								</ul>							</div>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section class=\"Story\">							<div id=\"story\" class=\"title\">								<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>								<i class=\"iconfont\">&#xe679;</i>							</div>							<div class=\"list\">								{{each story as value i}}									<div class=\"item\">										<img src=\"{{value.imgsrc}}\" alt=\"\" />										<div class=\"text\">											<h3>{{value.title}}</h3>											<p>{{value.content}}<p>										</div>									</div>								{{/each}}							</div>						</section>					</div>				</div>			</div>		</div>			</div>	</div>"
 
 /***/ },
-/* 9 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(3);
+	var common = __webpack_require__(7);
 	var T = template;
-	var html = __webpack_require__( 10 );
+	var html = __webpack_require__( 14 );
 
 	common.randerBody(html); 
 	// 分页但是不能滑动
@@ -488,21 +492,21 @@
 
 
 /***/ },
-/* 10 */
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">	<header>等待</header>	<div class=\"deScoll\">		<div class=\"deScoll-box\">						<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<div class=\"switch\"><a href=\"#\">使用手机验证登陆</a></div>						<section>  							<form id=\"loginMain\" action=\"../\">								<input class=\"text\" type=\"text\"   placeholder=\"请输入邮箱/手机号码\" />								<input class=\"text\" type=\"password\"   placeholder=\"请输入登陆密码\" />																<label for=\"\"><input type=\"checkbox\"/>一个月内免登陆</label>								<input type=\"button\" value=\"登陆\" />								<input type=\"button\" value=\"非会员快速下单\" />							</form>							</section> 						<section class=\"other\"><a href=\"./regist.html\">免费注册</a><a href=\"#\">找回密码</a></section>						<section class=\"otherlogin\">							<h3>其他方式登录：</h3>							<p><a href=\"javascript:void(0);\"></a><a href=\"javascript:void(0);\"></a></p>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<div class=\"switch\"><a href=\"#\">会员账号登录</a></div>						<section>  							<form id=\"loginBack\" action=\"../\">								<input class=\"text\" type=\"text\"   placeholder=\"请输入手机号码\" />								<label class=\"mess\" for=\"\"><input  type=\"text\"   placeholder=\"短信验证码\" /><span>获取验证码</span></label>								<input type=\"button\" value=\"登陆\" />							</form>							</section> 						<section class=\"other\"><a href=\"#\"></a><a href=\"#\">找回密码</a></section>						<section class=\"otherlogin\">							<h3>其他方式登录：</h3>							<p><a href=\"javascript:void(0);\"></a><a href=\"javascript:void(0);\"></a></p>						</section>					</div>				</div>			</div>												<footer>等待</footer>		</div>	</div></div>"
 
 /***/ },
-/* 11 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(3);
+	var common = __webpack_require__(7);
 	var T = template;
-	var html = __webpack_require__( 12 );
+	var html = __webpack_require__( 16 );
 
 	common.randerBody(html);
 	    
@@ -523,7 +527,7 @@
 
 
 /***/ },
-/* 12 */
+/* 16 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container  regist \">	<header>等待</header>	<div class=\"deScoll\">		<div class=\"deScoll-box\">						<ul class=\"reg\">				<li class=\"active\">手机注册</li>				<li>邮箱注册</li>			</ul>			      			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<form class=\"phone\" action=\"\">							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span>  </label>							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入手机号\" /><span class=\"err\">此项为必填项，请输入你要注册的手机号</span></label>							<label class=\"shoujihao\"><input type=\"number\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"duanxin\"><input type=\"text\" placeholder=\"输入短信验证码\" /><span>获取短信验证码</span></label>														<input type=\"button\" value=\"提交注册\" />						</form>  					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<form class=\"phone emil\" action=\"\">							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入手机号\" /><span class=\"err\">此项为必填项，请输入你要注册的手机号</span></label>							<label class=\"shoujihao\"><input type=\"number\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span></label>														<input type=\"button\" value=\"提交注册\" />						</form>					</div>				</div>			</div>												<footer>等待</footer>		</div>	</div></div>"
