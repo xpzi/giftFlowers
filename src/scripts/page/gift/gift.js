@@ -91,19 +91,26 @@ window.onload = function() {
 
     })
 
-    /*   var data = {
-    name: '好利来',
-    src:["http://img01.hua.com/uploadpic/newpic/5201103.jpg_220x240.jpg","http://img01.hua.com/uploadpic/newpic/5201103.jpg_220x240.jpg"],
-    price:["好利来 甄爱礼盒(6寸)<i>￥239</i>","好利来 甄爱礼盒(6寸)<i>￥289</i>"]
+ navload();
+    function navload(){
+            $('nav ul li').eq(0).on('tap',function(){
+        location.href="./index.html"
+    })
+     $('nav ul li').eq(1).on('tap',function(){
+       
+    
+    })
+ $('nav ul li').eq(2).on('tap',function(){
+        location.href="./build/other/cart.html"
+    })
+  $('nav ul li').eq(3).on('tap',function(){
+        location.href="./build/other/login.html"
+    })
+    $("#header ul li").eq(0).on('tap',function(){
+        history.back();
+    })
 
-};*/
-
-
-
-    /*var html1 = template('test1', data[1]);
-    $('.dgbox>li').eq(1).html(html1)*/
-    /*var html = template('test2', data[2]);
-    $('.dgbox li').eq(0).html(html)*/
+    }
 
 
 }

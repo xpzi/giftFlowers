@@ -1,0 +1,82 @@
+<div class="container">
+	
+	<div class="deScoll">
+		<div class="deScoll-box">
+		
+		<header id="header">
+		<ul>
+			<li><i class="iconfont">&#xe679;</i> </li>
+			<li>购物车</li> 
+			<li> <i class="iconfont">&#xe7ad;</i> </li>
+		</ul>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#"><span class="iconfont">&#xe6b8;</span><i>首页</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6fe;</span><i>分类搜索</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6af;</span><i>购物车</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe736;</span><i>我的</i></a></li>
+		</ul>
+	</nav>
+			
+			<div class="liubai"></div>
+			
+			<!-- 结算 -->
+			<div class="clearing">
+				<div>共1件商品</div>
+				<div><span> <a href="./index.html">继续挑选</a> | </span><span>去结算</span></div>
+			</div>
+			
+			
+			<!-- 购物车列表 -->
+			<script id="splistTpl" type="text/html">
+				{{each list as value i }}
+				<li>
+					<div><img src="{{value.img}}" alt=""/></div>
+					<div>
+						<h3><span>[{{value.type}}]</span><a href="#">{{value.name}}</a></h3>
+						<p>现价: <span > ￥{{value.price}}</span></p>
+						<p>数量：<span class="sub">-</span><span><input class="sum" type="text" data-id="{{value.id}}" value="{{value.sum}}"/></span><span class="add">+</span></p>
+					</div>
+					<div class="del"><i></i></div>
+				</li>
+				{{/each}}
+			</script>
+			<ul id="splist"  class="splist">
+				
+			</ul>
+			
+			<!-- total 总共 -->
+			<div class="goumai">
+				<div class="total"><span>合计:</span><i>￥129</i></div>
+				<div class="goclearing">去结算</div>
+			</div>
+			
+			
+			
+			<!-- 搭配 -->
+			<div class="match">
+				<h3>搭配以下商品，可与鲜花同时送达：</h3>
+				<ul>
+					<li>
+						<img src="http://img01.hua.com/uploadpic/images/20147211744696762.jpg" alt=""/>
+						<p>德芙心语:98g铁盒或109克礼盒</p>
+						<span>￥68</span>
+					</li>
+					<li>
+						<img src="http://img01.hua.com/uploadpic/images/20147211744696762.jpg" alt=""/>
+						<p>德芙心语:98g铁盒或109克礼盒</p>
+						<span>￥68</span>
+					</li>
+					<li>
+						<img src="http://img01.hua.com/uploadpic/images/20147211744696762.jpg" alt=""/>
+						<p>德芙心语:98g铁盒或109克礼盒</p>
+						<span>￥68</span>
+					</li>
+				</ul>
+			</div>
+			
+			<footer>等待</footer>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,325 @@
+@charset "utf-8";
+@import "../core/reset";
+@import "../core/config.scss";
+@import "../module/m-detail.scss";
+$headerbg:#ff6600;
+   
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color:#666;
+    
+ #header {
+                width: 100%;
+                height: 0.46rem;
+                background: $headerbg;
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-right: 0.1rem;
+                    li {
+                        line-height: 0.45rem;
+
+                        &:first-child {
+                            width: 0.30rem;
+                            height: 0.30rem;
+                            i {
+                                font-size: 0.30rem;
+                                color: white;
+
+                            }
+                        }
+                        &:nth-child(2) {
+                            position: absolute;
+                            left: calc(50% - 0.17*2rem);
+                            font-size: 0.17rem;
+                            color: #fff;
+                        }
+                        &:last-child {
+                            width: 0.32rem;
+                            height: 0.32rem;
+                            position: absolute;
+                            right: 0.1rem;
+                            i {
+                                font-size: 0.32rem;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            nav {
+                width: 100%;
+                height: 0.57rem;
+                background: #fff;
+                display: none;
+                ul {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    padding: 0.05rem;
+                    li {
+                        flex: 1;
+                        span,
+                        i {
+                            display: block;
+                            text-align: center;
+                            color: #666;
+                        }
+                        i {
+                            font-size: 13px;
+                            margin-top: -0.08rem;
+                        }
+                        span {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+	
+	.deScoll{
+        flex: 1;
+        overflow: hidden;
+		background:#fff;
+		padding:0 .1rem;
+		
+		.switch{
+			height: .44rem;
+			line-height:.4rem;
+			text-align:right;
+			a{
+				color:#f60;
+			}
+		}
+
+        .err{
+            font-size: 12px;
+            display: block;
+            height: .20rem;
+            color: #F55;
+            margin-top: -.1rem;
+            margin-bottom: .1rem;
+        }
+    
+		form{
+			.text{
+				height:.42rem;
+				border:1px solid #ccc;
+				background:#eee;
+				line-height:.4rem;
+				display:block;
+				margin:.1rem 0;
+				padding:0 .1rem;
+				width:100%;
+			}
+			
+			label{
+				display: block;
+				height:.42rem;
+				line-height: .42rem;
+				input{
+					margin:0 .1rem;
+					font-size:13px;
+					color:#888;
+				}
+			}
+			.mess{
+				display:flex;
+				height: .52rem;
+				padding-bottom: .1rem;
+				
+				input{
+					height:.42rem;
+					border:1px solid #ccc;
+					background:#eee;
+					line-height:.4rem;
+					display:block;
+					margin:0 .05rem 0 0 ;
+					padding:0 .1rem;
+					width:40%;
+				}
+				span{
+					background:#FFAD0D;
+					border-radius:.03rem;
+					flex:1;
+					text-align:center;
+					color:#fff;
+				}
+			}
+			
+			input[type=button]{
+				height:.42rem;
+				border:0;
+				padding:0;
+				margin:0;
+				border-radius:.03rem;
+				background:#f60;
+				color:#fff;
+				width:100%;
+				display:block;
+				margin-bottom:.1rem ;
+			}
+		}
+		
+		.other{
+			height:.42rem;
+			width:100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			
+			a{
+				color:#888;
+			}
+		}
+		.otherlogin{
+			border-top: 1px dashed #E4E4E4;
+			padding-bottom: 1rem;
+			h3{
+				font-weight:100;
+				height:.3rem;
+				line-height:.3rem;
+			}
+			p{
+				a{
+					display: inline-block;
+					width:.44rem;
+					height:.44rem;
+					background-size:3.3rem 3.3rem !important;
+					vertical-align: top;
+					margin-right:.2rem;
+				}
+				a:nth-child(1){
+					background: url(../../images/icon2b.png) -51px -224px no-repeat;
+				}
+				a:nth-child(2){
+					background: url(../../images/icon2b.png) -99px -224px no-repeat;
+				}
+			}
+		}
+	}
+}
+
+
+.regist{
+	.reg{
+		display:flex;
+		width:100%;
+		padding: .1rem 0;
+		
+		li{
+			height:.3rem;
+			line-height:28px;
+			border: 1px solid rgb(254,108,108);
+			color:#666;
+			text-align:center;
+			flex:1;
+			
+		}
+		li:nth-child(1){
+			border-top-left-radius: .04rem;
+			border-bottom-left-radius: .04rem;
+		}
+		li:nth-child(2){
+			border-top-right-radius: .04rem;
+			border-bottom-right-radius: .04rem;
+		}
+		.active{
+			background:rgb(254,108,108);
+			color:#fff;
+		}
+	}
+	
+	.phone{
+		
+		
+		input{
+			height:.42rem;
+			border-radius:.03rem;
+			border:1px solid #ccc;
+			background:#F9F9F9;
+			line-height:.4rem;
+			/* margin:0 .05rem 0 0 ; */
+			margin:0 !important;
+			padding:0 .1rem;
+		}
+		label{
+			padding:0;
+		}
+		
+		.yanzhenma{
+			width:100%;
+			height:.62rem;
+			padding: .1rem 0;
+			input{
+				width:70px;
+			}
+			img{
+				height:.4rem;
+			}
+		}
+		.haoma{
+			width:100%;
+			input[type="number"]{
+				width:100%;
+			}
+			margin-bottom:.1rem;
+		}
+		
+		
+		.shoujihao{
+			height:.42rem;
+			border-radius:.03rem;
+			border:1px solid #ccc;
+			background:#F9F9F9;
+			line-height:.4rem;
+			padding:0 .1rem;
+			display:flex;
+			margin-bottom:.1rem;
+
+			align-items:center;
+			input{
+				margin:0;
+				padding:0;
+				border:0;
+				background:none;
+				flex:1;
+			}
+			span{
+				height:.3rem;
+				width:.54rem;
+				border-radius:.54rem;
+				border:1px solid #ccc;
+				line-height:.28rem;
+				text-align:left;
+				i{
+					margin: .04rem;
+					width:.2rem;
+					height:.2rem;
+					display:inline-block;
+					background:#ccc;
+					border-radius:100%;
+				
+				}
+			}
+			
+		}
+		.duanxin{
+			margin-bottom: .5rem;
+			input{ width:40%;}
+			span{
+				height:.25rem;
+				line-height:.25rem;
+				display:inline-block;
+				border-radius: .03rem;
+				padding: 0 .1rem;
+				border: 1px solid #ecb351;
+				background: #fbe0b0; 
+				margin:0 .1rem;
+			}
+		}
+	}
+}

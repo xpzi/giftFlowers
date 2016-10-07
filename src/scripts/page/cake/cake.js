@@ -129,6 +129,27 @@ window.onload = function() {
 
 
     })
+    navload();
+    function navload(){
+            $('nav ul li').eq(0).on('tap',function(){
+        location.href="./index.html"
+    })
+     $('nav ul li').eq(1).on('tap',function(){
+       
+    
+    })
+ $('nav ul li').eq(2).on('tap',function(){
+        location.href="./build/other/cart.html"
+    })
+  $('nav ul li').eq(3).on('tap',function(){
+        location.href="./build/other/login.html"
+    })
+    $("#header ul li").eq(0).on('tap',function(){
+        history.back();
+    })
+
+    }
+
 
     /*   var data = {
     name: '好利来',

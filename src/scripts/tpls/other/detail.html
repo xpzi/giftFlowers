@@ -1,0 +1,161 @@
+<div class="container">
+		
+		<header id="header">
+		<ul>
+			<li><i class="iconfont">&#xe679;</i> </li>
+			<li>购物车</li> 
+			<li> <i class="iconfont">&#xe7ad;</i> </li>
+		</ul>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#"><span class="iconfont">&#xe6b8;</span><i>首页</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6fe;</span><i>分类搜索</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe6af;</span><i>购物车</i></a></li>
+			<li><a href="#"><span class="iconfont">&#xe736;</span><i>我的</i></a></li>
+		</ul>
+	</nav>
+	
+	<div class="deScoll">
+		<div class="deScoll-box">
+			<section>
+				<section id="slider-pic">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							{{each imgs as value i}}
+								<div class="swiper-slide"><img src="{{value}}" alt="" /></div>
+							{{/each}}
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="addcart">
+						<span>￥{{price}}</span>
+						<span>加入购物车</span>
+					</div>
+					<div class="details" data-url="./alldetail.html?{{id}}-0">
+						<a href="#">
+							<p>{{title}}<span>{{state}}</span></p>
+							<span><i  class="iconfont" >&#xe679;</i> </span>
+						</a>
+					</div>
+				</section>
+				<div class="kongbai"></div>
+				<section id="app-exclusive">
+					<span>APP专享价</span>
+					<span>可省3元</span>
+					<span></span>
+				</section>
+				<div class="kongbai"></div>
+				<section id="pictext">
+					<ul>
+						<li><span>材料：</span>{{material}}</li>
+						<li><span>花语：</span>{{says}}</li>
+						<li><span>配送：</span>{{delivery}}</li>
+						<li><span>说明：</span>{{explain}}</li>
+					</ul>
+					
+					<span data-url="./alldetail.html?{{id}}-0">更多图文详情 <i class="iconfont">&#xe679;</i>	</span>
+				</section>
+				<div class="kongbai"></div>
+				<section class="contact"> 
+					<a href="#"><i class="qq"></i><span>在线客服</span></a>
+					<a href="#"><i class="tel"></i><span>400-899-8188</span></a>
+				</section>
+				<div class="kongbai"></div>
+				<section id="comment">
+					<h3>商品评价</h3>
+					<ul>
+						{{each evaluation as value i}}
+							<li>
+								<div class="t">
+									<img src="{{value.imgsrc}}" alt="" />
+									<span class="xin"><span></span></span>
+									<span class="ip">{{value.ip}}</span>
+								</div>
+								<p>{{value.content}}</p>
+								<div class="b">
+									<span><img src="http://img02.hua.com/icon/touxiang_m.png?3"/></span>
+									<span>{{value.name}}</span>
+									<span>配送地址：{{value.path}}</span>
+								</div>
+							</li>
+						{{/each}}
+					</ul>
+					<div class="more">
+						<a href="./alldetail.html?{{id}}-1">【查看本商品全部评价】</a>
+						<a href="./alldetail.html?{{id}}-1">【查看最近所有商品评价181550条】</a>
+					</div>
+					
+				</section>
+				
+				<div class="kongbai"></div>
+				<section class="Story">
+					<div id="show"  class=" title" data-url="./alldetail.html?{{id}}-2">
+						<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>
+						<i class="iconfont">&#xe679;</i>	
+					</div>
+					<div class="scroll-pai">
+						<ul>
+							{{each show as value i}}
+							<li>
+								<img src="{{value.imgsrc}}" alt="" />
+								<p>订单：{{value.danhao}}</p>
+								<p>{{value.path}}</p>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+				</section>
+				
+				<div class="kongbai"></div>
+				<section class="Story">
+					<div id="story" class="title" data-url="./alldetail.html?{{id}}-3">
+						<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>
+						<i class="iconfont">&#xe679;</i>
+					</div>
+					<div class="list">
+						{{each story as value i}}
+							<div class="item">
+								<img src="{{value.imgsrc}}" alt="" />
+								<div class="text">
+									<h3>{{value.title}}</h3>
+									<p>{{value.content}}<p>
+								</div>
+							</div>
+						{{/each}}
+					</div>
+				</section>
+				
+				<div class="add-cart">
+					<a href="#">￥239  加入购物车</a>
+				</div>
+				<section class="you-like">
+					<h3>也许您还喜欢</h3>
+					<div class="scroll-youlike">
+						<ul>
+							<li>
+								<img src="http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg" alt="" />
+								<br /><span>￥159</span>
+							</li>
+							<li>
+								<img src="http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg" alt="" />
+								<br /><span>￥159</span>
+							</li>
+							<li>
+								<img src="http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg" alt="" />
+								<br /><span>￥159</span>
+							</li>
+							<li>
+								<img src="http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg" alt="" />
+								<br /><span>￥159</span>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+			</section>
+			
+			<footer>等待</footer>
+		</div>
+	</div>
+</div>
