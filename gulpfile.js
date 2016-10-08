@@ -68,11 +68,55 @@
                             res.end(data);
                         });
             			return;
-            	}
-            	next();
-            }
-        }))
-    });
+
+
+                    case '/api/foreverFlowers.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/foreverFlowers.json', function (err, data) {
+                        res.end(data);
+                        });
+                        return;         
+                    case '/api/foreverFlowersRefresh.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/foreverFlowers-refresh.json', function (err, data) {
+                        res.end(data);
+                        });
+                        return;
+                    case '/api/foreverFlowersMore.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/foreverFlowers-more.json', function (err, data) {
+                        res.end(data);
+                        });
+                        return;
+                    case '/api/freshFlowers.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/freshFlowers.json', function (err, data) {
+                        res.end(data);
+                        });
+                        return;
+                    case '/api/freshFlowersSale.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/freshFlowersSale.json', function (err, data) {
+                        res.end(data);
+                        });
+                        return;
+                    case '/api/freshFlowersPrice.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/freshFlowersPrice.json', function (err, data) {
+                        res.end(data);
+                        });
+                        return;
+                    case '/api/freshSort.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/freshSort.json', function (err, data) {
+                        res.end(data);
+                     });
+                        return;
+            	           }
+            	           next();
+                     }
+                    }))
+                });
 
 	//css 预处理
     var cssFiles = [

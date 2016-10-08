@@ -22,13 +22,13 @@ $('.icon li:last-child').on('tap',function(){
   location.href = '';
 });
 $('.no1').on('tap',function(){
-  location.href = '';
+  location.href = './freshFlowers.html';
 });
 $('.no2').on('tap',function(){
   location.href = './cake.html';
 });
 $('.no3').on('tap',function(){
-  location.href = '';
+  location.href = './foreverFlowers.html';
 });
 $('.no4').on('tap',function(){
   location.href = './gift.html';

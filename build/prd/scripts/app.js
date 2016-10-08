@@ -91,13 +91,13 @@
 	  location.href = '';
 	});
 	$('.no1').on('tap',function(){
-	  location.href = '';
+	  location.href = './freshFlowers.html';
 	});
 	$('.no2').on('tap',function(){
 	  location.href = './cake.html';
 	});
 	$('.no3').on('tap',function(){
-	  location.href = '';
+	  location.href = './foreverFlowers.html';
 	});
 	$('.no4').on('tap',function(){
 	  location.href = './gift.html';
@@ -142,6 +142,13 @@
 	  },
 	  append: function ($el, str) {
 	    $el.append(str);
+	  },
+
+	  switchPage: function (index) {
+	    $('#footer li').eq(index).addClass('active').siblings().removeClass('active');
+	    $('#footer').on('tap', 'li', function () {
+	      location.href = $(this).attr('data-url');
+	    })
 	  }
 	};
 
