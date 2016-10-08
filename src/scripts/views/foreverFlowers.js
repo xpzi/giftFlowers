@@ -76,7 +76,8 @@ window.onload = function () {
 
   var myScroll = new IScroll(id, {
     probeType: 3,
-    mouseWheel: true
+    mouseWheel: true,
+    click:true
   });
 
   var refreshAjax = function () {
@@ -98,14 +99,14 @@ window.onload = function () {
     $.ajax({
       url: '/api/foreverFlowersMore.php',
       success: function (res) {
+      	console.log( 123466 );
         var html = template('list', res);
         var lis = $(html).unwrap().html();
         $(id).find('ul').append(lis);
-
-        myScroll.scrollTo(0, self.y + 35);
         foot.removeClass('down');
         foot.attr('src', '/build/images/arrow.png');
         myScroll.refresh();
+//      myScroll.scrollTo(0, self.y + 35);
       }
     });
   }

@@ -103,8 +103,8 @@
 		__webpack_require__(28);
 	} else{
 		
-	}
-
+	}     
+	   
 
 
 
@@ -518,6 +518,7 @@
 						}
 					}
 					if( ok ){
+						window.location.href = '/index.html';
 						alert( '登录成功') ;
 					} else{
 						$('.err').remove();
@@ -578,9 +579,10 @@
 					url:'/api/userMessage',
 					success: function( res ){
 						console.log( res );
+						window.location.href = '/index.html';
 						alert( "登录成功！");
 					}
-				});
+				});  
 			}
 			
 			
