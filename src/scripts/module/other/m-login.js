@@ -52,6 +52,7 @@ $(function(){
 					}
 				}
 				if( ok ){
+					window.location.href = '/index.html';
 					alert( '登录成功') ;
 				} else{
 					$('.err').remove();
@@ -112,9 +113,10 @@ $(function(){
 				url:'/api/userMessage',
 				success: function( res ){
 					console.log( res );
+					window.location.href = '/index.html';
 					alert( "登录成功！");
 				}
-			});
+			});  
 		}
 		
 		

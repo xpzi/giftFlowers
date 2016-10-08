@@ -30,7 +30,7 @@ if( curhref.indexOf('index') >= 0 ){
 	require('../module/other/m-regist.js');
 } else{
 	
-}
-
+}     
+   
 
 

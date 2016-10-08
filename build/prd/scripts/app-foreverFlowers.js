@@ -179,7 +179,8 @@
 
 	  var myScroll = new IScroll(id, {
 	    probeType: 3,
-	    mouseWheel: true
+	    mouseWheel: true,
+	    click:true
 	  });
 
 	  var refreshAjax = function () {
@@ -201,14 +202,14 @@
 	    $.ajax({
 	      url: '/api/foreverFlowersMore.php',
 	      success: function (res) {
+	      	console.log( 123466 );
 	        var html = template('list', res);
 	        var lis = $(html).unwrap().html();
 	        $(id).find('ul').append(lis);
-
-	        myScroll.scrollTo(0, self.y + 35);
 	        foot.removeClass('down');
 	        foot.attr('src', '/build/images/arrow.png');
 	        myScroll.refresh();
+	//      myScroll.scrollTo(0, self.y + 35);
 	      }
 	    });
 	  }
@@ -254,7 +255,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container\">    <!-- 头部 -->	<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>鲜花列表</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav id=\"nav2\">		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>    <nav id=\"nav1\">        <ul id=\"swiper-nav\">            <li class=\"active\">综合</li>            <li>销量</li>            <li>价格</li>            <li>永生花分类</li>        </ul>    </nav>    <section>      <div class=\"swiper-container\" id=\"index-swiper\">        <div class=\"swiper-wrapper\">          <div class=\"swiper-slide\">            <section id=\"index-scroll\"></section>          </div>          <div class=\"swiper-slide\">            <section id=\"index-scroll01\"></section>          </div>          <div class=\"swiper-slide\">            <section id=\"index-scroll02\"></section>          </div>          <div class=\"swiper-slide\">            <div id = \"index-scroll03\"></div>          </div>        </div>      </div>    </section></div><script id=\"list\" type=\"text/html\">  <ul>    {{each data as value i}}    <li><span><i><img src={{value.img}} alt=\"\"></i><b><em>{{value.title}}</em>{{value.des}}</b>    <p>{{value.price}}</p></span></li>    {{/each}}  </ul></script><script id=\"list01\" type=\"text/html\">  <ul>    {{each data as value i}}    <li><p>{{value.title}}</p>      <ul>      {{each value.sort as item i}}        <li><span>{{item}}</span></li>      {{/each}}      </ul>    </li>    {{/each}}  </ul></script>"
+	module.exports = "<div class=\"container\">	<!-- 头部 -->	<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>鲜花列表</li>			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav id=\"nav2\">		<ul>			<li>				<a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a>			</li>			<li>				<a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a>			</li>			<li>				<a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a>			</li>			<li>				<a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a>			</li>		</ul>	</nav>	<nav id=\"nav1\">		<ul id=\"swiper-nav\">			<li class=\"active\">综合</li>			<li>销量</li>			<li>价格</li>			<li>永生花分类</li>		</ul>	</nav>	<section>		<div class=\"swiper-container\" id=\"index-swiper\">			<div class=\"swiper-wrapper\">				<div class=\"swiper-slide\">					<section id=\"index-scroll\"></section>				</div>				<div class=\"swiper-slide\">					<section id=\"index-scroll01\"></section>				</div>				<div class=\"swiper-slide\">					<section id=\"index-scroll02\"></section>				</div>				<div class=\"swiper-slide\">					<div id=\"index-scroll03\"></div>				</div>			</div>		</div>	</section></div><script id=\"list\" type=\"text/html\">	<ul>		{{each data as value i}}		<li><a href=\"/build/other/index.html?9012126\"><span><i><img src={{value.img}} alt=\"\"></i><b><em>{{value.title}}</em>{{value.des}}</b>    <p>{{value.price}}</p></span></a></li>		{{/each}}	</ul></script><script id=\"list01\" type=\"text/html\">	<ul>		{{each data as value i}}		<li>			<p>{{value.title}}</p>			<ul>				{{each value.sort as item i}}				<li><span>{{item}}</span></li>				{{/each}}			</ul>		</li>		{{/each}}	</ul></script>"
 
 /***/ },
 /* 11 */
