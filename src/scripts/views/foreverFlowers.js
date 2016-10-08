@@ -21,7 +21,7 @@ $('#swiper-nav li').on('tap', function () {
 
 
 $.ajax({
-  url: '/api/foreverFlowers.php',
+  url: '/api/foreverFlowers.json',
   success: function (res) {
     var strScrollTop = '<div><div class="head"> \
         <img src="/build/images/arrow.png"/> \
@@ -43,7 +43,7 @@ $.ajax({
 
 
 $.ajax({
-  url: '/api/freshFlowersSale.php',
+  url: '/api/freshFlowersSale.json',
   success: function (res) {
     var html = template('list', res);
     common.inner($('#index-scroll01'),html);
@@ -51,7 +51,7 @@ $.ajax({
 });
 
 $.ajax({
-  url: '/api/freshFlowersPrice.php',
+  url: '/api/freshFlowersPrice.json',
   success: function (res) {
     var html = template('list', res);
     common.inner($('#index-scroll02'),html);
@@ -59,7 +59,7 @@ $.ajax({
 });
 
 $.ajax({
-  url: '/api/freshSort.php',
+  url: '/api/freshSort.json',
   success: function (res) {
     var html = template('list01', res);
     common.inner($('#index-scroll03'),html);

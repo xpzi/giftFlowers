@@ -33,101 +33,88 @@
             middleware: function(req, res , next){
             	var urlObj = url.parse( req.url, true);
             	switch(urlObj.pathname){
-            		case '/api/list.php':
+            		case '/api/cakelist.php.json':
             			res.setHeader('Content-Type', 'application/json');
             			fs.readFile('./mock/cake.json', function(err, data){
             				res.end(data);
             			});
             			return;
-
-            		case '/api/cake/shanghai.php':
+            		case '/api/cake/shanghai.php.json':
                      res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/shanghai.json', function(err, data){
                             res.end(data);
                         });
-
-					case '/api/spid/9012126':
+					case '/api/spid/9012126.json':
             			res.setHeader('Content-Type', 'application/json');
             			fs.readFile('./mock/spid/9012126.json', function(err, data){
             				res.end(data);
             			});
             			return;
-					case '/api/userlogin':
+					case '/api/userlogin.json':
             			res.setHeader('Content-Type', 'application/json');
             			fs.readFile('./mock/userlogin.json', function(err, data){
             				res.end(data);
             			});
             			return;
-
-
-
-            		case '/api/gift':
-            			// ...
+            		case '/api/gift.json':
                           res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/gift.json', function(err, data){
                             res.end(data);
                         });
             			return;
-
-
-                    case '/api/foreverFlowers.php':
+                    case '/api/foreverFlowers.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/foreverFlowers.json', function (err, data) {
                         res.end(data);
                         });
-                        return;         
-                    case '/api/foreverFlowersRefresh.php':
+                        return;
+                    case '/api/foreverFlowersRefresh.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/foreverFlowers-refresh.json', function (err, data) {
                         res.end(data);
                         });
                         return;
-                    case '/api/foreverFlowersMore.php':
+                    case '/api/foreverFlowersMore.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/foreverFlowers-more.json', function (err, data) {
                         res.end(data);
                         });
                         return;
-                    case '/api/freshFlowers.php':
+                    case '/api/freshFlowers.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/freshFlowers.json', function (err, data) {
                         res.end(data);
                         });
                         return;
-                    case '/api/freshFlowersSale.php':
+                    case '/api/freshFlowersSale.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/freshFlowersSale.json', function (err, data) {
                         res.end(data);
                         });
                         return;
-                    case '/api/freshFlowersPrice.php':
+                    case '/api/freshFlowersPrice.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/freshFlowersPrice.json', function (err, data) {
                         res.end(data);
                         });
                         return;
-                    case '/api/freshSort.php':
+                    case '/api/freshSort.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/freshSort.json', function (err, data) {
-                        res.end(data);
-                     });
+	                        res.end(data);
+	                     });
                         return;
-            	           }
-            	           next();
-                     }
-                    }))
-                });
-
+            	}
+            	next();
+            }
+        }))
+    });
 	//css 预处理
     var cssFiles = [
-
-
-
         './src/styles/*.scss',
    		'./src/styles/usage/page/cake/*.scss',
    		'./src/styles/usage/page/flower/*.scss',
    		'./src/styles/usage/page/*.scss'
-
     ];
     gulp.task('scss', function(){
         gulp.src(cssFiles)
@@ -136,13 +123,10 @@
             .pipe( gulp.dest('./build/prd/styles/'));
     });
 
-
     // js 模块化 ，合并，压缩
     var jsFiles = [
    		'./src/scripts/*.js',
-
    		'./src/scripts/page/*.js'
-
     ];
     gulp.task('packjs', function(){
     	gulp.src(jsFiles)
@@ -170,8 +154,6 @@
         gulp.src('./*.html')
             .pipe(gulp.dest('./build/')) // 相对于
     });
-
-
     gulp.task('copy-flower', function(){
         gulp.src('./*.html')
             .pipe(gulp.dest('./build/flower/')) // 相对于
@@ -185,24 +167,14 @@
             .pipe(gulp.dest('./build/other/')) // 相对于
     });
 
-
-
-
-
     gulp.task('watch' , function(){
     	gulp.watch('./*.html',['copy-html']);
-
-
-
     	gulp.watch('./access/cake/*.html',['copy-cake']);
     	gulp.watch('./access/flower/*.html',['copy-flower']);
     	gulp.watch('./access/other/*.html',['copy-other']);
-
-
     	gulp.watch('./src/styles/**/*', ['scss']);
     	gulp.watch('./src/scripts/**/*', ['packjs']);
     });
-
 
     // 配置 default 任务， 执行任务队列
     gulp.task('default', ['watch', 'webserver'], function(){

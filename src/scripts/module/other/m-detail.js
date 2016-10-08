@@ -2,7 +2,7 @@ var common = require('../../utils/common-util.js');
 var T = template;
 var html = require( '../../tpls/other/detail.html' );
 $.ajax({
-	url: '/api/spid/9012126',
+	url: '/api/spid/9012126.json',
 	success: function (res) {
 	
 		var rander = template.compile(html);

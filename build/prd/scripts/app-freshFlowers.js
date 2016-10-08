@@ -127,7 +127,7 @@
 
 
 	$.ajax({
-	  url: '/api/freshFlowers.php',
+	  url: '/api/freshFlowers.json',
 	  success: function (res) {
 	    var html = template('list', res);
 	    common.inner($('#index-scroll'), html);
@@ -135,7 +135,7 @@
 	});
 
 	$.ajax({
-	  url: '/api/freshFlowersSale.php',
+	  url: '/api/freshFlowersSale.json',
 	  success: function (res) {
 	    var html = template('list', res);
 	    common.inner($('#index-scroll01'),html);
@@ -143,7 +143,7 @@
 	});
 
 	$.ajax({
-	  url: '/api/freshFlowersPrice.php',
+	  url: '/api/freshFlowersPrice.json',
 	  success: function (res) {
 	    var html = template('list', res);
 	    common.inner($('#index-scroll02'),html);
@@ -151,7 +151,7 @@
 	});
 
 	$.ajax({
-	  url: '/api/freshSort.php',
+	  url: '/api/freshSort.json',
 	  success: function (res) {
 	    var html = template('list01', res);
 	    common.inner($('#index-scroll03'),html);

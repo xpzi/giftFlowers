@@ -78,7 +78,7 @@
 	          $('.citys h3').html(localStorage.getItem('city'));
 	          $('#header ul li span').html(localStorage.getItem('city')+ '<i></i> ')
 	        if (localStorage.getItem('city')== "北京") {
-	            listload('/api/list.php');
+	            listload('/api/cakelist.php.json');
 	            $('.nav_bar ul').html(  '   <li><a href="http://baidu.com">热门  :</a></li>\
 	            <li><a href="#">好利来</a></li>\
 	            <li><a href="#">窝夫小子</a></li>\
@@ -87,7 +87,7 @@
 
 	        } else {
 
-	            listload('/api/cake/shanghai.php');
+	            listload('/api/cake/shanghai.php.json');
 	            $('.nav_bar ul').html(  '  <li><a href="http://baidu.com">热门  :</a></li>\
 	            <li><a href="#">元祖</a></li>\
 	            <li><a href="#">窝夫小子</a></li>\
@@ -96,7 +96,7 @@
 	        }
 
 	    }else{
-	        listload('/api/list.php');
+	        listload('/api/cakelist.php.json');
 	    }
 
 	function listload(url) {

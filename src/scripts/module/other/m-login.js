@@ -40,7 +40,7 @@ $(function(){
 			return;
 		}
 		$.ajax({
-			url: '/api/userlogin',
+			url: '/api/userlogin.json',
 			success: function( res ){
 				
 				var ok = false;

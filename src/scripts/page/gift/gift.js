@@ -2,7 +2,7 @@ var str = require('../../tpls/gift/gift.string');
 $("body").prepend(str);
 
 
-listload('/api/gift');
+listload('/api/gift.json');
 
 function listload(url) {
     $.ajax({
@@ -69,7 +69,7 @@ window.onload = function() {
         $('.close').trigger('tap')
 
         if ($(this).text() == "北京") {
-            listload('/api/list.php');
+            listload('/api/cakelist.php.json');
             $('.nav_bar ul').html('   <li><a href="http://baidu.com">热门  :</a></li>\
             <li><a href="#">好利来</a></li>\
             <li><a href="#">窝夫小子</a></li>\
@@ -78,7 +78,7 @@ window.onload = function() {
 
         } else {
             
-            listload('/api/cake/shanghai.php');
+            listload('/api/cake/shanghai.php.json');
             $('.nav_bar ul').html('  <li><a href="http://baidu.com">热门  :</a></li>\
             <li><a href="#">元祖</a></li>\
             <li><a href="#">窝夫小子</a></li>\

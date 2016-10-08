@@ -121,7 +121,7 @@
 	var T = template;
 	var html = __webpack_require__( 21 );
 	$.ajax({
-		url: '/api/spid/9012126',
+		url: '/api/spid/9012126.json',
 		success: function (res) {
 		
 			var rander = template.compile(html);
@@ -391,7 +391,7 @@
 	}
 
 	$.ajax({
-		url: '/api/spid/'+pathArr[0],
+		url: '/api/spid/'+pathArr[0]+".json",
 		success: function (res) {
 			var rander = template.compile(html);
 			var newhtml = rander(res);
@@ -506,7 +506,7 @@
 				return;
 			}
 			$.ajax({
-				url: '/api/userlogin',
+				url: '/api/userlogin.json',
 				success: function( res ){
 					
 					var ok = false;

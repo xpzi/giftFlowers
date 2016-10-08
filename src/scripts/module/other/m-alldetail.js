@@ -13,7 +13,7 @@ if(!pathArr[1]){
 }
 
 $.ajax({
-	url: '/api/spid/'+pathArr[0],
+	url: '/api/spid/'+pathArr[0]+".json",
 	success: function (res) {
 		var rander = template.compile(html);
 		var newhtml = rander(res);
