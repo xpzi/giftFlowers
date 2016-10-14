@@ -1,68 +1,53 @@
 <div class="container">
-    <!-- 头部 -->
-	<header id="header">
-		<ul>
-			<li><i class="iconfont">&#xe679;</i> </li>
-			<li>鲜花列表</li> 
-			<li> <i class="iconfont">&#xe7ad;</i> </li>
+	<!-- 头部 -->
+	<div id="nav1">
+		<ul id="swiper-nav">
+			<li class="active">综合</li>
+			<li>销量</li>
+			<li>价格</li>
+			<li>鲜花分类</li>
 		</ul>
-	</header>
-	<nav id="nav2">
-		<ul>
-			<li><a href="#"><span class="iconfont">&#xe6b8;</span><i>首页</i></a></li>
-			<li><a href="#"><span class="iconfont">&#xe6fe;</span><i>分类搜索</i></a></li>
-			<li><a href="#"><span class="iconfont">&#xe6af;</span><i>购物车</i></a></li>
-			<li><a href="#"><span class="iconfont">&#xe736;</span><i>我的</i></a></li>
-		</ul>
-	</nav>
-    <nav id="nav1">
-        <ul id="swiper-nav">
-            <li class="active">综合</li>
-            <li>销量</li>
-            <li>价格</li>
-            <li>鲜花分类</li>
-        </ul>
-      
-    </nav>
-    <section>
-      <div class="swiper-container" id="index-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <section id="index-scroll"></section>
-          </div>
-          <div class="swiper-slide">
-            <section id="index-scroll01"></section>
-          </div>
-          <div class="swiper-slide">
-            <section id="index-scroll02"></section>
-          </div>
-          <div class="swiper-slide">
-            <div id = "index-scroll03"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+	</div>
+	<section>
+		<div class="swiper-container" id="index-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<section id="index-scroll"></section>
+				</div>
+				<div class="swiper-slide">
+					<section id="index-scroll01"></section>
+				</div>
+				<div class="swiper-slide">
+					<section id="index-scroll02"></section>
+				</div>
+				<div class="swiper-slide">
+					<div id="index-scroll03"></div>
+				</div>
+			</div>
+		</div>
+
+	</section>
 </div>
 <script id="list" type="text/html">
-  <ul>
-    {{each data as value i}}
-    <li><span><i><img src={{value.img}} alt=""></i><b><em>{{value.title}}</em>{{value.des}}</b>
+	<ul>
+		{{each data as value i}}
+		<li><span><i><img src={{value.img}} alt=""></i><b><em>{{value.title}}</em>{{value.des}}</b>
     <p>{{value.price}}</p></span></li>
-    {{/each}}
-  </ul>
+		{{/each}}
+	</ul>
 </script>
 
-
 <script id="list01" type="text/html">
-  <ul>
-    {{each data as value i}}
-    <li><p>{{value.title}}</p>
-      <ul>
-      {{each value.sort as item i}}
-        <li><span>{{item}}</span></li>
-      {{/each}}
-      </ul>
-    </li>
-    {{/each}}
-  </ul>
+	<ul>
+		{{each data as value i}}
+		<li>
+			<p>{{value.title}}</p>
+			<ul>
+				{{each value.sort as item i}}
+				<li><span>{{item}}</span></li>
+				{{/each}}
+			</ul>
+		</li>
+		{{/each}}
+	</ul>
 </script>

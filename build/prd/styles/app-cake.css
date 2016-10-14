@@ -1177,6 +1177,177 @@ a {
       .yo-badge-tag::after {
         border-radius: 0.15rem; } }
 
+@font-face {
+  font-family: 'iconfont';
+  /* chrome、firefox */
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url("/build/images/iconfont/iconfont.woff") format("woff"), url("/build/images/iconfont/iconfont.ttf") format("truetype"); }
+
+.iconfont {
+  font-family: iconfont; }
+
+.container #wrapper #iscroll #header {
+  width: 100%;
+  height: 0.46rem;
+  background: #ff6600; }
+  .container #wrapper #iscroll #header ul {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-right: 0.1rem; }
+    .container #wrapper #iscroll #header ul li {
+      line-height: 0.45rem; }
+      .container #wrapper #iscroll #header ul li:first-child {
+        width: 0.30rem;
+        height: 0.30rem; }
+        .container #wrapper #iscroll #header ul li:first-child i {
+          font-size: 0.30rem;
+          color: white; }
+      .container #wrapper #iscroll #header ul li:nth-child(2) {
+        color: #fff;
+        font-size: 0.12rem; }
+      .container #wrapper #iscroll #header ul li:nth-child(3) {
+        flex: 1; }
+        .container #wrapper #iscroll #header ul li:nth-child(3) span {
+          margin-top: 0.13rem;
+          line-height: 0.10rem;
+          height: 0.16rem;
+          border: 1px solid #fff;
+          font-size: 0.12rem;
+          display: inline-block;
+          color: #fff;
+          border-radius: 0.02rem;
+          padding: 0.02rem; }
+          .container #wrapper #iscroll #header ul li:nth-child(3) span i {
+            display: inline-block;
+            width: 0.15rem;
+            height: 0.1rem;
+            background: url("http://m.hua.com/images/icon2b.png") -95px -7px no-repeat;
+            background-size: 198px 200px; }
+      .container #wrapper #iscroll #header ul li:nth-child(4) {
+        position: absolute;
+        left: calc(45% - 0.17rem);
+        font-size: 0.17rem;
+        color: #fff; }
+      .container #wrapper #iscroll #header ul li:last-child {
+        width: 0.32rem;
+        height: 0.32rem; }
+        .container #wrapper #iscroll #header ul li:last-child i {
+          font-size: 0.32rem;
+          color: white; }
+
+.container #wrapper #iscroll nav {
+  width: 100%;
+  height: 0.57rem;
+  background: #fff;
+  display: none; }
+  .container #wrapper #iscroll nav ul {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0.05rem; }
+    .container #wrapper #iscroll nav ul li {
+      flex: 1; }
+      .container #wrapper #iscroll nav ul li span, .container #wrapper #iscroll nav ul li i {
+        display: block;
+        text-align: center;
+        color: #666; }
+      .container #wrapper #iscroll nav ul li i {
+        font-size: 13px;
+        margin-top: -0.08rem; }
+      .container #wrapper #iscroll nav ul li span {
+        font-size: 22px; }
+
+.container .totop {
+  display: none;
+  width: 0.42rem;
+  height: 0.42rem;
+  background: rgba(255, 102, 0, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  z-index: 9999; }
+  .container .totop a {
+    display: block;
+    margin: 0 auto;
+    height: 0.3rem;
+    width: 0.3rem;
+    background: url("http://m.hua.com/images/icon2b.png") -169px 6px no-repeat;
+    background-size: 200px 200px; }
+
+.container #wrapper #iscroll footer {
+  padding: 0.1rem 0.1rem 0;
+  width: 100%; }
+  .container #wrapper #iscroll footer .btns {
+    width: 100%; }
+    .container #wrapper #iscroll footer .btns a {
+      position: relative;
+      border-radius: 5px;
+      padding: 0.05rem 0.15rem;
+      color: #f60; }
+      .container #wrapper #iscroll footer .btns a::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        content: "\0020";
+        border-color: #f60;
+        border-style: solid;
+        border-width: 2px;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .container #wrapper #iscroll footer .btns a::after {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .container #wrapper #iscroll footer .btns a::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            border-radius: 10px; } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .container #wrapper #iscroll footer .btns a::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333);
+            border-radius: 15px; } }
+  .container #wrapper #iscroll footer .footer_menu {
+    width: 100%;
+    padding: 0.1rem 0.3rem 0; }
+    .container #wrapper #iscroll footer .footer_menu ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .container #wrapper #iscroll footer .footer_menu ul li {
+        border-right: 1px solid #666;
+        padding: 0 0.1rem;
+        text-align: center; }
+        .container #wrapper #iscroll footer .footer_menu ul li:nth-child(n+4) {
+          border-right: none; }
+        .container #wrapper #iscroll footer .footer_menu ul li a {
+          color: #666;
+          font-size: 12px; }
+  .container #wrapper #iscroll footer p {
+    color: #a3a3a3;
+    font-size: 12px;
+    text-align: center; }
+
 /* @font-face {font-family: 'iconfont';
     url:('./src/styles/usage/module/cake/iconfont.ttf') format('truetype');
    
@@ -1206,82 +1377,6 @@ body {
   .container #wrapper {
     width: 100%;
     height: 100%; }
-    .container #wrapper #iscroll #header {
-      width: 100%;
-      height: 0.46rem;
-      background: #ff6600; }
-      .container #wrapper #iscroll #header ul {
-        width: 100%;
-        height: 100%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        justify-content: flex-start;
-        padding-right: 0.1rem; }
-        .container #wrapper #iscroll #header ul li {
-          line-height: 0.45rem; }
-          .container #wrapper #iscroll #header ul li:first-child {
-            width: 0.30rem;
-            height: 0.30rem; }
-            .container #wrapper #iscroll #header ul li:first-child i {
-              font-size: 0.30rem;
-              color: white; }
-          .container #wrapper #iscroll #header ul li:nth-child(2) {
-            color: #fff;
-            font-size: 0.12rem; }
-          .container #wrapper #iscroll #header ul li:nth-child(3) {
-            flex: 1; }
-            .container #wrapper #iscroll #header ul li:nth-child(3) span {
-              margin-top: 0.13rem;
-              line-height: 0.10rem;
-              height: 0.16rem;
-              border: 1px solid #fff;
-              font-size: 0.12rem;
-              display: inline-block;
-              color: #fff;
-              border-radius: 0.02rem;
-              padding: 0.02rem; }
-              .container #wrapper #iscroll #header ul li:nth-child(3) span i {
-                display: inline-block;
-                width: 0.15rem;
-                height: 0.1rem;
-                background: url("http://m.hua.com/images/icon2b.png") -95px -7px no-repeat;
-                background-size: 198px 200px; }
-          .container #wrapper #iscroll #header ul li:nth-child(4) {
-            position: absolute;
-            left: calc(50% - 0.17rem);
-            font-size: 0.17rem;
-            color: #fff; }
-          .container #wrapper #iscroll #header ul li:last-child {
-            width: 0.32rem;
-            height: 0.32rem; }
-            .container #wrapper #iscroll #header ul li:last-child i {
-              font-size: 0.32rem;
-              color: white; }
-    .container #wrapper #iscroll nav {
-      width: 100%;
-      height: 0.57rem;
-      background: #fff;
-      display: none; }
-      .container #wrapper #iscroll nav ul {
-        height: 100%;
-        width: 100%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        padding: 0.05rem; }
-        .container #wrapper #iscroll nav ul li {
-          flex: 1; }
-          .container #wrapper #iscroll nav ul li span,
-          .container #wrapper #iscroll nav ul li i {
-            display: block;
-            text-align: center;
-            color: #666; }
-          .container #wrapper #iscroll nav ul li i {
-            font-size: 13px;
-            margin-top: -0.08rem; }
-          .container #wrapper #iscroll nav ul li span {
-            font-size: 22px; }
     .container #wrapper #iscroll section.nav_bar {
       height: 0.41rem;
       width: 100%;
@@ -1428,86 +1523,6 @@ body {
               display: block;
               width: 100%;
               color: #666; }
-    .container #wrapper #iscroll footer {
-      padding: 0.1rem 0.1rem 0;
-      width: 100%; }
-      .container #wrapper #iscroll footer .btns {
-        width: 100%; }
-        .container #wrapper #iscroll footer .btns a {
-          position: relative;
-          border-radius: 5px;
-          padding: 0.05rem 0.15rem;
-          color: #f60; }
-          .container #wrapper #iscroll footer .btns a::after {
-            pointer-events: none;
-            position: absolute;
-            z-index: 999;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            content: "\0020";
-            border-color: #f60;
-            border-style: solid;
-            border-width: 2px;
-            -webkit-transform-origin: 0 0;
-            transform-origin: 0 0; }
-            @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-              .container #wrapper #iscroll footer .btns a::after {
-                width: 100%;
-                height: 100%;
-                border-radius: 5px; } }
-            @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-              .container #wrapper #iscroll footer .btns a::after {
-                width: 200%;
-                height: 200%;
-                -webkit-transform: scale(0.5);
-                transform: scale(0.5);
-                border-radius: 10px; } }
-            @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-              .container #wrapper #iscroll footer .btns a::after {
-                width: 300%;
-                height: 300%;
-                -webkit-transform: scale(0.33333);
-                transform: scale(0.33333);
-                border-radius: 15px; } }
-      .container #wrapper #iscroll footer .footer_menu {
-        width: 100%;
-        padding: 0.1rem 0.3rem 0; }
-        .container #wrapper #iscroll footer .footer_menu ul {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center; }
-          .container #wrapper #iscroll footer .footer_menu ul li {
-            border-right: 1px solid #666;
-            padding: 0 0.1rem 0;
-            text-align: center; }
-            .container #wrapper #iscroll footer .footer_menu ul li:nth-child(n+4) {
-              border-right: none; }
-            .container #wrapper #iscroll footer .footer_menu ul li a {
-              color: #666;
-              font-size: 12px; }
-      .container #wrapper #iscroll footer p {
-        color: #a3a3a3;
-        font-size: 12px;
-        text-align: center; }
-  .container .totop {
-    display: none;
-    width: 0.42rem;
-    height: 0.42rem;
-    background: rgba(255, 102, 0, 0.6);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 70px;
-    right: 20px; }
-    .container .totop a {
-      display: block;
-      margin: 0 auto;
-      height: 0.3rem;
-      width: 0.3rem;
-      background: url("http://m.hua.com/images/icon2b.png") -169px 6px no-repeat;
-      background-size: 200px 200px; }
 
 .citys {
   display: none;
@@ -1565,8 +1580,8 @@ body {
       text-shadow: 1px 1px 5px solid #ccc; }
     .citys .city_menu .title {
       text-align: center;
-      height: .42rem;
-      line-height: .42rem;
+      height: 0.42rem;
+      line-height: 0.42rem;
       color: #E42B2B; }
     .citys .city_menu h4 {
       width: 100%;
@@ -1600,7 +1615,7 @@ body {
           width: 0.68rem;
           height: 0.44rem;
           line-height: 0.44rem;
-          padding: 0 0.12rem 0;
+          padding: 0 0.12rem;
           text-align: center;
           font-size: 14px;
           position: relative; }

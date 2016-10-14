@@ -625,8 +625,7 @@ textarea {
 input,
 textarea,
 button,
-select
-a {
+select a {
   outline: 0 none; }
 
 input,
@@ -691,17 +690,36 @@ a {
 
 @font-face {
   font-family: 'iconfont';
+  /* chrome、firefox */
   /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   src: url("/build/images/iconfont/iconfont.woff") format("woff"), url("/build/images/iconfont/iconfont.ttf") format("truetype"); }
 
 .iconfont {
   font-family: iconfont; }
 
-.container {
+body .totop {
+  display: none;
+  width: 0.42rem;
+  height: 0.42rem;
+  background: rgba(255, 102, 0, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  z-index: 9999; }
+  body .totop a {
+    display: block;
+    margin: 0 auto;
+    height: 0.3rem;
+    width: 0.3rem;
+    background: url("http://m.hua.com/images/icon2b.png") -169px 6px no-repeat;
+    background-size: 200px 200px; }
+
+body .container {
   width: 100%;
   height: 100%;
   overflow: hidden; }
-  .container .iscroll {
+  body .container .iscroll {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -709,9 +727,9 @@ a {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     flex-direction: column; }
-    .container .iscroll > * {
+    body .container .iscroll > * {
       width: 100%; }
-    .container .iscroll header {
+    body .container .iscroll header {
       height: 0.46rem;
       display: -webkit-box;
       display: -webkit-flex;
@@ -727,13 +745,13 @@ a {
       -webkit-align-items: center;
       align-items: center;
       background: #ff6600; }
-      .container .iscroll header .logo {
+      body .container .iscroll header .logo {
         width: 1.31rem;
         height: 0.41rem;
         margin-left: 0.09rem;
         background: url("/build/images/icon.png") 0 -0.59rem no-repeat;
         background-size: 1.9rem 1.9rem; }
-      .container .iscroll header ul {
+      body .container .iscroll header ul {
         width: 1.2rem;
         display: -webkit-box;
         display: -webkit-flex;
@@ -748,7 +766,7 @@ a {
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         justify-content: space-between; }
-        .container .iscroll header ul li {
+        body .container .iscroll header ul li {
           width: 0.4rem;
           font-size: 0.26rem;
           color: #fff;
@@ -756,7 +774,7 @@ a {
           -webkit-box-align: center;
           -webkit-align-items: center;
           align-items: center; }
-    .container .iscroll section {
+    body .container .iscroll section {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
@@ -764,20 +782,20 @@ a {
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       flex-direction: column; }
-      .container .iscroll section nav {
+      body .container .iscroll section nav {
         height: 1.24rem; }
-        .container .iscroll section nav .swiper-container {
+        body .container .iscroll section nav .swiper-container {
           width: 100%;
           height: 100%; }
-          .container .iscroll section nav .swiper-container img {
+          body .container .iscroll section nav .swiper-container img {
             width: 100%;
             height: 100%; }
-          .container .iscroll section nav .swiper-container .swiper-pagination-bullet-active {
+          body .container .iscroll section nav .swiper-container .swiper-pagination-bullet-active {
             background: #fff; }
-      .container .iscroll section .mainlist {
+      body .container .iscroll section .mainlist {
         height: 0.85rem;
         background: #fff; }
-        .container .iscroll section .mainlist ul {
+        body .container .iscroll section .mainlist ul {
           width: 100%;
           height: 100%;
           display: -webkit-box;
@@ -790,13 +808,13 @@ a {
           -webkit-box-pack: justify;
           -webkit-justify-content: space-between;
           justify-content: space-between; }
-          .container .iscroll section .mainlist ul li {
+          body .container .iscroll section .mainlist ul li {
             width: 20%;
             padding: 0.08rem; }
-            .container .iscroll section .mainlist ul li dl {
+            body .container .iscroll section .mainlist ul li dl {
               font-size: 0.12rem;
               text-align: center; }
-              .container .iscroll section .mainlist ul li dl dt span {
+              body .container .iscroll section .mainlist ul li dl dt span {
                 background: #fb8989;
                 border-radius: 50%;
                 display: block;
@@ -805,20 +823,20 @@ a {
                 margin: auto auto 0.08rem;
                 text-align: center;
                 width: 0.45rem; }
-              .container .iscroll section .mainlist ul li dl dt .icon_cake {
+              body .container .iscroll section .mainlist ul li dl dt .icon_cake {
                 background: #de8dc5; }
-              .container .iscroll section .mainlist ul li dl dt .icon_flowersong {
+              body .container .iscroll section .mainlist ul li dl dt .icon_flowersong {
                 background: #77bae6; }
-              .container .iscroll section .mainlist ul li dl dt .icon_gifts {
+              body .container .iscroll section .mainlist ul li dl dt .icon_gifts {
                 background: #f6b365; }
-              .container .iscroll section .mainlist ul li dl dt .icon-Plant {
+              body .container .iscroll section .mainlist ul li dl dt .icon-Plant {
                 background: #88d4c0; }
-              .container .iscroll section .mainlist ul li dl dd .icon_list {
+              body .container .iscroll section .mainlist ul li dl dd .icon_list {
                 color: #666; }
-      .container .iscroll section .flowernav {
+      body .container .iscroll section .flowernav {
         height: 1.25rem;
         background: #fff; }
-        .container .iscroll section .flowernav ul {
+        body .container .iscroll section .flowernav ul {
           width: 100%;
           height: 100%;
           display: -webkit-box;
@@ -831,7 +849,7 @@ a {
           -webkit-box-pack: justify;
           -webkit-justify-content: space-between;
           justify-content: space-between; }
-          .container .iscroll section .flowernav ul li {
+          body .container .iscroll section .flowernav ul li {
             width: 33.3%;
             border-left: 1px solid #E5E5E5;
             margin-left: -1px;
@@ -840,10 +858,10 @@ a {
             font-size: 0.12rem;
             color: #999;
             position: relative; }
-            .container .iscroll section .flowernav ul li img {
+            body .container .iscroll section .flowernav ul li img {
               border: 0;
               width: 100%; }
-            .container .iscroll section .flowernav ul li i {
+            body .container .iscroll section .flowernav ul li i {
               position: absolute;
               z-index: 2;
               left: 0;
@@ -851,20 +869,20 @@ a {
               text-align: center;
               line-height: 0.18rem;
               width: 100%; }
-              .container .iscroll section .flowernav ul li i .p1 {
+              body .container .iscroll section .flowernav ul li i .p1 {
                 font-size: 0.14rem; }
-              .container .iscroll section .flowernav ul li i .red {
+              body .container .iscroll section .flowernav ul li i .red {
                 color: #f00; }
-              .container .iscroll section .flowernav ul li i .pink {
+              body .container .iscroll section .flowernav ul li i .pink {
                 color: #ff8588; }
-              .container .iscroll section .flowernav ul li i .orange {
+              body .container .iscroll section .flowernav ul li i .orange {
                 color: #f2b354; }
-              .container .iscroll section .flowernav ul li i .p2 {
+              body .container .iscroll section .flowernav ul li i .p2 {
                 font-size: 0.12rem; }
-      .container .iscroll section .libox {
+      body .container .iscroll section .libox {
         height: 8.52rem;
         background: #fff; }
-        .container .iscroll section .libox .flowerlist {
+        body .container .iscroll section .libox .flowerlist {
           height: 100%;
           width: 100%;
           padding: 0.1rem;
@@ -879,30 +897,30 @@ a {
           flex-wrap: wrap;
           -webkit-align-content: space-between;
           align-content: space-between; }
-          .container .iscroll section .libox .flowerlist li {
+          body .container .iscroll section .libox .flowerlist li {
             width: 1.47rem;
             border: 0.01rem solid #e5e5e5;
             text-align: center;
             font-size: 13px; }
-            .container .iscroll section .libox .flowerlist li img {
+            body .container .iscroll section .libox .flowerlist li img {
               width: 100%; }
-            .container .iscroll section .libox .flowerlist li p {
+            body .container .iscroll section .libox .flowerlist li p {
               padding-top: 0.05rem;
               color: #666; }
-            .container .iscroll section .libox .flowerlist li span {
+            body .container .iscroll section .libox .flowerlist li span {
               color: #ff0000; }
-          .container .iscroll section .libox .flowerlist li:nth-child(odd) {
+          body .container .iscroll section .libox .flowerlist li:nth-child(odd) {
             margin-right: 0.025rem; }
-          .container .iscroll section .libox .flowerlist li:nth-child(even) {
+          body .container .iscroll section .libox .flowerlist li:nth-child(even) {
             margin-left: 0.025rem; }
-      .container .iscroll section .white {
+      body .container .iscroll section .white {
         height: 0.12rem;
         background: #F1F1F5;
         border-bottom: 1px solid #E5E5E5;
         border-top: 1px solid #E5E5E5;
         width: 100%;
         margin: 0 auto; }
-      .container .iscroll section .list h3 {
+      body .container .iscroll section .list h3 {
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
@@ -915,72 +933,72 @@ a {
         padding: 0 .1rem;
         width: 100%;
         height: .4rem; }
-        .container .iscroll section .list h3 span {
+        body .container .iscroll section .list h3 span {
           line-height: 24px;
           font-size: .16rem;
           color: #666; }
-        .container .iscroll section .list h3 a {
+        body .container .iscroll section .list h3 a {
           font-size: 14px;
           color: #666;
           font-weight: 100; }
-      .container .iscroll section .cake {
+      body .container .iscroll section .cake {
         background: #fff; }
-        .container .iscroll section .cake .logolist div {
+        body .container .iscroll section .cake .logolist div {
           height: .8rem;
           width: 100%;
           padding-bottom: .08rem; }
-          .container .iscroll section .cake .logolist div img {
+          body .container .iscroll section .cake .logolist div img {
             width: 100%; }
-        .container .iscroll section .cake .logolist ul {
+        body .container .iscroll section .cake .logolist ul {
           display: -webkit-box;
           display: -webkit-flex;
           display: flex;
           -webkit-flex-wrap: wrap;
           flex-wrap: wrap; }
-          .container .iscroll section .cake .logolist ul li {
+          body .container .iscroll section .cake .logolist ul li {
             width: 33.3333333%;
             border-bottom: 1px solid #E5E5E5;
             border-right: 1px solid #E5E5E5;
             text-align: center; }
-            .container .iscroll section .cake .logolist ul li img {
+            body .container .iscroll section .cake .logolist ul li img {
               width: 100%; }
-            .container .iscroll section .cake .logolist ul li a {
+            body .container .iscroll section .cake .logolist ul li a {
               color: #999;
               font-size: 12px;
               line-height: .24rem; }
-          .container .iscroll section .cake .logolist ul li:nth-child(3n) {
+          body .container .iscroll section .cake .logolist ul li:nth-child(3n) {
             border-right: 0; }
-      .container .iscroll section .gift {
+      body .container .iscroll section .gift {
         background: #fff;
         border-top: 1px solid #E5E5E5; }
-        .container .iscroll section .gift ul {
+        body .container .iscroll section .gift ul {
           display: -webkit-box;
           display: -webkit-flex;
           display: flex;
           -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
           border-top: 1px solid #E5E5E5; }
-          .container .iscroll section .gift ul li {
+          body .container .iscroll section .gift ul li {
             width: 33.33333%;
             border-right: 1px solid #e5e5e5; }
-            .container .iscroll section .gift ul li h4 {
+            body .container .iscroll section .gift ul li h4 {
               font-size: .14rem;
               line-height: .16rem;
               color: #666;
               font-weight: 100;
               padding: 0 .05rem;
               margin-top: -1.2rem; }
-            .container .iscroll section .gift ul li p {
+            body .container .iscroll section .gift ul li p {
               font-size: .12rem;
               color: #b9b9b9;
               padding: 0 .05rem .9rem; }
-            .container .iscroll section .gift ul li img {
+            body .container .iscroll section .gift ul li img {
               width: 100%; }
-          .container .iscroll section .gift ul li:nth-child(3n) {
+          body .container .iscroll section .gift ul li:nth-child(3n) {
             border-right: 0; }
-      .container .iscroll section .uation {
+      body .container .iscroll section .uation {
         background: #fff; }
-        .container .iscroll section .uation .alluation {
+        body .container .iscroll section .uation .alluation {
           margin: 0 2% .1rem;
           border: 1px solid #E6E6E6;
           display: block;
@@ -989,11 +1007,11 @@ a {
           line-height: .28rem;
           color: #999;
           text-align: center; }
-          .container .iscroll section .uation .alluation span {
+          body .container .iscroll section .uation .alluation span {
             color: #f60; }
-        .container .iscroll section .uation ul {
+        body .container .iscroll section .uation ul {
           padding: 0 .08rem; }
-          .container .iscroll section .uation ul li {
+          body .container .iscroll section .uation ul li {
             display: -webkit-box;
             display: -webkit-flex;
             display: flex;
@@ -1002,57 +1020,57 @@ a {
             align-items: flex-start;
             border-top: 1px solid #E6E6E6;
             padding: .1rem 0; }
-            .container .iscroll section .uation ul li img {
+            body .container .iscroll section .uation ul li img {
               width: 15%; }
-            .container .iscroll section .uation ul li > div {
+            body .container .iscroll section .uation ul li > div {
               -webkit-box-flex: 1;
               -webkit-flex: 1;
               flex: 1;
               width: .1px; }
-              .container .iscroll section .uation ul li > div h4 {
+              body .container .iscroll section .uation ul li > div h4 {
                 font-size: 14px;
                 color: #666; }
-              .container .iscroll section .uation ul li > div div {
+              body .container .iscroll section .uation ul li > div div {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: flex;
                 -webkit-box-pack: justify;
                 -webkit-justify-content: space-between;
                 justify-content: space-between; }
-                .container .iscroll section .uation ul li > div div i {
+                body .container .iscroll section .uation ul li > div div i {
                   width: .78rem;
                   height: .26rem;
                   background: url(../../images/icon2b.png) -0.01rem 0.03rem no-repeat;
                   background-size: 1.9rem 1.9rem;
                   vertical-align: top; }
-                .container .iscroll section .uation ul li > div div span {
+                body .container .iscroll section .uation ul li > div div span {
                   line-height: .2rem;
                   color: #ccc; }
-              .container .iscroll section .uation ul li > div p {
+              body .container .iscroll section .uation ul li > div p {
                 font-size: 12px;
                 color: #999; }
-      .container .iscroll section .news {
+      body .container .iscroll section .news {
         background: #fff; }
-        .container .iscroll section .news .news-list {
+        body .container .iscroll section .news .news-list {
           border-top: 1px solid #E6E6E6;
           width: 100%;
           padding: 0 .1rem; }
-          .container .iscroll section .news .news-list a {
+          body .container .iscroll section .news .news-list a {
             display: block;
             border-top: 1px solid #E6E6E6;
             line-height: 20px;
             font-size: 14px;
             color: #666;
             padding: .14rem 0; }
-          .container .iscroll section .news .news-list a:nth-child(1) {
+          body .container .iscroll section .news .news-list a:nth-child(1) {
             border-top: 0; }
-      .container .iscroll section .busin {
+      body .container .iscroll section .busin {
         background: #fff; }
-        .container .iscroll section .busin ul {
+        body .container .iscroll section .busin ul {
           display: -webkit-box;
           display: -webkit-flex;
           display: flex; }
-          .container .iscroll section .busin ul li {
+          body .container .iscroll section .busin ul li {
             padding: .1rem 0;
             -webkit-box-flex: 1;
             -webkit-flex: 1;
@@ -1072,41 +1090,41 @@ a {
             -webkit-align-items: center;
             align-items: center;
             text-align: center; }
-            .container .iscroll section .busin ul li img {
+            body .container .iscroll section .busin ul li img {
               height: .45rem;
               width: .45rem; }
-            .container .iscroll section .busin ul li span {
+            body .container .iscroll section .busin ul li span {
               margin-top: .05rem;
               font-size: 12px;
               color: #999; }
-        .container .iscroll section .busin .tel {
+        body .container .iscroll section .busin .tel {
           border-top: 1px solid #E6E6E6;
           line-height: 20px;
           font-size: 14px;
           color: #666;
           text-align: center;
           padding: .15rem 0; }
-          .container .iscroll section .busin .tel i {
+          body .container .iscroll section .busin .tel i {
             background: url("http://m.hua.com/images/Phone.png") no-repeat scroll 0 0 transparent;
             display: inline-block;
             height: 20px;
             vertical-align: middle;
             width: 20px; }
-    .container .iscroll footer .button {
+    body .container .iscroll footer .button {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
       -webkit-justify-content: space-around;
       justify-content: space-around;
       padding: .2rem 0 .1rem; }
-      .container .iscroll footer .button span {
+      body .container .iscroll footer .button span {
         width: 40%;
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: space-around;
         justify-content: space-around; }
-        .container .iscroll footer .button span a {
+        body .container .iscroll footer .button span a {
           border: 1px solid #f60;
           padding: 0 .1rem;
           border-radius: .05rem;
@@ -1115,19 +1133,19 @@ a {
           line-height: 28px;
           color: #f60;
           width: 40%; }
-      .container .iscroll footer .button span:nth-child(2) a {
+      body .container .iscroll footer .button span:nth-child(2) a {
         width: 80%; }
-    .container .iscroll footer .link {
+    body .container .iscroll footer .link {
       text-align: center;
       height: 24px;
       line-height: 24px;
       color: #666;
       font-size: 12px; }
-      .container .iscroll footer .link a {
+      body .container .iscroll footer .link a {
         color: #666; }
-      .container .iscroll footer .link span {
+      body .container .iscroll footer .link span {
         padding: 0 .1rem; }
-    .container .iscroll footer p {
+    body .container .iscroll footer p {
       font-size: 12px;
       color: #999;
       text-align: center;

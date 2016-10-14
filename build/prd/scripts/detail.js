@@ -44,20 +44,137 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(18);
+	module.exports = __webpack_require__(22);
 
 
 /***/ },
 /* 1 */,
 /* 2 */,
 /* 3 */,
-/* 4 */,
-/* 5 */,
+/* 4 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"totop\">	<a></a></div>"
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+	var common = {
+		
+	  renderBody: function ($el, str) {
+	    $el.prepend(str);
+	  },
+	  
+	  inner: function ($el, str) {
+	    $el.html(str);
+	  },
+	  
+	  append: function ($el, str) {
+	    $el.append(str);
+	  },
+	 
+		reanderHeader:function( tpl , data){
+			var html  = '';
+			var rander = template.compile(tpl);
+			return rander(data);
+		},
+		
+		ajaxquer: function(url,tplId , boxId, key, callback){
+			 $.ajax({
+	        url: url,
+	        success: function(data) {
+	        	data = key ? data[key] : data;
+	        	var dgboxHtml = template(tplId, data);
+						$(boxId).html( dgboxHtml );
+						if(callback) callback();
+	        },
+	        error: function(data) {
+	            console.log("ajax错误")
+	        },
+	        dataType: 'json'
+	    })
+		},
+		
+		compile: function( tplstr , data  ){
+			var rander = template.compile(tplstr);
+			return rander(data);
+		},
+		
+		/* 
+		 * 
+		 	应该换一个文件保存这类 有关联的方法
+		 *
+		 * */
+	  switchPage: function (index) {
+	    $('#footer li').eq(index).addClass('active').siblings().removeClass('active');
+	    $('#footer').on('tap', 'li', function () {
+	      location.href = $(this).attr('data-url');
+	    })
+	  },
+	  
+	  backTop: function( myScroll ){
+	 			//回到顶部显示的距离
+	    	myScroll.on('scroll', function() {
+	            if (myScroll.y < -500) {
+	                $('.totop').show()
+	            } else {
+	                $('.totop').hide()
+	            }
+	        });
+	        
+	        $('.totop a').on('tap', function(e) {
+	            myScroll.scrollTo(0, 0, 200);
+	            e.preventDefalut;
+	        })
+	  },
+	  
+	  navload:function() {
+			$('nav ul li').eq(0).on('tap', function() {
+				location.href = "/build/index.html"
+			})
+			$('nav ul li').eq(1).on('tap', function() {
+
+			})
+			$('nav ul li').eq(2).on('tap', function() {
+				location.href = "/build/other/cart.html"
+			})
+			$('nav ul li').eq(3).on('tap', function() {
+				location.href = "/build/other/login.html"  
+			})
+			$("#header ul li").eq(0).on('tap', function() {
+				history.back();
+			})
+			$('#header ul').on('tap', 'li:last-child', function() {
+				$('nav').toggle()
+			})
+		}
+		
+	};
+
+	module.exports = common;
+
+
+
+/***/ },
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */,
-/* 10 */,
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = "<header id=\"header\">	<ul>		<li><i class=\"iconfont\">&#xe679;</i> </li>		{{each data as value i}}			<li>{{value}}</li> 		{{/each}}		{{if cake}}			<li>送至:</li>			<li><span>北京 <i></i> </span></li>			<li>蛋糕</li>		{{/if}}		<li> <i class=\"iconfont\">&#xe7ad;</i> </li>	</ul></header><nav  id=\"nav2\">	<ul>		<li>			<a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a>		</li>		<li>			<a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a>		</li>		<li>			<a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a>		</li>		<li>			<a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a>		</li>	</ul></nav>"
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"btns\">	<a href=\"#\">登录</a>	<a href=\"#\">注册</a></div><div class=\"footer_menu\">	<ul>		<li>			<a href=\"#\">帮助</a>		</li>		<li>			<a href=\"#\">查单</a>		</li>		<li>			<a href=\"#\">在线补款</a>		</li>		<li>			<a href=\"#\">客服</a>		</li>		<li>			<a href=\"#\">花语大全</a>		</li>		<li>			<a href=\"#\">电脑版</a>		</li>	</ul></div><p>© 花礼网(中国鲜花礼品网) m.hua.com</p>"
+
+/***/ },
 /* 11 */,
 /* 12 */,
 /* 13 */,
@@ -65,7 +182,11 @@
 /* 15 */,
 /* 16 */,
 /* 17 */,
-/* 18 */
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -92,15 +213,15 @@
 	} */
 	var curhref = window.location.href;
 	if( curhref.indexOf('index') >= 0 ){
-		__webpack_require__(19);
+		__webpack_require__(23);
 	} else if( curhref.indexOf('cart') >= 0 ){
-		__webpack_require__(22);
-	} else if( curhref.indexOf('alldetail') >= 0 ){
-		__webpack_require__(24);
-	} else if( curhref.indexOf('login') >= 0 ){
 		__webpack_require__(26);
-	} else if( curhref.indexOf('regist') >= 0 ){
+	} else if( curhref.indexOf('alldetail') >= 0 ){
 		__webpack_require__(28);
+	} else if( curhref.indexOf('login') >= 0 ){
+		__webpack_require__(30);
+	} else if( curhref.indexOf('regist') >= 0 ){
+		__webpack_require__(32);
 	} else{
 		
 	}     
@@ -111,92 +232,79 @@
 
 
 /***/ },
-/* 19 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(20);
-	var T = template;
-	var html = __webpack_require__( 21 );
+	var common = __webpack_require__(24);
+	var comm = __webpack_require__(5);
+	var html = __webpack_require__(25);
+	var header = __webpack_require__(9);
+	var top = __webpack_require__(4);
+	var footer = __webpack_require__(10);
+
 	$.ajax({
 		url: '/api/spid/9012126.json',
-		success: function (res) {
-		
-			var rander = template.compile(html);
-			var newhtml = rander(res);
-			
-			common.randerBody(newhtml);
+		success: function(res) {
+			common.randerBody(comm.compile(html, res));
+			$('.container').prepend(comm.compile(header, {
+				data: ['', '', res.name]
+			}));
+			$('body').append(top);
+			$('footer').html(footer);
 			callbackFunc(res);
 		}
-	});  
+	});
 
-	function callbackFunc(sp){
+	function callbackFunc(sp) {
 		var sp = sp;
+
+		var deScroll = new IScroll('.deScoll', {
+			probeType: 3
+		});
+		comm.backTop(deScroll);
+
+		$('img').on('load', function() {
+			deScroll.refresh();
+		});
+
 		var picSwiper = new Swiper('.swiper-container', {
-			pagination : '.swiper-pagination',
-			paginationType : 'custom',
-			paginationCustomRender: function (swiper, current, total) {
+			pagination: '.swiper-pagination',
+			paginationType: 'custom',
+			paginationCustomRender: function(swiper, current, total) {
 				return current + '/' + total;
 			}
 		});
 
-		setTimeout( function(){
-			var deScroll = new IScroll('.deScoll');
-		},1000);
-
 		//加入购物车直接 跳转到购物车 页面
-		$('.addcart span').eq(1).on('tap' , function(){
-			common.addCart( sp );
+		$('.addcart span').eq(1).on('tap', function() {
+			common.addCart(sp);
 			window.location.href = './cart.html';
 		});
 
 		//跳转到商品全部信息页面
-		$('.details').on('tap' , function(){
-			window.location.href =  $(this).attr('data-url');
+		$('.details').on('tap', function() {
+			window.location.href = $(this).attr('data-url');
 		});
-		$('#pictext>span').on('tap' , function(){
-			window.location.href =  $(this).attr('data-url');
+		$('#pictext>span').on('tap', function() {
+			window.location.href = $(this).attr('data-url');
 		});
-		$('#show').on('tap' , function(){
-			window.location.href =  $(this).attr('data-url');
+		$('#show').on('tap', function() {
+			window.location.href = $(this).attr('data-url');
 		});
-		$('#story').on('tap' , function(){
-			window.location.href =  $(this).attr('data-url');
+		$('#story').on('tap', function() {
+			window.location.href = $(this).attr('data-url');
 		});
-		        //顶部导航栏
-	    $('#header ul').on('tap', 'li:last-child', function() {
-
-	            $('nav').toggle()
-	        })
-	     navload();
-	    function navload(){
-	            $('nav ul li').eq(0).on('tap',function(){
-	        location.href="./index.html"
-	    })
-	     $('nav ul li').eq(1).on('tap',function(){
-	       
-	    
-	    })
-	 $('nav ul li').eq(2).on('tap',function(){
-	        location.href="./build/other/cart.html"
-	    })
-	  $('nav ul li').eq(3).on('tap',function(){
-	        location.href="./build/other/login.html"
-	    })
-	    $("#header ul li").eq(0).on('tap',function(){
-	        history.back();
-	    })
-
-	    }
 		
+		/* 那个啥  */
+		comm.navload();
 	}
 
 
-
 /***/ },
-/* 20 */
+/* 24 */
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -239,21 +347,21 @@
 
 
 /***/ },
-/* 21 */
+/* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container\">				<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>购物车</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav>		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>		<div class=\"deScoll\">		<div class=\"deScoll-box\">			<section>				<section id=\"slider-pic\">					<div class=\"swiper-container\">						<div class=\"swiper-wrapper\">							{{each imgs as value i}}								<div class=\"swiper-slide\"><img src=\"{{value}}\" alt=\"\" /></div>							{{/each}}						</div>						<div class=\"swiper-pagination\"></div>					</div>					<div class=\"addcart\">						<span>￥{{price}}</span>						<span>加入购物车</span>					</div>					<div class=\"details\" data-url=\"./alldetail.html?{{id}}-0\">						<a href=\"#\">							<p>{{title}}<span>{{state}}</span></p>							<span><i  class=\"iconfont\" >&#xe679;</i> </span>						</a>					</div>				</section>				<div class=\"kongbai\"></div>				<section id=\"app-exclusive\">					<span>APP专享价</span>					<span>可省3元</span>					<span></span>				</section>				<div class=\"kongbai\"></div>				<section id=\"pictext\">					<ul>						<li><span>材料：</span>{{material}}</li>						<li><span>花语：</span>{{says}}</li>						<li><span>配送：</span>{{delivery}}</li>						<li><span>说明：</span>{{explain}}</li>					</ul>										<span data-url=\"./alldetail.html?{{id}}-0\">更多图文详情 <i class=\"iconfont\">&#xe679;</i>	</span>				</section>				<div class=\"kongbai\"></div>				<section class=\"contact\"> 					<a href=\"#\"><i class=\"qq\"></i><span>在线客服</span></a>					<a href=\"#\"><i class=\"tel\"></i><span>400-899-8188</span></a>				</section>				<div class=\"kongbai\"></div>				<section id=\"comment\">					<h3>商品评价</h3>					<ul>						{{each evaluation as value i}}							<li>								<div class=\"t\">									<img src=\"{{value.imgsrc}}\" alt=\"\" />									<span class=\"xin\"><span></span></span>									<span class=\"ip\">{{value.ip}}</span>								</div>								<p>{{value.content}}</p>								<div class=\"b\">									<span><img src=\"http://img02.hua.com/icon/touxiang_m.png?3\"/></span>									<span>{{value.name}}</span>									<span>配送地址：{{value.path}}</span>								</div>							</li>						{{/each}}					</ul>					<div class=\"more\">						<a href=\"./alldetail.html?{{id}}-1\">【查看本商品全部评价】</a>						<a href=\"./alldetail.html?{{id}}-1\">【查看最近所有商品评价181550条】</a>					</div>									</section>								<div class=\"kongbai\"></div>				<section class=\"Story\">					<div id=\"show\"  class=\" title\" data-url=\"./alldetail.html?{{id}}-2\">						<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>						<i class=\"iconfont\">&#xe679;</i>						</div>					<div class=\"scroll-pai\">						<ul>							{{each show as value i}}							<li>								<img src=\"{{value.imgsrc}}\" alt=\"\" />								<p>订单：{{value.danhao}}</p>								<p>{{value.path}}</p>							</li>							{{/each}}						</ul>					</div>				</section>								<div class=\"kongbai\"></div>				<section class=\"Story\">					<div id=\"story\" class=\"title\" data-url=\"./alldetail.html?{{id}}-3\">						<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>						<i class=\"iconfont\">&#xe679;</i>					</div>					<div class=\"list\">						{{each story as value i}}							<div class=\"item\">								<img src=\"{{value.imgsrc}}\" alt=\"\" />								<div class=\"text\">									<h3>{{value.title}}</h3>									<p>{{value.content}}<p>								</div>							</div>						{{/each}}					</div>				</section>								<div class=\"add-cart\">					<a href=\"#\">￥239  加入购物车</a>				</div>				<section class=\"you-like\">					<h3>也许您还喜欢</h3>					<div class=\"scroll-youlike\">						<ul>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>						</ul>					</div>				</section>			</section>						<footer>等待</footer>		</div>	</div></div>"
+	module.exports = "<div class=\"container\">				<!--<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>购物车</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav>		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>-->		<div class=\"deScoll\">		<div class=\"deScoll-box\">			<section>				<section id=\"slider-pic\">					<div class=\"swiper-container\">						<div class=\"swiper-wrapper\">							{{each imgs as value i}}								<div class=\"swiper-slide\"><img src=\"{{value}}\" alt=\"\" /></div>							{{/each}}						</div>						<div class=\"swiper-pagination\"></div>					</div>					<div class=\"addcart\">						<span>￥{{price}}</span>						<span>加入购物车</span>					</div>					<div class=\"details\" data-url=\"./alldetail.html?{{id}}-0\">						<a href=\"#\">							<p>{{title}}<span>{{state}}</span></p>							<span><i  class=\"iconfont\" >&#xe679;</i> </span>						</a>					</div>				</section>				<div class=\"kongbai\"></div>				<section id=\"app-exclusive\">					<span>APP专享价</span>					<span>可省3元</span>					<span></span>				</section>				<div class=\"kongbai\"></div>				<section id=\"pictext\">					<ul>						<li><span>材料：</span>{{material}}</li>						<li><span>花语：</span>{{says}}</li>						<li><span>配送：</span>{{delivery}}</li>						<li><span>说明：</span>{{explain}}</li>					</ul>										<span data-url=\"./alldetail.html?{{id}}-0\">更多图文详情 <i class=\"iconfont\">&#xe679;</i>	</span>				</section>				<div class=\"kongbai\"></div>				<section class=\"contact\"> 					<a href=\"#\"><i class=\"qq\"></i><span>在线客服</span></a>					<a href=\"#\"><i class=\"tel\"></i><span>400-899-8188</span></a>				</section>				<div class=\"kongbai\"></div>				<section id=\"comment\">					<h3>商品评价</h3>					<ul>						{{each evaluation as value i}}							<li>								<div class=\"t\">									<img src=\"{{value.imgsrc}}\" alt=\"\" />									<span class=\"xin\"><span></span></span>									<span class=\"ip\">{{value.ip}}</span>								</div>								<p>{{value.content}}</p>								<div class=\"b\">									<span><img src=\"http://img02.hua.com/icon/touxiang_m.png?3\"/></span>									<span>{{value.name}}</span>									<span>配送地址：{{value.path}}</span>								</div>							</li>						{{/each}}					</ul>					<div class=\"more\">						<a href=\"./alldetail.html?{{id}}-1\">【查看本商品全部评价】</a>						<a href=\"./alldetail.html?{{id}}-1\">【查看最近所有商品评价181550条】</a>					</div>									</section>								<div class=\"kongbai\"></div>				<section class=\"Story\">					<div id=\"show\"  class=\" title\" data-url=\"./alldetail.html?{{id}}-2\">						<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>						<i class=\"iconfont\">&#xe679;</i>						</div>					<div class=\"scroll-pai\">						<ul>							{{each show as value i}}							<li>								<img src=\"{{value.imgsrc}}\" alt=\"\" />								<p>订单：{{value.danhao}}</p>								<p>{{value.path}}</p>							</li>							{{/each}}						</ul>					</div>				</section>								<div class=\"kongbai\"></div>				<section class=\"Story\">					<div id=\"story\" class=\"title\" data-url=\"./alldetail.html?{{id}}-3\">						<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>						<i class=\"iconfont\">&#xe679;</i>					</div>					<div class=\"list\">						{{each story as value i}}							<div class=\"item\">								<img src=\"{{value.imgsrc}}\" alt=\"\" />								<div class=\"text\">									<h3>{{value.title}}</h3>									<p>{{value.content}}<p>								</div>							</div>						{{/each}}					</div>				</section>								<div class=\"add-cart\">					<a href=\"#\">￥239  加入购物车</a>				</div>				<section class=\"you-like\">					<h3>也许您还喜欢</h3>					<div class=\"scroll-youlike\">						<ul>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>							<li>								<img src=\"http://img01.hua.com/uploadpic/newpic/9010734.jpg_80x87.jpg\" alt=\"\" />								<br /><span>￥159</span>							</li>						</ul>					</div>				</section>			</section>						<footer>等待</footer>		</div>	</div></div>"
 
 /***/ },
-/* 22 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(20);
+	var common = __webpack_require__(24);
 	var T = template;
-	var html = __webpack_require__( 23 );
+	var html = __webpack_require__( 27 );
 
 	common.randerBody(html);
 
@@ -364,109 +472,112 @@
 
 
 /***/ },
-/* 23 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">		<div class=\"deScoll\">		<div class=\"deScoll-box\">				<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>购物车</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav>		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>						<div class=\"liubai\"></div>						<!-- 结算 -->			<div class=\"clearing\">				<div>共1件商品</div>				<div><span> <a href=\"./index.html\">继续挑选</a> | </span><span>去结算</span></div>			</div>									<!-- 购物车列表 -->			<script id=\"splistTpl\" type=\"text/html\">				{{each list as value i }}				<li>					<div><img src=\"{{value.img}}\" alt=\"\"/></div>					<div>						<h3><span>[{{value.type}}]</span><a href=\"#\">{{value.name}}</a></h3>						<p>现价: <span > ￥{{value.price}}</span></p>						<p>数量：<span class=\"sub\">-</span><span><input class=\"sum\" type=\"text\" data-id=\"{{value.id}}\" value=\"{{value.sum}}\"/></span><span class=\"add\">+</span></p>					</div>					<div class=\"del\"><i></i></div>				</li>				{{/each}}			</script>			<ul id=\"splist\"  class=\"splist\">							</ul>						<!-- total 总共 -->			<div class=\"goumai\">				<div class=\"total\"><span>合计:</span><i>￥129</i></div>				<div class=\"goclearing\">去结算</div>			</div>												<!-- 搭配 -->			<div class=\"match\">				<h3>搭配以下商品，可与鲜花同时送达：</h3>				<ul>					<li>						<img src=\"http://img01.hua.com/uploadpic/images/20147211744696762.jpg\" alt=\"\"/>						<p>德芙心语:98g铁盒或109克礼盒</p>						<span>￥68</span>					</li>					<li>						<img src=\"http://img01.hua.com/uploadpic/images/20147211744696762.jpg\" alt=\"\"/>						<p>德芙心语:98g铁盒或109克礼盒</p>						<span>￥68</span>					</li>					<li>						<img src=\"http://img01.hua.com/uploadpic/images/20147211744696762.jpg\" alt=\"\"/>						<p>德芙心语:98g铁盒或109克礼盒</p>						<span>￥68</span>					</li>				</ul>			</div>						<footer>等待</footer>		</div>	</div></div>"
 
 /***/ },
-/* 24 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(20);
-	var html = __webpack_require__( 25 );
+	var common = __webpack_require__(24);
+	var html = __webpack_require__(29);
+	var comm = __webpack_require__(5);
+	var header = __webpack_require__(9);
+	var top = __webpack_require__(4);
+	var footer = __webpack_require__(10);
 	// iscroll 滑动
 	var deScroll;
 	// var picSwiper;
 	// 根据地质栏，首次显示的位置
 	var href = window.location.href;
-	var pathArr = href.substr( href.indexOf('?') + 1).split('-');
-	if(!pathArr[1]){
+	var pathArr = href.substr(href.indexOf('?') + 1).split('-');
+	if(!pathArr[1]) {
 		pathArr[1] = 0;
-	}else{
+	} else {
 		pathArr[1] = parseInt(pathArr[1]);
 	}
 
 	$.ajax({
-		url: '/api/spid/'+pathArr[0]+".json",
-		success: function (res) {
+		url: '/api/spid/' + pathArr[0] + ".json",
+		success: function(res) {
 			var rander = template.compile(html);
 			var newhtml = rander(res);
 			common.randerBody(newhtml);
+			var headerData = {
+				data: ['', '', res.name]
+			};
+			rander = template.compile(header);
+			header = rander(headerData);
 			callbackFunc();
 		}
-	}); 
+	});
 
-	function callbackFunc(){
-		        //顶部导航栏
-	    $('#header ul').on('tap', 'li:last-child', function() {
+	function callbackFunc() {
 
-	            $('nav').toggle()
-	        })
+		$('.container').prepend(header);
+		$('body').append(top);
+		$('footer').html(footer);
 
-		activeSelf('.delist li' ,pathArr[1], 'active');
+		//顶部导航栏
+		$('#header ul').on('tap', 'li:last-child', function() {
+
+			$('nav').toggle()
+		})
+
+		activeSelf('.delist li', pathArr[1], 'active');
 
 		// 单击按钮的监听方法
-		$('.delist li').on('tap', function( e ){
+		$('.delist li').on('tap', function(e) {
 			var index = $(this).index();
-			activeSelf('.delist li' ,index, 'active');
+			activeSelf('.delist li', index, 'active');
 		});
-	} 
+		
+		comm.navload();
+		
+	}
 
-	function activeSelf( select , index, className ){
-		$('.swiper-slide').eq(index).css('display' , 'block').siblings().css('display','none');
+	function activeSelf(select, index, className) {
+		$('.swiper-slide').eq(index).css('display', 'block').siblings().css('display', 'none');
 		$(select).eq(index).addClass(className).siblings().removeClass(className);
-		setTimeout( function(){ 
-			if( !deScroll){
-				 deScroll = new IScroll('.deScoll');
-				 setTimeout( function(){deScroll.refresh() },200);
-			}else{
+		setTimeout(function() {
+			if(!deScroll) {
+				deScroll = new IScroll('.deScoll', {
+					probeType: 3
+				});
+				comm.backTop(deScroll);
+				setTimeout(function() {
+					deScroll.refresh()
+				}, 200);
+			} else {
 				deScroll.refresh();
 			}
-		},100);
+		}, 100);
 
 	}
-	 navload();
-	    function navload(){
-	            $('nav ul li').eq(0).on('tap',function(){
-	        location.href="./index.html"
-	    })
-	     $('nav ul li').eq(1).on('tap',function(){
-	       
-	    
-	    })
-	 $('nav ul li').eq(2).on('tap',function(){
-	        location.href="./build/other/cart.html"
-	    })
-	  $('nav ul li').eq(3).on('tap',function(){
-	        location.href="./build/other/login.html"
-	    })
-	    $("#header ul li").eq(0).on('tap',function(){
-	        history.back();
-	    })
 
-	    }
 
 
 /***/ },
-/* 25 */
+/* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container\">				<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>购物车</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav>		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>	<div class=\"deScoll\">		<div class=\"deScoll-box\">			<ul class=\"delist\">				<li class=\"active\">详情</li>				<li>评价</li>				<li>实拍秀</li>				<li>送花故事</li>			</ul>			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<div id=\"Img_Deail\" style=\"width:100%\">							{{each contentImg as value i}}								<p align=\"center\"><img alt=\"\" src=\"{{value}}\" border=\"0\"></p>								<p>&nbsp;</p>							{{/each}}						</div>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section id=\"comment\">							<h3>商品评价</h3>							<ul>								{{each evaluation as value i}}									<li>										<div class=\"t\">											<img src=\"{{value.imgsrc}}\" alt=\"\" />											<span class=\"xin\"><span></span></span>											<span class=\"ip\">{{value.ip}}</span>										</div>										<p>{{value.content}}</p>										<div class=\"b\">											<span><img src=\"http://img02.hua.com/icon/touxiang_m.png?3\"/></span>											<span>{{value.name}}</span>											<span>配送地址：{{value.path}}</span>										</div>									</li>								{{/each}}							</ul>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section class=\"Story\">							<div id=\"show\" class=\" title\">								<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>								<i class=\"iconfont\">&#xe679;</i>								</div>							<div class=\"scroll-pai\">								<ul>									{{each show as value i}}									<li>										<img src=\"{{value.imgsrc}}\" alt=\"\" />										<p>订单：{{value.danhao}}</p>										<p>{{value.path}}</p>									</li>									{{/each}}								</ul>							</div>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section class=\"Story\">							<div id=\"story\" class=\"title\">								<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>								<i class=\"iconfont\">&#xe679;</i>							</div>							<div class=\"list\">								{{each story as value i}}									<div class=\"item\">										<img src=\"{{value.imgsrc}}\" alt=\"\" />										<div class=\"text\">											<h3>{{value.title}}</h3>											<p>{{value.content}}<p>										</div>									</div>								{{/each}}							</div>						</section>					</div>				</div>			</div>		</div>			</div>	</div>"
+	module.exports = "<div class=\"container\">			<div class=\"deScoll\">		<div class=\"deScoll-box\">			<ul class=\"delist\">				<li class=\"active\">详情</li>				<li>评价</li>				<li>实拍秀</li>				<li>送花故事</li>			</ul>			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<div id=\"Img_Deail\" style=\"width:100%\">							{{each contentImg as value i}}								<p align=\"center\"><img alt=\"\" src=\"{{value}}\" border=\"0\"></p>								<p>&nbsp;</p>							{{/each}}						</div>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section id=\"comment\">							<h3>商品评价</h3>							<ul>								{{each evaluation as value i}}									<li>										<div class=\"t\">											<img src=\"{{value.imgsrc}}\" alt=\"\" />											<span class=\"xin\"><span></span></span>											<span class=\"ip\">{{value.ip}}</span>										</div>										<p>{{value.content}}</p>										<div class=\"b\">											<span><img src=\"http://img02.hua.com/icon/touxiang_m.png?3\"/></span>											<span>{{value.name}}</span>											<span>配送地址：{{value.path}}</span>										</div>									</li>								{{/each}}							</ul>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section class=\"Story\">							<div id=\"show\" class=\" title\">								<h3><b>订单实拍秀</b><span>（由加盟店配送前拍取）</span></h3>								<i class=\"iconfont\">&#xe679;</i>								</div>							<div class=\"scroll-pai\">								<ul>									{{each show as value i}}									<li>										<img src=\"{{value.imgsrc}}\" alt=\"\" />										<p>订单：{{value.danhao}}</p>										<p>{{value.path}}</p>									</li>									{{/each}}								</ul>							</div>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<section class=\"Story\">							<div id=\"story\" class=\"title\">								<h3><b>送花故事</b><span>最近共<span>888</span>条</span></h3>								<i class=\"iconfont\">&#xe679;</i>							</div>							<div class=\"list\">								{{each story as value i}}									<div class=\"item\">										<img src=\"{{value.imgsrc}}\" alt=\"\" />										<div class=\"text\">											<h3>{{value.title}}</h3>											<p>{{value.content}}<p>										</div>									</div>								{{/each}}							</div>						</section>					</div>				</div>			</div>			<footer></footer>		</div>			</div>	</div>"
 
 /***/ },
-/* 26 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(20);
+	var common = __webpack_require__(24);
 	var T = template;
-	var html = __webpack_require__( 27 );
+	var html = __webpack_require__( 31 );
 
 	common.randerBody(html); 
 	// 分页但是不能滑动
@@ -620,21 +731,21 @@
 
 
 /***/ },
-/* 27 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">				<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>购物车</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav>		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>	<div class=\"deScoll\">		<div class=\"deScoll-box\">						<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<div class=\"switch\"><a href=\"#\">使用手机验证登陆</a></div>						<section>  							<form id=\"loginMain\" action=\"../\">								<input class=\"text\" type=\"text\"   placeholder=\"请输入邮箱/手机号码\" />								<input class=\"text\" type=\"password\"   placeholder=\"请输入登陆密码\" />																<label for=\"\"><input type=\"checkbox\"/>一个月内免登陆</label>								<input type=\"button\" value=\"登陆\" />								<input type=\"button\" value=\"非会员快速下单\" />							</form>							</section> 						<section class=\"other\"><a href=\"./regist.html\">免费注册</a><a href=\"#\">找回密码</a></section>						<section class=\"otherlogin\">							<h3>其他方式登录：</h3>							<p><a href=\"javascript:void(0);\"></a><a href=\"javascript:void(0);\"></a></p>						</section>					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<div class=\"switch\"><a href=\"#\">会员账号登录</a></div>						<section>  							<form id=\"loginBack\" action=\"../\">								<input class=\"text\" type=\"text\"   placeholder=\"请输入手机号码\" />								<label class=\"mess\" for=\"\"><input  type=\"text\"   placeholder=\"短信验证码\" /><span>获取验证码</span></label>								<input type=\"button\" value=\"登陆\" />							</form>							</section> 						<section class=\"other\"><a href=\"#\"></a><a href=\"#\">找回密码</a></section>						<section class=\"otherlogin\">							<h3>其他方式登录：</h3>							<p><a href=\"javascript:void(0);\"></a><a href=\"javascript:void(0);\"></a></p>						</section>					</div>				</div>			</div>												<footer>等待</footer>		</div>	</div></div>"
 
 /***/ },
-/* 28 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var common = __webpack_require__(20);
+	var common = __webpack_require__(24);
 	var T = template;
-	var html = __webpack_require__( 29 );
+	var html = __webpack_require__( 33 );
 
 	common.randerBody(html);
 	    
@@ -767,7 +878,7 @@
 
 
 /***/ },
-/* 29 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container  regist \">				<header id=\"header\">		<ul>			<li><i class=\"iconfont\">&#xe679;</i> </li>			<li>购物车</li> 			<li> <i class=\"iconfont\">&#xe7ad;</i> </li>		</ul>	</header>	<nav>		<ul>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6b8;</span><i>首页</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6fe;</span><i>分类搜索</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe6af;</span><i>购物车</i></a></li>			<li><a href=\"#\"><span class=\"iconfont\">&#xe736;</span><i>我的</i></a></li>		</ul>	</nav>	<div class=\"deScoll\">		<div class=\"deScoll-box\">						<ul class=\"reg\">				<li class=\"active\">手机注册</li>				<li>邮箱注册</li>			</ul>			      			<div class=\"swiper-container\">				<div class=\"swiper-wrapper\">					<div class=\"swiper-slide swiper-no-swiping\">						<form class=\"phone\" id=\"phone\" action=\"\">							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span>  </label>							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入手机号\" /></label>							<!--<span class=\"err\">此项为必填项，请输入你要注册的手机号</span>-->							<label class=\"shoujihao\"><input type=\"text\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"duanxin\"><input type=\"text\" placeholder=\"输入短信验证码\" /><span>获取短信验证码</span></label>														<input type=\"button\" value=\"提交注册\" />						</form>  					</div>					<div class=\"swiper-slide swiper-no-swiping\">						<form id=\"emil\" class=\"phone emil\" action=\"\">							<label class=\"haoma\"><input type=\"number\"  placeholder=\"请输入邮箱\" /></label>							<label class=\"shoujihao\"><input type=\"text\"  placeholder=\"请设置6-20位字母和数字登录密码\" /><span><i></i></span></label>							<label class=\"yanzhenma\"><input type=\"text\" placeholder=\"验证码\" /><img src=\"http://m.hua.com/Passport/Register/GetImgVerificationCode\" alt=\"\"/><span>看不清，换一张</span></label>							<input type=\"button\" value=\"提交注册\" />						</form>					</div>				</div>			</div>												<footer>等待</footer>		</div>	</div></div>"

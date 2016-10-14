@@ -1,18 +1,30 @@
+var common = require('../../utils/common.util.js');
 var str = require('../../tpls/gift/gift.string');
+var header = require('../../tpls/public/header.html');
+var top = require('../../tpls/public/top.html');
+var footer = require('../../tpls/public/footer.html');
+
 $("body").prepend(str);
+$('#iscroll').prepend( common.reanderHeader(header, {data: ['特色礼品']} ) );
+$('.container').eq(0).append(top);
+$('footer').prepend(footer);
 
 
 listload('/api/gift.json');
+common.ajaxquer('/build/api/newlist.json','footerlist','.footerlist', 'gift'); 
 
 function listload(url) {
     $.ajax({
         url: url,
         success: function(data) {
-            for (var i = 0; i < data.length; i++) {
-                $('.dgbox>li').eq(i).html(template('test' + i, data[i]));
-
-
-            }
+        	
+        	var dgboxHtml = template('testList', data);
+			$('#dgbox').html( dgboxHtml );
+			 
+//          for (var i = 0; i < data.length; i++) {
+//              $('.dgbox>li').eq(i).html(template('test' + i, data[i]));
+//          }
+            
         },
         error: function(data) {
             console.log("ajax错误")
@@ -20,11 +32,6 @@ function listload(url) {
         dataType: 'json'
     })
 }
-
-
-
-
-
 
 
 window.onload = function() {
@@ -90,8 +97,10 @@ window.onload = function() {
 
 
     })
+    
+    common.navload();
 
- navload();
+/* navload();
     function navload(){
             $('nav ul li').eq(0).on('tap',function(){
         location.href="./index.html"
@@ -110,7 +119,7 @@ window.onload = function() {
         history.back();
     })
 
-    }
+    }*/
 
 
 }

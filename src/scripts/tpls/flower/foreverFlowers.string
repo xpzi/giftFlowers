@@ -1,28 +1,5 @@
 <div class="container">
 	<!-- 头部 -->
-	<header id="header">
-		<ul>
-			<li><i class="iconfont">&#xe679;</i> </li>
-			<li>鲜花列表</li>
-			<li> <i class="iconfont">&#xe7ad;</i> </li>
-		</ul>
-	</header>
-	<nav id="nav2">
-		<ul>
-			<li>
-				<a href="#"><span class="iconfont">&#xe6b8;</span><i>首页</i></a>
-			</li>
-			<li>
-				<a href="#"><span class="iconfont">&#xe6fe;</span><i>分类搜索</i></a>
-			</li>
-			<li>
-				<a href="#"><span class="iconfont">&#xe6af;</span><i>购物车</i></a>
-			</li>
-			<li>
-				<a href="#"><span class="iconfont">&#xe736;</span><i>我的</i></a>
-			</li>
-		</ul>
-	</nav>
 	<nav id="nav1">
 		<ul id="swiper-nav">
 			<li class="active">综合</li>

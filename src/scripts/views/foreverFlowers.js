@@ -1,5 +1,7 @@
 var str = require('../tpls/flower/foreverFlowers.string');
 //var footer = require('../tpls/footer.string');
+var header = require('../tpls/public/header.html');
+var top = require('../tpls/public/top.html');
 
 var common = require('../utils/common.util.js');
 var iscrollUtil = require('../utils/iscroll.util.js');
@@ -7,6 +9,12 @@ var iscrollUtil = require('../utils/iscroll.util.js');
 common.renderBody($('body'), str);
 //common.append($('.container'), footer);
 common.switchPage(0);
+var headerData = {data: ['','','鲜花列表']};
+var rander = template.compile(header);
+header = rander(headerData);
+$('.container').eq(0).prepend(header);
+$('body').append(top);
+
 
 // swiper 定义
 var mySwiper = new Swiper('#index-swiper', {
@@ -79,10 +87,10 @@ window.onload = function () {
     mouseWheel: true,
     click:true
   });
-
+	common.backTop( myScroll);
   var refreshAjax = function () {
     $.ajax({
-      url: '/api/foreverFlowersRefresh.php',
+      url: '/api/foreverFlowersRefresh.json',
       success: function (res) {
         var html = template('list', res);
         var lis = $(html).unwrap().html();
@@ -97,7 +105,7 @@ window.onload = function () {
 
   var moreAjax = function () {
     $.ajax({
-      url: '/api/foreverFlowersMore.php',
+      url: '/api/foreverFlowersMore.json',
       success: function (res) {
       	console.log( 123466 );
         var html = template('list', res);

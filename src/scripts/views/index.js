@@ -1,7 +1,9 @@
 var str=require('../tpls/index.html');
+var top = require('../tpls/public/top.html');
 var common=require('../utils/common.util.js');
 
 common.renderBody($('body'),str);
+$('body').append( top );
 
 var mySwiper = new Swiper('.swiper-container', {
 	autoplay: 3000,
@@ -39,13 +41,22 @@ $('.no5').on('tap',function(){
 
       
 $(function(){
-	var huaScroll = new IScroll('.container',{});
+	
+	var huaScroll = new IScroll('.container',{
+		probeType: 3
+	});
     
 	setTimeout(function(){
 		huaScroll.refresh();		
 	},500);
-      $('.button a').eq(2).on('tap', function(e) {
-            huaScroll.scrollTo(0, 0, 200);
-            e.preventDefalut;
-        })
+	
+    $('.button a').eq(2).on('tap', function(e) {
+        huaScroll.scrollTo(0, 0, 200);
+        e.preventDefalut;
+   	});
+    
+    
+    //回到顶部按钮
+	common.backTop( huaScroll );
+    
 })  

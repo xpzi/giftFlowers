@@ -625,8 +625,7 @@ textarea {
 input,
 textarea,
 button,
-select
-a {
+select a {
   outline: 0 none; }
 
 input,
@@ -739,372 +738,490 @@ html, body {
   height: 100%;
   width: 100%; }
 
-.container {
+@font-face {
+  font-family: 'iconfont';
+  /* chrome、firefox */
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url("/build/images/iconfont/iconfont.woff") format("woff"), url("/build/images/iconfont/iconfont.ttf") format("truetype"); }
+
+.iconfont {
+  font-family: iconfont; }
+
+body .container #header {
+  width: 100%;
+  height: 0.46rem;
+  background: #ff6600; }
+  body .container #header ul {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-right: 0.1rem; }
+    body .container #header ul li {
+      line-height: 0.45rem; }
+      body .container #header ul li:first-child {
+        width: 0.30rem;
+        height: 0.30rem; }
+        body .container #header ul li:first-child i {
+          font-size: 0.30rem;
+          color: white; }
+      body .container #header ul li:nth-child(2) {
+        color: #fff;
+        font-size: 0.12rem; }
+      body .container #header ul li:nth-child(3) {
+        flex: 1; }
+        body .container #header ul li:nth-child(3) span {
+          margin-top: 0.13rem;
+          line-height: 0.10rem;
+          height: 0.16rem;
+          border: 1px solid #fff;
+          font-size: 0.12rem;
+          display: inline-block;
+          color: #fff;
+          border-radius: 0.02rem;
+          padding: 0.02rem; }
+          body .container #header ul li:nth-child(3) span i {
+            display: inline-block;
+            width: 0.15rem;
+            height: 0.1rem;
+            background: url("http://m.hua.com/images/icon2b.png") -95px -7px no-repeat;
+            background-size: 198px 200px; }
+      body .container #header ul li:nth-child(4) {
+        position: absolute;
+        left: calc(45% - 0.17rem);
+        font-size: 0.17rem;
+        color: #fff; }
+      body .container #header ul li:last-child {
+        width: 0.32rem;
+        height: 0.32rem; }
+        body .container #header ul li:last-child i {
+          font-size: 0.32rem;
+          color: white; }
+
+body .container nav {
+  width: 100%;
+  height: 0.57rem;
+  background: #fff;
+  display: none; }
+  body .container nav ul {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0.05rem; }
+    body .container nav ul li {
+      flex: 1; }
+      body .container nav ul li span, body .container nav ul li i {
+        display: block;
+        text-align: center;
+        color: #666; }
+      body .container nav ul li i {
+        font-size: 13px;
+        margin-top: -0.08rem; }
+      body .container nav ul li span {
+        font-size: 22px; }
+
+body .totop {
+  display: none;
+  width: 0.42rem;
+  height: 0.42rem;
+  background: rgba(255, 102, 0, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  z-index: 9999; }
+  body .totop a {
+    display: block;
+    margin: 0 auto;
+    height: 0.3rem;
+    width: 0.3rem;
+    background: url("http://m.hua.com/images/icon2b.png") -169px 6px no-repeat;
+    background-size: 200px 200px; }
+
+body .container footer {
+  padding: 0.1rem 0.1rem 0;
+  width: 100%; }
+  body .container footer .btns {
+    width: 100%; }
+    body .container footer .btns a {
+      position: relative;
+      border-radius: 5px;
+      padding: 0.05rem 0.15rem;
+      color: #f60; }
+      body .container footer .btns a::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        content: "\0020";
+        border-color: #f60;
+        border-style: solid;
+        border-width: 2px;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          body .container footer .btns a::after {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          body .container footer .btns a::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            border-radius: 10px; } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          body .container footer .btns a::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333);
+            border-radius: 15px; } }
+  body .container footer .footer_menu {
+    width: 100%;
+    padding: 0.1rem 0.3rem 0; }
+    body .container footer .footer_menu ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      body .container footer .footer_menu ul li {
+        border-right: 1px solid #666;
+        padding: 0 0.1rem;
+        text-align: center; }
+        body .container footer .footer_menu ul li:nth-child(n+4) {
+          border-right: none; }
+        body .container footer .footer_menu ul li a {
+          color: #666;
+          font-size: 12px; }
+  body .container footer p {
+    color: #a3a3a3;
+    font-size: 12px;
+    text-align: center; }
+
+body .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   color: #666; }
-  .container #header {
-    width: 100%;
-    height: 0.46rem;
-    background: #ff6600; }
-    .container #header ul {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-start;
-      padding-right: 0.1rem; }
-      .container #header ul li {
-        line-height: 0.45rem; }
-        .container #header ul li:first-child {
-          width: 0.30rem;
-          height: 0.30rem; }
-          .container #header ul li:first-child i {
-            font-size: 0.30rem;
-            color: white; }
-        .container #header ul li:nth-child(2) {
-          position: absolute;
-          left: calc(50% - 0.17*2rem);
-          font-size: 0.17rem;
-          color: #fff; }
-        .container #header ul li:last-child {
-          width: 0.32rem;
-          height: 0.32rem;
-          position: absolute;
-          right: 0.1rem; }
-          .container #header ul li:last-child i {
-            font-size: 0.32rem;
-            color: white; }
-  .container nav {
-    width: 100%;
-    height: 0.57rem;
-    background: #fff;
-    display: none; }
-    .container nav ul {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      padding: 0.05rem; }
-      .container nav ul li {
-        flex: 1; }
-        .container nav ul li span,
-        .container nav ul li i {
-          display: block;
-          text-align: center;
-          color: #666; }
-        .container nav ul li i {
-          font-size: 13px;
-          margin-top: -0.08rem; }
-        .container nav ul li span {
-          font-size: 22px; }
-  .container .deScoll {
+  body .container .deScoll {
     flex: 1;
     overflow: hidden; }
-    .container .deScoll section {
+    body .container .deScoll section {
       background: #fff; }
-    .container .deScoll #slider-pic {
+    body .container .deScoll #slider-pic {
       width: 100%;
       background: #FFFFFF; }
-      .container .deScoll #slider-pic .swiper-container .swiper-slide {
+      body .container .deScoll #slider-pic .swiper-container .swiper-slide {
         width: 100%;
-        padding: 0 .1rem;
+        padding: 0 0.1rem;
         display: flex;
         align-items: center; }
-        .container .deScoll #slider-pic .swiper-container .swiper-slide img {
+        body .container .deScoll #slider-pic .swiper-container .swiper-slide img {
           width: 100%; }
-      .container .deScoll #slider-pic .addcart {
-        height: .56rem;
+      body .container .deScoll #slider-pic .addcart {
+        height: 0.56rem;
         display: flex;
         width: 100%;
-        padding: 0 .1rem 0 .2rem;
+        padding: 0 0.1rem 0 0.2rem;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid #CCCCCC; }
-        .container .deScoll #slider-pic .addcart span:nth-child(1) {
+        body .container .deScoll #slider-pic .addcart span:nth-child(1) {
           font-size: 20px;
           color: #f60; }
-        .container .deScoll #slider-pic .addcart span:nth-child(2) {
+        body .container .deScoll #slider-pic .addcart span:nth-child(2) {
           background: #f60;
           line-height: 37px;
           color: #fff;
           font-size: 17px;
-          border-radius: .05rem;
+          border-radius: 0.05rem;
           text-align: center;
-          padding: 0 .2rem; }
-      .container .deScoll #slider-pic .details {
+          padding: 0 0.2rem; }
+      body .container .deScoll #slider-pic .details {
         /* height: .72rem; */
-        padding: .1rem 0;
+        padding: 0.1rem 0;
         display: flex;
         align-items: center; }
-        .container .deScoll #slider-pic .details a {
+        body .container .deScoll #slider-pic .details a {
           /* height: .48rem; */
           flex: 1;
           display: flex; }
-          .container .deScoll #slider-pic .details a p {
+          body .container .deScoll #slider-pic .details a p {
             height: 100%;
             flex: 1;
             font-size: 16px;
             line-height: 24px;
             color: #666;
             padding: 0 8px; }
-            .container .deScoll #slider-pic .details a p span {
+            body .container .deScoll #slider-pic .details a p span {
               color: #f60;
               line-height: 24px; }
-          .container .deScoll #slider-pic .details a > span {
+          body .container .deScoll #slider-pic .details a > span {
             /* height: 100%; */
             display: flex;
             align-items: center;
             justify-content: center;
-            width: .25rem;
+            width: 0.25rem;
             /* line-height: .48rem; */
             color: #666;
             text-align: right;
             transform: rotate(180deg); }
-    .container .deScoll .kongbai {
-      height: .16rem;
+    body .container .deScoll .kongbai {
+      height: 0.16rem;
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
       background: #eee; }
-    .container .deScoll #app-exclusive {
-      height: .44rem;
+    body .container .deScoll #app-exclusive {
+      height: 0.44rem;
       background: #fff;
       display: flex;
       align-items: center;
       padding: 0 8px; }
-      .container .deScoll #app-exclusive span:nth-child(1) {
+      body .container .deScoll #app-exclusive span:nth-child(1) {
         color: #FFF;
         background: #f60 none repeat;
-        padding: .03rem;
-        line-height: .12rem; }
-      .container .deScoll #app-exclusive span:nth-child(2) {
+        padding: 0.03rem;
+        line-height: 0.12rem; }
+      body .container .deScoll #app-exclusive span:nth-child(2) {
         flex: 1;
-        font-size: .12rem;
-        line-height: .2rem;
+        font-size: 0.12rem;
+        line-height: 0.2rem;
         padding-left: 16px; }
-      .container .deScoll #app-exclusive span:nth-child(3) {
+      body .container .deScoll #app-exclusive span:nth-child(3) {
         width: 82px;
         height: 24px;
-        background: url(../../images/icon2b.png) -34px -143px no-repeat;
+        background: url("../../images/icon2b.png") -34px -143px no-repeat;
         background-size: 165px 165px; }
-    .container .deScoll #pictext {
-      padding: 0 .08rem .13rem;
+    body .container .deScoll #pictext {
+      padding: 0 0.08rem 0.13rem;
       display: flex;
       flex-direction: column; }
-      .container .deScoll #pictext li {
-        line-height: .26rem;
-        font-size: .13rem;
+      body .container .deScoll #pictext li {
+        line-height: 0.26rem;
+        font-size: 0.13rem;
         width: 100%; }
-        .container .deScoll #pictext li span {
+        body .container .deScoll #pictext li span {
           color: #AD923B; }
-      .container .deScoll #pictext > span {
+      body .container .deScoll #pictext > span {
         width: 100%;
         text-align: center;
-        line-height: .28rem;
+        line-height: 0.28rem;
         border: 1px solid #ccc; }
-        .container .deScoll #pictext > span i {
+        body .container .deScoll #pictext > span i {
           transform: rotate(180deg);
           display: inline-block; }
-    .container .deScoll .contact {
+    body .container .deScoll .contact {
       display: flex;
-      height: .66rem;
+      height: 0.66rem;
       justify-content: space-around;
       align-items: center;
-      padding: 0 .08rem; }
-      .container .deScoll .contact a {
+      padding: 0 0.08rem; }
+      body .container .deScoll .contact a {
         color: #f60;
         width: 48%;
-        line-height: .4rem;
-        font-size: .16rem;
-        border-radius: .05rem;
+        line-height: 0.4rem;
+        font-size: 0.16rem;
+        border-radius: 0.05rem;
         border: 1px solid #f60;
-        height: .4rem;
+        height: 0.4rem;
         text-align: center; }
-        .container .deScoll .contact a i {
+        body .container .deScoll .contact a i {
           display: inline-block;
-          width: .26rem;
-          height: .26rem;
-          background-size: .26rem .26rem !important;
+          width: 0.26rem;
+          height: 0.26rem;
+          background-size: 0.26rem 0.26rem !important;
           vertical-align: middle;
           margin-right: 5px;
           margin-top: -2px; }
-        .container .deScoll .contact a .qq {
-          background: url(http://img02.hua.com/icon/qq_m.png) no-repeat; }
-        .container .deScoll .contact a .tel {
-          background: url(http://m.hua.com/images/dhkf.png) no-repeat; }
-    .container .deScoll #comment {
+        body .container .deScoll .contact a .qq {
+          background: url("http://img02.hua.com/icon/qq_m.png") no-repeat; }
+        body .container .deScoll .contact a .tel {
+          background: url("http://m.hua.com/images/dhkf.png") no-repeat; }
+    body .container .deScoll #comment {
       display: flex;
       flex-direction: column;
-      padding: .1rem; }
-      .container .deScoll #comment h3 {
+      padding: 0.1rem; }
+      body .container .deScoll #comment h3 {
         font-size: 16px;
         color: #666;
         font-weight: 100;
         line-height: 30px;
         border-bottom: 1px solid #ccc; }
-      .container .deScoll #comment li {
-        padding: .05rem 0;
+      body .container .deScoll #comment li {
+        padding: 0.05rem 0;
         border-bottom: 1px solid #ccc; }
-        .container .deScoll #comment li .t {
-          height: .56rem;
+        body .container .deScoll #comment li .t {
+          height: 0.56rem;
           display: flex;
           align-items: center;
           color: #ccc; }
-          .container .deScoll #comment li .t img {
-            height: .5rem;
-            width: .5rem;
+          body .container .deScoll #comment li .t img {
+            height: 0.5rem;
+            width: 0.5rem;
             border: 1px solid #ccc; }
-          .container .deScoll #comment li .t .xin {
-            padding-left: .1rem;
-            width: .78rem;
-            height: .26rem; }
-            .container .deScoll #comment li .t .xin span {
+          body .container .deScoll #comment li .t .xin {
+            padding-left: 0.1rem;
+            width: 0.78rem;
+            height: 0.26rem; }
+            body .container .deScoll #comment li .t .xin span {
               display: block;
-              width: .78rem;
-              height: .26rem;
-              background: url(../../images/icon2b.png) -1px 3px no-repeat;
+              width: 0.78rem;
+              height: 0.26rem;
+              background: url("../../images/icon2b.png") -1px 3px no-repeat;
               background-size: 1.9rem 1.9rem; }
-          .container .deScoll #comment li .t .ip {
+          body .container .deScoll #comment li .t .ip {
             flex: 1;
             text-align: right; }
-        .container .deScoll #comment li p {
+        body .container .deScoll #comment li p {
           line-height: 20px;
           font-size: 12px;
-          padding: .05rem 0; }
-        .container .deScoll #comment li .b {
+          padding: 0.05rem 0; }
+        body .container .deScoll #comment li .b {
           display: flex;
           align-items: center;
           font-size: 12px;
           color: #ccc; }
-          .container .deScoll #comment li .b span:nth-child(1) {
-            height: .2rem;
-            width: .2rem; }
-            .container .deScoll #comment li .b span:nth-child(1) img {
+          body .container .deScoll #comment li .b span:nth-child(1) {
+            height: 0.2rem;
+            width: 0.2rem; }
+            body .container .deScoll #comment li .b span:nth-child(1) img {
               height: 100%;
               width: 100%; }
-          .container .deScoll #comment li .b span:nth-child(2) {
+          body .container .deScoll #comment li .b span:nth-child(2) {
             width: 35%;
-            padding: 0 .05rem; }
-          .container .deScoll #comment li .b span:nth-child(3) {
+            padding: 0 0.05rem; }
+          body .container .deScoll #comment li .b span:nth-child(3) {
             flex: 1; }
-      .container .deScoll #comment .more {
+      body .container .deScoll #comment .more {
         width: 100%;
         display: flex;
         flex-direction: column; }
-        .container .deScoll #comment .more a {
-          height: .4rem;
-          font-size: .14rem;
+        body .container .deScoll #comment .more a {
+          height: 0.4rem;
+          font-size: 0.14rem;
           color: #ff6a00;
-          line-height: .4rem;
+          line-height: 0.4rem;
           text-align: center;
           width: 100%; }
-    .container .deScoll .Story {
+    body .container .deScoll .Story {
       display: flex;
       flex-direction: column;
-      padding: .1rem; }
-      .container .deScoll .Story .title {
-        height: .45rem;
+      padding: 0.1rem; }
+      body .container .deScoll .Story .title {
+        height: 0.45rem;
         border-bottom: 1px solid #ccc;
         display: flex;
-        line-height: .45rem; }
-        .container .deScoll .Story .title h3 {
+        line-height: 0.45rem; }
+        body .container .deScoll .Story .title h3 {
           flex: 1;
           display: flex;
           align-items: center;
           font-size: 16px;
           font-weight: 100; }
-          .container .deScoll .Story .title h3 > b {
+          body .container .deScoll .Story .title h3 > b {
             font-weight: 100; }
-          .container .deScoll .Story .title h3 > span {
-            padding: 0 .03rem;
+          body .container .deScoll .Story .title h3 > span {
+            padding: 0 0.03rem;
             font-size: 12px;
             color: #ccc; }
-            .container .deScoll .Story .title h3 > span span {
+            body .container .deScoll .Story .title h3 > span span {
               color: #f60; }
-        .container .deScoll .Story .title i {
-          width: .14rem;
+        body .container .deScoll .Story .title i {
+          width: 0.14rem;
           display: inline-block;
           transform: rotate(180deg); }
-      .container .deScoll .Story .scroll-pai {
+      body .container .deScoll .Story .scroll-pai {
         width: 100%;
         overflow: hidden; }
-        .container .deScoll .Story .scroll-pai ul {
+        body .container .deScoll .Story .scroll-pai ul {
           white-space: nowrap; }
-          .container .deScoll .Story .scroll-pai ul li {
+          body .container .deScoll .Story .scroll-pai ul li {
             display: inline-block;
             width: 1rem;
-            margin-right: .01rem;
+            margin-right: 0.01rem;
             white-space: normal; }
-            .container .deScoll .Story .scroll-pai ul li img {
+            body .container .deScoll .Story .scroll-pai ul li img {
               width: 100%;
-              padding: .05rem 0; }
-            .container .deScoll .Story .scroll-pai ul li p {
+              padding: 0.05rem 0; }
+            body .container .deScoll .Story .scroll-pai ul li p {
               font-size: 12px;
-              line-height: .16rem; }
-      .container .deScoll .Story .list .item {
+              line-height: 0.16rem; }
+      body .container .deScoll .Story .list .item {
         width: 100%;
-        padding: .06rem 0; }
-        .container .deScoll .Story .list .item img {
+        padding: 0.06rem 0; }
+        body .container .deScoll .Story .list .item img {
           float: left;
-          width: .6rem;
-          padding-right: .1rem; }
-        .container .deScoll .Story .list .item .text h3 {
+          width: 0.6rem;
+          padding-right: 0.1rem; }
+        body .container .deScoll .Story .list .item .text h3 {
           font-size: 12px;
           font-weight: 100; }
-        .container .deScoll .Story .list .item .text p {
+        body .container .deScoll .Story .list .item .text p {
           font-size: 12px;
           color: #929292; }
-    .container .deScoll .add-cart {
+    body .container .deScoll .add-cart {
       height: 68px;
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
-      padding: 0 .2rem;
+      padding: 0 0.2rem;
       display: flex;
       align-items: center; }
-      .container .deScoll .add-cart a {
+      body .container .deScoll .add-cart a {
         width: 100%;
         background: #f60;
-        line-height: .42rem;
+        line-height: 0.42rem;
         color: #fff;
         font-size: 17px;
-        border-radius: .05rem;
+        border-radius: 0.05rem;
         text-align: center;
-        padding: 0 .2rem; }
-    .container .deScoll .you-like {
+        padding: 0 0.2rem; }
+    body .container .deScoll .you-like {
       width: 100%; }
-      .container .deScoll .you-like h3 {
+      body .container .deScoll .you-like h3 {
         height: 50px;
         line-height: 50px;
         font-size: 14px;
         color: #666666; }
-      .container .deScoll .you-like .scroll-youlike {
+      body .container .deScoll .you-like .scroll-youlike {
         height: 1.1rem; }
-        .container .deScoll .you-like .scroll-youlike ul {
+        body .container .deScoll .you-like .scroll-youlike ul {
           white-space: nowrap; }
-          .container .deScoll .you-like .scroll-youlike ul li {
-            margin-right: .1rem;
-            width: .9rem;
+          body .container .deScoll .you-like .scroll-youlike ul li {
+            margin-right: 0.1rem;
+            width: 0.9rem;
             height: 1.1rem;
             display: inline-block;
             text-align: center;
             color: #f6a; }
-            .container .deScoll .you-like .scroll-youlike ul li img {
-              width: .8rem; }
-  .container .delist {
-    height: .44rem;
+            body .container .deScoll .you-like .scroll-youlike ul li img {
+              width: 0.8rem; }
+  body .container .delist {
+    height: 0.44rem;
     display: flex;
     background: #FFFFFF; }
-    .container .delist li {
+    body .container .delist li {
       width: 25%;
-      line-height: .44rem;
+      line-height: 0.44rem;
       text-align: center;
       border-bottom: 1px solid #ccc;
       border-right: 1px solid #CCCCCC; }
-    .container .delist .active {
+    body .container .delist .active {
       border-bottom: 1px #f60 solid;
       color: #f60; }
-    .container .delist li:nth-last-child(1) {
+    body .container .delist li:nth-last-child(1) {
       border-right: 0; }
-  .container #Img_Deail {
+  body .container #Img_Deail {
     width: 100%; }
-    .container #Img_Deail img {
+    body .container #Img_Deail img {
       width: 100%; }
